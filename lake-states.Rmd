@@ -8,7 +8,7 @@ library(tidyverse)
 ```
 
 
-```{r}
+```{r, results = 'hide', message=FALSE, warning=FALSE, echo=FALSE}
 # read in .xsl data as dataframe
 library(readxl)
 
@@ -16,7 +16,57 @@ library(readxl)
 
 merchBio <- read_excel("Merch Bio GLakes 06-14-2021.xlsx") %>% select(-1)
 premerchBio <- read_excel("Premerch Bio GLakes 06-14-2024.xlsx") %>% select(-1)
+
+# load price data
+tmnPrices <- read_excel("TMN_Price_Series_September2023.xlsx", sheet = 1) %>%
+  filter(Market == 'Stumpage')
 ```
+# Organize the price data
+
+```{r}
+# print the list of unique species in alphabetical order
+tmnPrices %>% select(Species) %>% unique() %>% arrange(Species)
+
+```
+```{r}
+# print the list of unique species in alphabetical order from merchBIO using SPGRPNM
+merchBio %>% select(SPGRPNM) %>% unique() %>% arrange(SPGRPNM)
+```
+```{r}
+# create a crosswalk between tmnPrices$Species and merchBio$SPGRPNM
+# this will allow us to join
+crosswalk <- tribble(
+  ~SPGRPNM, ~Species,
+  'Ash', 'Ash',
+  'Basswood', 'Basswood',
+  'Beech', 'Beech',
+  'Black Walnut', 'Black Walnut',
+  'Cottonwood and aspen (East)', 'Aspen', 
+  'Eastern hemlock', 'Hemlock', 
+  'Eastern white and red pines', 'White Pine',
+  'Eastern white and red pines', 'Red Pine',
+  'Hard maple', 'Maple',
+  'Hickory', 'Hickory',
+  'Jack pine', 'Jack Pine',
+  'Loblolly and shortleaf pines', '',
+  'Other eastern hard hardwoods', '',
+  'Other eastern soft hardwoods', '',
+  'Other eastern softwoods', '',
+  'Other red oaks', '',
+  'Other white oaks', '',
+  'Select red oaks', 'Red Oak',
+  'Select white oaks', 'White Oak',
+  'Soft maple', 'Soft Maple',
+  'Spruce and balsam fir', 'Spruce',
+  'Spruce and balsam fir', 'Spruce/Fir',
+  'Tupelo and blackgum', '',
+  'Yellow-poplar', '',
+  'Yellow birch', 'Yellow Birch')
+  
+
+```
+
+
 
 # Organize the FIA data
 
@@ -35,6 +85,11 @@ df <- df %>% pivot_longer(cols = 11:33,
                           values_to = 'biomass') %>%
             filter(!is.na(biomass))
 
+```
+
+```{r}
+# join prices to df
+df <- left_join(df, tmnPrices, by = c('SPGRPCD' = 'Species'))
 ```
 
 
