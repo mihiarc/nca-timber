@@ -1,0 +1,108 @@
+---
+title: 'Timber Asset Account: Production Boundary'
+author: "Chris Mihiar"
+date: "6/3/2024"
+output:
+  word_document: default
+  html_notebook: default
+---
+
+```{r, warning=F, echo=F}
+# setup
+
+library(tidyverse)
+```
+
+## Load FIA data
+
+FIA data is from the 2020 evaluation which includes observation made from 2015-2020
+
+```{r, echo=F}
+vol <- read.csv("C:/Users/cmihiar/OneDrive - USDA/Data/FIA Data/timber_asset_vol.csv")
+
+vol <- vol %>%
+  mutate(spgrp = case_match(spgrpcd,
+           1 ~ 'longleaf and slash pines',
+           2 ~ 'loblolly and shortleaf pines',
+           3 ~ 'other yellow pines',
+           4 ~ 'eastern white and red pines',
+           5 ~ 'jack pine',
+           6 ~ 'spruce and balsam fur',
+           7 ~ 'eastern hemlock',
+           8 ~ 'cypress',
+           9 ~ 'other eastern softwoods',
+           23 ~ 'woodland softwoods',
+           25 ~ 'select white oaks',
+           26 ~ 'select red oaks',
+           27 ~ 'other white oaks',
+           28 ~ 'other red oaks',
+           29 ~ 'hickory',
+           30 ~ 'yellow birch',
+           31 ~ 'hard maple',
+           32 ~ 'soft maple',
+           33 ~ 'beech',
+           34 ~ 'sweetgum',
+           35 ~ 'tupelo and blackgum',
+           36 ~ 'ash',
+           37 ~ 'cottonwood and aspen',
+           38 ~ 'basswood',
+           39 ~ 'yellow poplar',
+           40 ~ 'black walnut',
+           41 ~ 'other eastern soft hardwoods',
+           42 ~ 'other eastern hard hardwoods',
+           43 ~ 'eastern non-commercial hardwoods',
+           48 ~ 'woodland hardwoods',
+           55 ~ 'urban specific hardwoods'),
+         state = case_match(statecd, 1 ~ 'AL', 5 ~ 'AR', 12 ~ 'FL',
+                            13 ~ 'GA', 22 ~ 'LA',
+                            28 ~ 'MS', 37 ~ 'NC',
+                            45 ~ 'SC', 47 ~ 'TN',
+                            48 ~ 'TX', 51 ~ 'VA'))
+
+```
+
+## Clearcut harvest
+
+The Southern FIA region collects information on the specific harvesting activity observed. Let's filter for clear cut harvests.
+
+```{r, echo=F}
+clearcutvol <- vol %>% filter(harvest_type1_srs == 11 |
+                                 harvest_type2_srs == 11 |
+                                 harvest_type3_srs == 11,
+                                 !is.na(totvol))
+```
+
+### What species groups do we find in the clear cut group?
+
+Its reasonable to assume that species groups that are clear cut should be included in the timber asset account.
+
+```{r, echo=F}
+spvol <- clearcutvol %>%
+  group_by(spgrp, state) %>%
+  summarise(totvol = sum(totvol, na.rm = T)/1000000, .groups = 'drop') %>%
+  pivot_wider(names_from = 'spgrp', values_from = 'totvol') %>%
+  arrange(state)
+
+# calculate total volume for the South
+
+spvol[is.na(spvol)] <- 0
+
+spvol <- spvol %>%
+  bind_rows(summarise(.,
+                      across(where(is.numeric), sum),
+                      across(where(is.character), ~"Total")))
+spvol <- pivot_longer(spvol, c(2:27), names_to = 'species', values_to = 'total_volume') %>%
+  pivot_wider(names_from = state, values_from = total_volume)
+
+
+```
+
+
+```{r}
+
+library(knitr)
+kable(spvol, caption = "Clear cut harvest volume for the South, in millions of cubic meters",
+      digits = 0)
+
+```
+
