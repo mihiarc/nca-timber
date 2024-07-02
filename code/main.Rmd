@@ -1,0 +1,393 @@
+---
+title: "NCA Timber: Pilot Accounts for the Great Lakes and Southern U.S."
+output: html_notebook
+---
+```{r, results = 'hide', message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+```
+
+# First, define the asset account boundary for the Southern U.S. with respect to species group
+
+## Load FIA data
+
+FIA data is from the 2020 evaluation which includes observation made from 2015-2020
+
+```{r, echo=F}
+vol <- read.csv("data/timber_asset_vol.csv")
+
+vol <- vol %>%
+  mutate(spgrp = case_match(spgrpcd,
+           1 ~ 'longleaf and slash pines',
+           2 ~ 'loblolly and shortleaf pines',
+           3 ~ 'other yellow pines',
+           4 ~ 'eastern white and red pines',
+           5 ~ 'jack pine',
+           6 ~ 'spruce and balsam fur',
+           7 ~ 'eastern hemlock',
+           8 ~ 'cypress',
+           9 ~ 'other eastern softwoods',
+           23 ~ 'woodland softwoods',
+           25 ~ 'select white oaks',
+           26 ~ 'select red oaks',
+           27 ~ 'other white oaks',
+           28 ~ 'other red oaks',
+           29 ~ 'hickory',
+           30 ~ 'yellow birch',
+           31 ~ 'hard maple',
+           32 ~ 'soft maple',
+           33 ~ 'beech',
+           34 ~ 'sweetgum',
+           35 ~ 'tupelo and blackgum',
+           36 ~ 'ash',
+           37 ~ 'cottonwood and aspen',
+           38 ~ 'basswood',
+           39 ~ 'yellow poplar',
+           40 ~ 'black walnut',
+           41 ~ 'other eastern soft hardwoods',
+           42 ~ 'other eastern hard hardwoods',
+           43 ~ 'eastern non-commercial hardwoods',
+           48 ~ 'woodland hardwoods',
+           55 ~ 'urban specific hardwoods'),
+         state = case_match(statecd, 1 ~ 'AL', 5 ~ 'AR', 12 ~ 'FL',
+                            13 ~ 'GA', 22 ~ 'LA',
+                            28 ~ 'MS', 37 ~ 'NC',
+                            45 ~ 'SC', 47 ~ 'TN',
+                            48 ~ 'TX', 51 ~ 'VA'))
+
+```
+
+## Clearcut harvest
+
+The Southern FIA region collects information on the specific harvesting activity observed. Let's filter for clear cut harvests.
+
+```{r, echo=F}
+clearcutvol <- vol %>% filter(harvest_type1_srs == 11 |
+                                 harvest_type2_srs == 11 |
+                                 harvest_type3_srs == 11,
+                                 !is.na(totvol))
+```
+
+### What species groups do we find in the clear cut group?
+
+Its reasonable to assume that species groups that are clear cut should be included in the timber asset account.
+
+```{r, echo=F}
+spvol <- clearcutvol %>%
+  group_by(spgrp, state) %>%
+  summarise(totvol = sum(totvol, na.rm = T)/1000000, .groups = 'drop') %>%
+  pivot_wider(names_from = 'spgrp', values_from = 'totvol') %>%
+  arrange(state)
+
+# calculate total volume for the South
+
+spvol[is.na(spvol)] <- 0
+
+spvol <- spvol %>%
+  bind_rows(summarise(.,
+                      across(where(is.numeric), sum),
+                      across(where(is.character), ~"Total")))
+spvol <- pivot_longer(spvol, c(2:27), names_to = 'species', values_to = 'total_volume') %>%
+  pivot_wider(names_from = state, values_from = total_volume)
+
+
+```
+
+
+```{r}
+
+library(knitr)
+kable(spvol, caption = "Clear cut harvest volume for the South, in millions of cubic meters",
+      digits = 0)
+
+```
+
+```{r, results = 'hide', message=FALSE, warning=FALSE, echo=FALSE}
+# create pilot tables for southern pine
+
+library(tidyverse)
+library(pivottabler)
+
+# load data----
+
+setwd("C:/Users/cmihiar/OneDrive - USDA/(DUKE) Natural Capital/NCA Timber Account")
+# setwd("E:/OneDrive - USDA/NCA Timber Account/Pilot South")
+
+# prices are in per ton units
+prices <- read.csv('Pilot South/Georgia stumpage prices.csv')
+quantity <- read.csv('Pilot South/Georgia FIA example.csv')
+
+merch <- read.csv('FIA Data/Merch bio.csv')
+premerch <- read.csv('FIA Data/Premerch bio.csv')
+
+# clean and merge data----
+
+p <- prices %>%
+  mutate(pm1p = plpp / 1.05^8,
+         pm2p = plpp / 1.05^6,
+         pm3p = plpp / 1.05^4,
+         pm4p = plpp / 1.05^2,
+         pm1h = plph / 1.05^8,
+         pm2h = plph / 1.05^6,
+         pm3h = plph / 1.05^4,
+         pm4h = plph / 1.05^2) %>%
+  pivot_longer(cols = c(5:18), values_to = "price") %>%
+  mutate(product = substr(name, 1, 3),
+         type = substr(name, 4, 4)) %>%
+  select(-name) %>%
+  group_by(year, product, state, type) %>%
+  summarize(price = mean(price, na.rm = T), .groups = "drop") %>%
+  mutate(type = recode(type, 'p' = 'Softwood',
+                       'h' = 'Hardwood',
+                       'm' = 'Mixed'),
+         PRODUCT = product,
+         SPCLASS = type,
+         PRICE = price) %>%
+  filter(product != "cns", type != "Mixed", year == 2021) %>%
+  select(PRODUCT, SPCLASS, PRICE)
+
+pm <- premerch
+names(pm) <- c("STATENM", "STATECD", "COUNTYNM", "COUNTYCD", "SPGRPCD",
+               "SPGRPNM", "SPCLASS", "UNITCD", "RESERVCD", "EVALID",
+               "PM1", "PM2", "PM3", "PM4")
+mc <- merch
+names(mc) <- c("STATENM", "STATECD", "COUNTYNM", "COUNTYCD", "SPGRPCD",
+               "SPGRPNM", "SPCLASS", "UNITCD", "RESERVCD", "EVALID",
+               "PW1","PW2","PW3",
+               "ST01","ST02","ST03","ST04","ST05","ST06", "ST07","ST08",
+               "ST09","ST10","ST11","ST12","ST13","ST14","ST15","ST16")
+
+szcd <- data.frame(SZCLASS = c("PM1","PM2","PM3","PM4",
+                               "PW1","PW2","PW3",
+                               "ST01","ST02","ST03","ST04","ST05",
+                               "ST06", "ST07","ST08",
+                               "ST09","ST10","ST11","ST12","ST13",
+                               "ST14","ST15","ST16"),
+                   PRODUCT = c("pm1","pm2","pm3","pm4",
+                               "plp","plp","plp",
+                               "saw","saw","saw","saw","saw","saw",
+                               "saw","saw","saw","saw","saw","saw",
+                               "saw","saw","saw","saw"))
+
+pm <- pm %>%
+  filter(RESERVCD == 1) %>%
+  pivot_longer(cols = 11:14, names_to = 'SZCLASS') %>%
+  group_by(SPCLASS, SZCLASS) %>%
+  summarize(biomass = sum(value, na.rm = T), .groups = 'drop') %>%
+  left_join(szcd, by = 'SZCLASS') %>%
+  left_join(p, by = c("PRODUCT", "SPCLASS")) %>%
+  mutate(value = (biomass * PRICE))
+
+mc <- mc %>%
+  filter(RESERVCD == 1) %>%
+  pivot_longer(cols = 11:29, names_to = 'SZCLASS') %>%
+  group_by(SPCLASS, SZCLASS) %>%
+  summarize(biomass = sum(value, na.rm = T), .groups = 'drop') %>%
+  left_join(szcd, by = 'SZCLASS') %>%
+  left_join(p, by = c("PRODUCT", "SPCLASS")) %>%
+  mutate(value = (biomass * PRICE))
+
+total.value.ga <- rbind(pm,mc)
+sum(total.value.ga$value)/1000000000 #total value in billions
+#total value of hardwood stock
+sum(total.value.ga$value[total.value.ga$SPCLASS=="Hardwood"])/1000000000
+#total value of hardwood stock in sawtimber classses
+sum(total.value.ga$value[total.value.ga$SPCLASS=="Hardwood" & 
+                           total.value.ga$SZCLASS %in% c("ST01","ST02","ST03","ST04","ST05",
+                                                         "ST06", "ST07","ST08",
+                                                         "ST09","ST10","ST11","ST12","ST13",
+                                                         "ST14","ST15","ST16")])/1000000000
+#total value of hardwood stock in pulpwood classes
+sum(total.value.ga$value[total.value.ga$SPCLASS=="Hardwood" & 
+                           total.value.ga$SZCLASS %in% c("PW1","PW2","PW3")])/1000000000
+#total value of hardwood stock in premerch classes
+sum(total.value.ga$value[total.value.ga$SPCLASS=="Hardwood" & 
+                           total.value.ga$SZCLASS %in% c("PM1","PM2","PM3","PM4")])/1000000000
+
+#total value of softwood stock
+sum(total.value.ga$value[total.value.ga$SPCLASS=="Softwood"])/1000000000
+#total value of softwood stock in sawtimber classses
+sum(total.value.ga$value[total.value.ga$SPCLASS=="Softwood" & 
+                           total.value.ga$SZCLASS %in% c("ST01","ST02","ST03","ST04","ST05",
+                                                         "ST06", "ST07","ST08",
+                                                         "ST09","ST10","ST11","ST12","ST13",
+                                                         "ST14","ST15","ST16")])/1000000000
+#total value of softwood stock in pulpwood classes
+sum(total.value.ga$value[total.value.ga$SPCLASS=="Softwood" & 
+                           total.value.ga$SZCLASS %in% c("PW1","PW2","PW3")])/1000000000
+#total value of softwood stock in premerch classes
+sum(total.value.ga$value[total.value.ga$SPCLASS=="Softwood" & 
+                           total.value.ga$SZCLASS %in% c("PM1","PM2","PM3","PM4")])/1000000000
+
+
+# p <- prices %>%
+#   pivot_longer(cols = c(4:69), values_to = "price_raw") %>%
+#   mutate(product = substr(name, 1, 3),
+#          state = substr(name, 4, 5),
+#          region = as.integer(substr(name, 6, 6))) %>%
+#   select(-name) %>%
+#   filter(state == 'ga') %>%
+#   group_by(year, product, state, type) %>%
+#   summarize(price_scrib = mean(price_raw, na.rm = T), .groups = "drop") %>%
+#   mutate(price_tons = case_when(product == 'saw' ~ price_scrib / 7,
+#                                 product == 'plp' ~ price_scrib / 8,
+#                                 product == 'pre' ~ price_scrib / 8))
+
+# p <- prices %>%
+#   mutate(prep = 0, preh = 0) %>%
+#   pivot_longer(cols = c(5:12), values_to = "price") %>%
+#   mutate(product = substr(name, 1, 3),
+#          type = substr(name, 4, 4)) %>%
+#   select(-name) %>%
+#   group_by(year, product, state, type) %>%
+#   summarize(price = mean(price, na.rm = T), .groups = "drop") %>%
+#   mutate(type = recode(type, 'p' = 'Pines',
+#                        'h' = 'Oaks',
+#                        'm' = 'Other hardwoods')) %>%
+#   filter(product != "cns")
+
+q <- quantity %>%
+  rename(pre = GAGB_le_6,
+         plp = GAGB_6_12,
+         saw = GAGB_12,
+         type = spgrp2) %>%
+  pivot_longer(cols = c(3:6), names_to = 'product', values_to = 'tons') %>%
+  filter(type %in% c("Oaks", "Pines", "Other hardwoods"),
+         !product == "GAGB_total") %>%
+  mutate(state = "ga")
+
+df <- full_join(p, q, by = c("year", "state", "type", "product")) %>%
+  mutate(product_name = recode(product,
+                          'pre' = 'Pre-Merchantable (<6"DBH)',
+                          'plp' = 'Pulpwood (6\" - 11.9")',
+                          'saw' = 'Sawtimber (12\" and up)'),
+         state = recode(state,
+                        'ga' = 'Georgia'),
+         value = price * tons) %>%
+  filter(year >= 2014,
+         type != "Other hardwoods")
+
+# trend figures----
+
+ggplot(filter(df, product == "plp")) +
+  geom_line(aes(x=year, y=tons, color = type))
+```
+
+
+```{r, results = 'hide', message=FALSE, warning=FALSE, echo=FALSE}
+# read in .xsl data as dataframe
+library(readxl)
+
+# read tables from excel and drop first column
+
+merchBio <- read_excel("Merch Bio GLakes 06-14-2021.xlsx") %>% select(-1)
+premerchBio <- read_excel("Premerch Bio GLakes 06-14-2024.xlsx") %>% select(-1)
+
+# load price data
+tmnPrices <- read_excel("TMN_Price_Series_September2023.xlsx", sheet = 1) %>%
+  filter(Market == 'Stumpage')
+```
+# Organize the price data
+
+```{r}
+# print the list of unique species in alphabetical order
+tmnPrices %>% select(Species) %>% unique() %>% arrange(Species)
+
+```
+```{r}
+# print the list of unique species in alphabetical order from merchBIO using SPGRPNM
+merchBio %>% select(SPGRPNM) %>% unique() %>% arrange(SPGRPNM)
+```
+```{r}
+# create a crosswalk between tmnPrices$Species and merchBio$SPGRPNM
+# this will allow us to join
+crosswalk <- tribble(
+  ~SPGRPNM, ~Species,
+  'Ash', 'Ash',
+  'Basswood', 'Basswood',
+  'Beech', 'Beech',
+  'Black Walnut', 'Black Walnut',
+  'Cottonwood and aspen (East)', 'Aspen', 
+  'Eastern hemlock', 'Hemlock', 
+  'Eastern white and red pines', 'White Pine',
+  'Eastern white and red pines', 'Red Pine',
+  'Hard maple', 'Maple',
+  'Hickory', 'Hickory',
+  'Jack pine', 'Jack Pine',
+  'Loblolly and shortleaf pines', '',
+  'Other eastern hard hardwoods', '',
+  'Other eastern soft hardwoods', '',
+  'Other eastern softwoods', '',
+  'Other red oaks', '',
+  'Other white oaks', '',
+  'Select red oaks', 'Red Oak',
+  'Select white oaks', 'White Oak',
+  'Soft maple', 'Soft Maple',
+  'Spruce and balsam fir', 'Spruce',
+  'Spruce and balsam fir', 'Spruce/Fir',
+  'Tupelo and blackgum', '',
+  'Yellow-poplar', '',
+  'Yellow birch', 'Yellow Birch')
+  
+
+```
+
+
+
+# Organize the FIA data
+
+```{r}
+# join the two dataframes
+df <- left_join(merchBio, premerchBio, by = c('STATENM','STATECD', 'COUNTYNM',
+                                              'COUNTYCD', 'SPGRPCD', 'SPGRPNM',
+                                              'SPCLASS', 'UNITCD', 'EVALID',
+                                              'RESERVCD')) %>%
+                  filter(RESERVCD == 0)
+
+# pivot longer on columns 11 to 33
+# drop if biomass is NA
+df <- df %>% pivot_longer(cols = 11:33,
+                          names_to = 'sizeClass',
+                          values_to = 'biomass') %>%
+            filter(!is.na(biomass))
+
+```
+
+```{r}
+# join prices to df
+df <- left_join(df, tmnPrices, by = c('SPGRPCD' = 'Species'))
+```
+
+
+# summarize the data
+
+```{r}
+# create a table that shows the distribution of biomass by size class and state
+df %>% group_by(STATENM, sizeClass) %>%
+  summarise(totalBiomass = sum(biomass), .groups = 'drop') %>%
+  pivot_wider(names_from = sizeClass, values_from = totalBiomass) %>%
+  mutate(total = rowSums(select(., -STATENM))) %>%
+  arrange(desc(total))
+```
+
+```{r}
+# create a panel of histograms by state showing the distribution of biomass,
+# restrict the data to drop biomass in the top 10% of the distribution
+df %>% group_by(STATENM) %>%
+  filter(biomass < quantile(biomass, 0.9)) %>%
+  ggplot(aes(x = biomass)) +
+  geom_histogram(bins = 30) +
+  facet_wrap(~STATENM, scales = 'free_y') +
+  labs(title = 'Distribution of Biomass by State',
+       x = 'Biomass (kg/ha)',
+       y = 'Count')
+
+
+```
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
