@@ -52,19 +52,67 @@ vol <- vol %>%
                             13 ~ 'GA', 22 ~ 'LA',
                             28 ~ 'MS', 37 ~ 'NC',
                             45 ~ 'SC', 47 ~ 'TN',
-                            48 ~ 'TX', 51 ~ 'VA'))
+                            48 ~ 'TX', 51 ~ 'VA'),
+         trtcd1 = case_match(trtcd1,
+                             0 ~ 'No observable treatment',
+                             10 ~ 'Cutting',
+                             20 ~ 'Site preparation',
+                             30 ~ 'Artificial regeneration',
+                             40 ~ 'Natural regeneration',
+                             50 ~ 'Other silvicultural treatment'),
+         trtcd2 = case_match(trtcd2,
+                             0 ~ 'No observable treatment',
+                             10 ~ 'Cutting',
+                             20 ~ 'Site preparation',
+                             30 ~ 'Artificial regeneration',
+                             40 ~ 'Natural regeneration',
+                             50 ~ 'Other silvicultural treatment'),
+         trtcd3 = case_match(trtcd3,
+                             0 ~ 'No observable treatment',
+                             10 ~ 'Cutting',
+                             20 ~ 'Site preparation',
+                             30 ~ 'Artificial regeneration',
+                             40 ~ 'Natural regeneration',
+                             50 ~ 'Other silvicultural treatment'))
 
 ```
 
-## Clearcut harvest
+## Use harvest related activity to define the species groups that are included in the timber asset account
 
 The Southern FIA region collects information on the specific harvesting activity observed. Let's filter for clear cut harvests.
 
 ```{r, echo=F}
-clearcutvol <- vol %>% filter(harvest_type1_srs == 11 |
-                                 harvest_type2_srs == 11 |
-                                 harvest_type3_srs == 11,
-                                 !is.na(totvol))
+# show the distrubution of trtcd1, trtcd2, and trtcd3
+vol %>%
+  group_by(trtcd1) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  arrange(desc(count))
+
+vol %>%
+  group_by(trtcd2) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  arrange(desc(count))
+
+vol %>%
+  group_by(trtcd3) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  arrange(desc(count))
+
+```
+
+```{r, echo=F}
+# drop observations where trtcd1, trtcd2, or trtcd3 are all 'No observable treatment'
+acct.species <- vol %>%
+  filter(trtcd1 != 'No observable treatment' & 
+           trtcd2 != 'No observable treatment' & 
+           trtcd3 != 'No observable treatment')
+
+# unique species groups in the timber asset account
+acct.species <- acct.species %>%
+  group_by(spgrp) %>%
+  summarise(count = n(), .groups = 'drop') %>%
+  arrange(desc(count))
+
 ```
 
 ### What species groups do we find in the clear cut group?
