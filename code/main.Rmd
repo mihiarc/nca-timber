@@ -110,45 +110,73 @@ acct.species <- vol %>%
 # unique species groups in the timber asset account
 acct.species <- acct.species %>%
   group_by(spgrp) %>%
-  summarise(count = n(), .groups = 'drop') %>%
-  arrange(desc(count))
+  summarise(volume = sum(totvol, na.rm = T) / 1000000,
+            .groups = 'drop') %>%
+  arrange(desc(volume))
 
 ```
 
-### What species groups do we find in the clear cut group?
+### What species groups do we find in the harvest group?
 
-Its reasonable to assume that species groups that are clear cut should be included in the timber asset account.
-
-```{r, echo=F}
-spvol <- clearcutvol %>%
-  group_by(spgrp, state) %>%
-  summarise(totvol = sum(totvol, na.rm = T)/1000000, .groups = 'drop') %>%
-  pivot_wider(names_from = 'spgrp', values_from = 'totvol') %>%
-  arrange(state)
-
-# calculate total volume for the South
-
-spvol[is.na(spvol)] <- 0
-
-spvol <- spvol %>%
-  bind_rows(summarise(.,
-                      across(where(is.numeric), sum),
-                      across(where(is.character), ~"Total")))
-spvol <- pivot_longer(spvol, c(2:27), names_to = 'species', values_to = 'total_volume') %>%
-  pivot_wider(names_from = state, values_from = total_volume)
-
-
-```
+Its reasonable to assume that species groups that have evidence of timber management should be included in the timber asset account.
 
 
 ```{r}
 
 library(knitr)
-kable(spvol, caption = "Clear cut harvest volume for the South, in millions of cubic meters",
+kable(acct.species, caption = "Volume for the South, in millions of cubic meters",
       digits = 0)
 
 ```
+## Stumpage prices from timbermart south
 
+```{r}
+# load timbermart south prices
+tms <- read.csv("data/prices_south.csv")
+
+# pivot longer on columns 5:18
+tms <- tms %>%
+  pivot_longer(cols = c(4:69), values_to = "price", names_to = 'type_state_region') %>%
+  mutate(product = substr(type_state_region, 1, 3),
+         state = substr(type_state_region, 4, 5),
+         region = substr(type_state_region, 6, 6)) %>%
+  select(-type_state_region) %>%
+  filter(year %in% c(2015:2020)) %>%
+  group_by(product, state, type) %>%
+  summarize(price = mean(price, na.rm = T), .groups = "drop")
+
+# Add prices for pre-merchantable timber
+
+tms$price[tms$product == 'pre'] <- tms$price[tms$product == 'plp'] / 1.05^8
+```
+
+```{r}
+tms <- tms %>%
+  mutate(pm1p = plpp / 1.05^8,
+         pm2p = plpp / 1.05^6,
+         pm3p = plpp / 1.05^4,
+         pm4p = plpp / 1.05^2,
+         pm1h = plph / 1.05^8,
+         pm2h = plph / 1.05^6,
+         pm3h = plph / 1.05^4,
+         pm4h = plph / 1.05^2) %>%
+  pivot_longer(cols = c(5:18), values_to = "price") %>%
+  mutate(product = substr(name, 1, 3),
+         type = substr(name, 4, 4)) %>%
+  select(-name) %>%
+  group_by(year, product, state, type) %>%
+  summarize(price = mean(price, na.rm = T), .groups = "drop") %>%
+  mutate(type = recode(type, 'p' = 'Softwood',
+                       'h' = 'Hardwood',
+                       'm' = 'Mixed'),
+         PRODUCT = product,
+         SPCLASS = type,
+         PRICE = price) %>%
+  filter(product != "cns", type != "Mixed", year == 2021) %>%
+  select(PRODUCT, SPCLASS, PRICE)
+
+
+```
 ```{r, results = 'hide', message=FALSE, warning=FALSE, echo=FALSE}
 # create pilot tables for southern pine
 
