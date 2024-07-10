@@ -182,8 +182,9 @@ kable(tmnPrices.table,
 
 ```
 
-# create a crosswalk between tmn price regions and counties for MN, MI, and WI
-# including the FIA survey unit codes
+# TimberMart North
+## create a crosswalk between tmn price regions and counties for MN, MI, and WI
+## including the FIA survey unit codes
 
 ```{r}
 # create a crosswalk between tmnPrices$Region and FIA survey unit codes
@@ -366,6 +367,42 @@ crosswalk1 <- tribble(
   'WI', '5', '55', '009', 'WI-2',
   'WI', '5', '55', '061', 'WI-2',
   'WI', '5', '55', '029', 'WI-2')
+
+```
+
+# TimberMart South
+
+```{r}
+
+# remove all NAs from data frame, then pivot longer on columns 3 to the end
+tmsHW <- read.csv("prices_hw.csv") %>% filter(!is.na(year)) %>%
+  mutate_at(vars(3:ncol(tmsHW)), as.numeric) %>%
+  mutate(year = as.integer(year),
+         quarter = as.integer(quarter),
+         SPCLASS = 'Hardwood') %>%
+  pivot_longer(cols = 3:ncol(tmsHW),
+                names_to = 'prodStateRegion',
+                values_to = 'price')
+
+tmsSW <- read.csv("tmsPricesSW.csv") %>%
+  filter(year %in% c(2000:2020), !is.na(quarter)) %>%
+  mutate_at(vars(3:ncol(tmsSW)), as.numeric) %>%
+  mutate(year = as.integer(year),
+         quarter = as.integer(quarter),
+         SPCLASS = 'Softwood') %>%
+  pivot_longer(cols = 3:ncol(tmsSW),
+                names_to = 'prodStateRegion',
+                values_to = 'price')
+
+# bind the two dataframes
+tmsPrices <- rbind(tmsHW, tmsSW) %>%
+  mutate(Product = substr(prodStateRegion, 1, 3),
+         State = substr(prodStateRegion, 4, 5),
+         Region = substr(prodStateRegion, 6, 6)) %>%
+  select(-prodStateRegion)
+
+
+
 
 ```
 
