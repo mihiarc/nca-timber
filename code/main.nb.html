@@ -9974,40 +9974,33 @@ State/n(million tons)</caption>
 <h1>Organize the price data</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5saWJyYXJ5KHJlYWR4bClcbnRtblByaWNlcyA8LSBzdXBwcmVzc1dhcm5pbmdzKHJlYWRfZXhjZWwoXCJUTU5fUHJpY2VfU2VyaWVzX1NlcHRlbWJlcjIwMjMueGxzeFwiKSkgJT4lXG4gIGZpbHRlcihNYXJrZXQgPT0gJ1N0dW1wYWdlJyxcbiAgICAgICAgIFJlZ2lvbiAlaW4lIGMoJ01JJywnTU4nLCdXSScpLFxuICAgICAgICAgU3BlY2llcyAhPSAnU2F3dGltYmVyICgkL21iZiknKSAlPiVcbiAgcmVuYW1lKFN0YXRlID0gYFJlZ2lvbmAsXG4gICAgICAgICBwcmljZVJhdyA9IGAkIFBlciBVbml0YCkgJT4lXG4gIG11dGF0ZShwcmljZVRvbnMgPSBpZmVsc2UoVW5pdHMgPT0gJ21iZicsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgY29udmVydF9wcmljZV9tYmZfdG9ucyhwcmljZVJhdyksXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgY29udmVydF9wcmljZV9tYmZfdG9ucyhjb252ZXJ0X3ByaWNlX2NvcmRfbWJmKHByaWNlUmF3KSkpLFxuICAgICAgICAgbW9udGggPSBhcy5pbnRlZ2VyKGZvcm1hdCh0bW5QcmljZXMkYFBlcmlvZCBFbmQgRGF0ZWAsIFwiJW1cIikpLFxuICAgICAgICAgeWVhciA9IGFzLmludGVnZXIoZm9ybWF0KHRtblByaWNlcyRgUGVyaW9kIEVuZCBEYXRlYCwgXCIlWVwiKSkpICU+JVxuICBzZWxlY3QoLWMoJ01hcmtldCcsICdVbml0cycsICdwcmljZVJhdycsICdQZXJpb2QgRW5kIERhdGUnKSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5saWJyYXJ5KHJlYWR4bClcbnRtblByaWNlcyA8LSBzdXBwcmVzc1dhcm5pbmdzKHJlYWRfZXhjZWwoXCJUTU5fUHJpY2VfU2VyaWVzX1NlcHRlbWJlcjIwMjMueGxzeFwiKSkgJT4lXG4gIGZpbHRlcihNYXJrZXQgPT0gJ1N0dW1wYWdlJyxcbiAgICAgICAgIFNwZWNpZXMgIT0gJ1Nhd3RpbWJlciAoJC9tYmYpJykgJT4lXG4gIHJlbmFtZShTdGF0ZSA9IGBSZWdpb25gLFxuICAgICAgICAgcHJpY2VSYXcgPSBgJCBQZXIgVW5pdGApICU+JVxuICBtdXRhdGUoUmVnaW9uID0gc3Vic3RyKFN0YXRlLCA0LCA0KSxcbiAgICAgICAgIFN0YXRlID0gc3Vic3RyKFN0YXRlLCAxLCAyKSxcbiAgICAgICAgIHByaWNlVG9ucyA9IGlmZWxzZShVbml0cyA9PSAnbWJmJyxcbiAgICAgICAgICAgICAgICAgICAgICBjb252ZXJ0X3ByaWNlX21iZl90b25zKHByaWNlUmF3KSxcbiAgICAgICAgICAgICAgICAgICAgICBjb252ZXJ0X3ByaWNlX21iZl90b25zKGNvbnZlcnRfcHJpY2VfY29yZF9tYmYocHJpY2VSYXcpKSksXG4gICAgICAgICBtb250aCA9IGFzLmludGVnZXIoZm9ybWF0KGBQZXJpb2QgRW5kIERhdGVgLCBcIiVtXCIpKSxcbiAgICAgICAgIHllYXIgPSBhcy5pbnRlZ2VyKGZvcm1hdChgUGVyaW9kIEVuZCBEYXRlYCwgXCIlWVwiKSkpICU+JVxuICBzZWxlY3QoLWMoJ01hcmtldCcsICdVbml0cycsICdwcmljZVJhdycsICdQZXJpb2QgRW5kIERhdGUnKSkgJT4lXG4gIGZpbHRlcihSZWdpb24gIT0gXCJcIilcblxuIyBtYWtlIGEga2FibGUgdGFibGUgd2l0aCBhdmVyYWdlIHByaWNlcyBmb3IgZWFjaCBzcGVjaWVzIGFuZCBzdGF0ZVxudG1uUHJpY2VzLnRhYmxlIDwtIHRtblByaWNlcyAlPiVcbiAgZ3JvdXBfYnkoU3RhdGUsIFJlZ2lvbiwgU3BlY2llcywgUHJvZHVjdCkgJT4lXG4gIHN1bW1hcml6ZShQcmljZSA9IG1lYW4ocHJpY2VUb25zLCBuYS5ybSA9IFQpLCAuZ3JvdXBzID0gJ2Ryb3AnKSAlPiVcbiAgYXJyYW5nZShTcGVjaWVzKVxuXG5rYWJsZSh0bW5QcmljZXMudGFibGUsXG4gICAgICBjYXB0aW9uID0gXCJHcmVhdCBMYWtlczogVGltYmVyIEFjY291bnQgU3R1bXBhZ2UgUHJpY2VzIGJ5IFN0YXRlIGFuZCBTcGVjaWVzXCIsXG4gICAgICBjb2wubmFtZXMgPSBjKFwiU3RhdGVcIiwgXCJSZWdpb25cIiwgXCJTcGVjaWVzXCIsIFwiUHJvZHVjdFwiLCBcIlByaWNlXCIpLFxuICAgICAgZGlnaXRzID0gMilcbmBgYCJ9 -->
 <pre class="r"><code>
 library(readxl)
 tmnPrices &lt;- suppressWarnings(read_excel(&quot;TMN_Price_Series_September2023.xlsx&quot;)) %&gt;%
   filter(Market == &#39;Stumpage&#39;,
-         Region %in% c(&#39;MI&#39;,&#39;MN&#39;,&#39;WI&#39;),
          Species != &#39;Sawtimber ($/mbf)&#39;) %&gt;%
   rename(State = `Region`,
          priceRaw = `$ Per Unit`) %&gt;%
-  mutate(priceTons = ifelse(Units == &#39;mbf&#39;,
-                            convert_price_mbf_tons(priceRaw),
-                            convert_price_mbf_tons(convert_price_cord_mbf(priceRaw))),
-         month = as.integer(format(tmnPrices$`Period End Date`, &quot;%m&quot;)),
-         year = as.integer(format(tmnPrices$`Period End Date`, &quot;%Y&quot;))) %&gt;%
-  select(-c(&#39;Market&#39;, &#39;Units&#39;, &#39;priceRaw&#39;, &#39;Period End Date&#39;))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogVGhlcmUgd2VyZSA0IHdhcm5pbmdzIGluIGBtdXRhdGUoKWAuXG5UaGUgZmlyc3Qgd2FybmluZyB3YXM6XG7ihLkgSW4gYXJndW1lbnQ6IGBtb250aCA9IGFzLmludGVnZXIoZm9ybWF0KHRtblByaWNlcyRgUGVyaW9kIEVuZCBEYXRlYCwgXCIlbVwiKSlgLlxuQ2F1c2VkIGJ5IHdhcm5pbmc6XG4hIFVua25vd24gb3IgdW5pbml0aWFsaXNlZCBjb2x1bW46IGBQZXJpb2QgRW5kIERhdGVgLlxu4oS5IFJ1biBcdTAwMWJdODs7aWRlOnJ1bjpkcGx5cjo6bGFzdF9kcGx5cl93YXJuaW5ncygpXHUwMDA3ZHBseXI6Omxhc3RfZHBseXJfd2FybmluZ3MoKVx1MDAxYl04OztcdTAwMDcgdG8gc2VlIHRoZSAzIHJlbWFpbmluZyB3YXJuaW5ncy5cbiJ9 -->
-<pre><code>Warning: There were 4 warnings in `mutate()`.
-The first warning was:
-ℹ In argument: `month = as.integer(format(tmnPrices$`Period End Date`, &quot;%m&quot;))`.
-Caused by warning:
-! Unknown or uninitialised column: `Period End Date`.
-ℹ Run ]8;;ide:run:dplyr::last_dplyr_warnings()dplyr::last_dplyr_warnings()]8;; to see the 3 remaining warnings.</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBtYWtlIGEga2FibGUgdGFibGUgd2l0aCBhdmVyYWdlIHByaWNlcyBmb3IgZWFjaCBzcGVjaWVzIGFuZCBzdGF0ZVxudG1uUHJpY2VzLnRhYmxlIDwtIHRtblByaWNlcyAlPiVcbiAgZ3JvdXBfYnkoU3RhdGUsIFNwZWNpZXMsIFByb2R1Y3QpICU+JVxuICBzdW1tYXJpemUoUHJpY2UgPSBtZWFuKHByaWNlVG9ucyksIC5ncm91cHMgPSAnZHJvcCcpICU+JVxuICBhcnJhbmdlKFNwZWNpZXMpXG5cbmthYmxlKHRtblByaWNlcy50YWJsZSxcbiAgICAgIGNhcHRpb24gPSBcIkdyZWF0IExha2VzOiBUaW1iZXIgQWNjb3VudCBTdHVtcGFnZSBQcmljZXMgYnkgU3RhdGUgYW5kIFNwZWNpZXNcIixcbiAgICAgIGNvbC5uYW1lcyA9IGMoXCJTdGF0ZVwiLCBcIlNwZWNpZXNcIiwgXCJQcm9kdWN0XCIsIFwiQXZlcmFnZSBQcmljZVwiKSxcbiAgICAgIGRpZ2l0cyA9IDIpXG5gYGAifQ== -->
-<pre class="r"><code># make a kable table with average prices for each species and state
+  mutate(Region = substr(State, 4, 4),
+         State = substr(State, 1, 2),
+         priceTons = ifelse(Units == &#39;mbf&#39;,
+                      convert_price_mbf_tons(priceRaw),
+                      convert_price_mbf_tons(convert_price_cord_mbf(priceRaw))),
+         month = as.integer(format(`Period End Date`, &quot;%m&quot;)),
+         year = as.integer(format(`Period End Date`, &quot;%Y&quot;))) %&gt;%
+  select(-c(&#39;Market&#39;, &#39;Units&#39;, &#39;priceRaw&#39;, &#39;Period End Date&#39;)) %&gt;%
+  filter(Region != &quot;&quot;)
+
+# make a kable table with average prices for each species and state
 tmnPrices.table &lt;- tmnPrices %&gt;%
-  group_by(State, Species, Product) %&gt;%
-  summarize(Price = mean(priceTons), .groups = &#39;drop&#39;) %&gt;%
+  group_by(State, Region, Species, Product) %&gt;%
+  summarize(Price = mean(priceTons, na.rm = T), .groups = &#39;drop&#39;) %&gt;%
   arrange(Species)
 
 kable(tmnPrices.table,
       caption = &quot;Great Lakes: Timber Account Stumpage Prices by State and Species&quot;,
-      col.names = c(&quot;State&quot;, &quot;Species&quot;, &quot;Product&quot;, &quot;Average Price&quot;),
+      col.names = c(&quot;State&quot;, &quot;Region&quot;, &quot;Species&quot;, &quot;Product&quot;, &quot;Price&quot;),
       digits = 2)</code></pre>
 <!-- rnb-source-end -->
 
@@ -10019,743 +10012,2021 @@ Species</caption>
 <thead>
 <tr class="header">
 <th align="left">State</th>
+<th align="left">Region</th>
 <th align="left">Species</th>
 <th align="left">Product</th>
-<th align="right">Average Price</th>
+<th align="right">Price</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Ash</td>
 <td align="left">Sawtimber</td>
-<td align="right">43.97</td>
+<td align="right">46.70</td>
 </tr>
 <tr class="even">
-<td align="left">MN</td>
+<td align="left">MI</td>
+<td align="left">2</td>
 <td align="left">Ash</td>
 <td align="left">Sawtimber</td>
-<td align="right">31.12</td>
+<td align="right">50.38</td>
 </tr>
 <tr class="odd">
-<td align="left">WI</td>
+<td align="left">MI</td>
+<td align="left">3</td>
 <td align="left">Ash</td>
 <td align="left">Sawtimber</td>
-<td align="right">70.70</td>
-</tr>
-<tr class="even">
-<td align="left">MI</td>
-<td align="left">Aspen</td>
-<td align="left">Pulpwood</td>
-<td align="right">24.73</td>
-</tr>
-<tr class="odd">
-<td align="left">MI</td>
-<td align="left">Aspen</td>
-<td align="left">Sawtimber</td>
-<td align="right">42.07</td>
+<td align="right">42.78</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
-<td align="left">Aspen</td>
-<td align="left">Pulpwood</td>
-<td align="right">25.39</td>
+<td align="left">1</td>
+<td align="left">Ash</td>
+<td align="left">Sawtimber</td>
+<td align="right">32.76</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
-<td align="left">Aspen</td>
+<td align="left">2</td>
+<td align="left">Ash</td>
 <td align="left">Sawtimber</td>
-<td align="right">26.69</td>
+<td align="right">29.11</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
-<td align="left">Aspen</td>
-<td align="left">Pulpwood</td>
-<td align="right">28.73</td>
+<td align="left">1</td>
+<td align="left">Ash</td>
+<td align="left">Sawtimber</td>
+<td align="right">58.78</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
-<td align="left">Aspen</td>
+<td align="left">2</td>
+<td align="left">Ash</td>
 <td align="left">Sawtimber</td>
-<td align="right">NA</td>
+<td align="right">65.40</td>
 </tr>
 <tr class="even">
-<td align="left">MI</td>
-<td align="left">Basswood</td>
-<td align="left">Pulpwood</td>
-<td align="right">10.40</td>
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Ash</td>
+<td align="left">Sawtimber</td>
+<td align="right">70.27</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
-<td align="left">Basswood</td>
+<td align="left">1</td>
+<td align="left">Aspen</td>
+<td align="left">Pulpwood</td>
+<td align="right">22.10</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">Aspen</td>
 <td align="left">Sawtimber</td>
-<td align="right">57.59</td>
+<td align="right">44.42</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Aspen</td>
+<td align="left">Pulpwood</td>
+<td align="right">23.20</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Aspen</td>
+<td align="left">Sawtimber</td>
+<td align="right">27.68</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Aspen</td>
+<td align="left">Pulpwood</td>
+<td align="right">29.49</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Aspen</td>
+<td align="left">Sawtimber</td>
+<td align="right">29.14</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Aspen</td>
+<td align="left">Pulpwood</td>
+<td align="right">23.38</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
-<td align="left">Basswood</td>
-<td align="left">Pulpwood</td>
-<td align="right">9.11</td>
+<td align="left">1</td>
+<td align="left">Aspen</td>
+<td align="left">Sawtimber</td>
+<td align="right">19.91</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
-<td align="left">Basswood</td>
-<td align="left">Sawtimber</td>
-<td align="right">36.35</td>
+<td align="left">2</td>
+<td align="left">Aspen</td>
+<td align="left">Pulpwood</td>
+<td align="right">27.85</td>
 </tr>
 <tr class="even">
-<td align="left">WI</td>
-<td align="left">Basswood</td>
-<td align="left">Pulpwood</td>
-<td align="right">7.83</td>
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Aspen</td>
+<td align="left">Sawtimber</td>
+<td align="right">29.85</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
-<td align="left">Basswood</td>
+<td align="left">1</td>
+<td align="left">Aspen</td>
+<td align="left">Pulpwood</td>
+<td align="right">17.74</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Aspen</td>
 <td align="left">Sawtimber</td>
-<td align="right">69.64</td>
+<td align="right">30.92</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Aspen</td>
+<td align="left">Pulpwood</td>
+<td align="right">26.60</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Aspen</td>
+<td align="left">Sawtimber</td>
+<td align="right">62.21</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Aspen</td>
+<td align="left">Pulpwood</td>
+<td align="right">30.12</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Aspen</td>
+<td align="left">Sawtimber</td>
+<td align="right">48.99</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">Basswood</td>
+<td align="left">Pulpwood</td>
+<td align="right">9.50</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">Basswood</td>
+<td align="left">Sawtimber</td>
+<td align="right">49.05</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Basswood</td>
+<td align="left">Pulpwood</td>
+<td align="right">13.70</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Basswood</td>
+<td align="left">Sawtimber</td>
+<td align="right">64.31</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Basswood</td>
+<td align="left">Pulpwood</td>
+<td align="right">10.73</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Basswood</td>
+<td align="left">Sawtimber</td>
+<td align="right">64.03</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Basswood</td>
+<td align="left">Pulpwood</td>
+<td align="right">7.00</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Basswood</td>
+<td align="left">Sawtimber</td>
+<td align="right">41.01</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Basswood</td>
+<td align="left">Pulpwood</td>
+<td align="right">8.93</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Basswood</td>
+<td align="left">Sawtimber</td>
+<td align="right">33.72</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Basswood</td>
+<td align="left">Pulpwood</td>
+<td align="right">3.07</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Basswood</td>
+<td align="left">Sawtimber</td>
+<td align="right">67.16</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Basswood</td>
+<td align="left">Pulpwood</td>
+<td align="right">6.83</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Basswood</td>
+<td align="left">Sawtimber</td>
+<td align="right">73.02</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Basswood</td>
+<td align="left">Pulpwood</td>
+<td align="right">8.74</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Basswood</td>
+<td align="left">Sawtimber</td>
+<td align="right">69.31</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Beech</td>
 <td align="left">Sawtimber</td>
-<td align="right">37.02</td>
+<td align="right">36.88</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Beech</td>
+<td align="left">Sawtimber</td>
+<td align="right">32.65</td>
 </tr>
 <tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Beech</td>
+<td align="left">Sawtimber</td>
+<td align="right">33.11</td>
+</tr>
+<tr class="even">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Beech</td>
 <td align="left">Sawtimber</td>
 <td align="right">62.50</td>
 </tr>
-<tr class="even">
-<td align="left">WI</td>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">2</td>
 <td align="left">Beech</td>
 <td align="left">Sawtimber</td>
-<td align="right">35.92</td>
+<td align="right">35.42</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Beech</td>
+<td align="left">Sawtimber</td>
+<td align="right">29.95</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Beech</td>
+<td align="left">Sawtimber</td>
+<td align="right">35.54</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Beech</td>
+<td align="left">Sawtimber</td>
+<td align="right">41.15</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
 <td align="left">Birch</td>
 <td align="left">Sawtimber</td>
 <td align="right">72.92</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
+<td align="left">2</td>
 <td align="left">Black Ash</td>
 <td align="left">Sawtimber</td>
-<td align="right">65.10</td>
-</tr>
-<tr class="odd">
-<td align="left">MI</td>
-<td align="left">Black Cherry</td>
-<td align="left">Sawtimber</td>
-<td align="right">110.01</td>
-</tr>
-<tr class="even">
-<td align="left">MN</td>
-<td align="left">Black Cherry</td>
-<td align="left">Sawtimber</td>
-<td align="right">59.92</td>
+<td align="right">75.00</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Black Ash</td>
+<td align="left">Sawtimber</td>
+<td align="right">35.42</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Black Cherry</td>
 <td align="left">Sawtimber</td>
-<td align="right">146.01</td>
+<td align="right">108.08</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Black Cherry</td>
+<td align="left">Sawtimber</td>
+<td align="right">93.45</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Black Cherry</td>
+<td align="left">Sawtimber</td>
+<td align="right">81.86</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Black Cherry</td>
+<td align="left">Sawtimber</td>
+<td align="right">55.97</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Black Cherry</td>
+<td align="left">Sawtimber</td>
+<td align="right">142.65</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Black Cherry</td>
+<td align="left">Sawtimber</td>
+<td align="right">105.60</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Black Walnut</td>
 <td align="left">Sawtimber</td>
 <td align="right">982.79</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Elm</td>
 <td align="left">Sawtimber</td>
 <td align="right">36.77</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Elm</td>
 <td align="left">Sawtimber</td>
 <td align="right">20.60</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Hard Maple</td>
 <td align="left">Sawtimber</td>
-<td align="right">243.45</td>
+<td align="right">221.17</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Hard Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">286.21</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Hard Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">263.38</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Hard Maple</td>
 <td align="left">Sawtimber</td>
-<td align="right">99.74</td>
+<td align="right">123.87</td>
 </tr>
 <tr class="odd">
-<td align="left">WI</td>
+<td align="left">MN</td>
+<td align="left">2</td>
 <td align="left">Hard Maple</td>
 <td align="left">Sawtimber</td>
-<td align="right">171.19</td>
+<td align="right">55.08</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Hard Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">179.15</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Hard Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">184.54</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Hard Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">160.06</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
 <td align="left">Hemlock</td>
 <td align="left">Sawtimber</td>
-<td align="right">57.18</td>
+<td align="right">27.08</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Hemlock</td>
+<td align="left">Sawtimber</td>
+<td align="right">117.38</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Hickory</td>
 <td align="left">Sawtimber</td>
 <td align="right">44.57</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
+<td align="left">3</td>
 <td align="left">Hickory</td>
 <td align="left">Sawtimber</td>
 <td align="right">143.75</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Jack Pine</td>
 <td align="left">Pulpwood</td>
-<td align="right">32.62</td>
+<td align="right">25.01</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Jack Pine</td>
 <td align="left">Sawtimber</td>
-<td align="right">30.49</td>
+<td align="right">34.72</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Jack Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">42.36</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Jack Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">43.40</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Jack Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">43.37</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Jack Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">32.19</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Jack Pine</td>
 <td align="left">Pulpwood</td>
-<td align="right">24.32</td>
+<td align="right">19.09</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Jack Pine</td>
 <td align="left">Sawtimber</td>
-<td align="right">24.93</td>
-</tr>
-<tr class="odd">
-<td align="left">WI</td>
-<td align="left">Jack Pine</td>
-<td align="left">Pulpwood</td>
-<td align="right">32.40</td>
-</tr>
-<tr class="even">
-<td align="left">WI</td>
-<td align="left">Jack Pine</td>
-<td align="left">Sawtimber</td>
-<td align="right">37.57</td>
+<td align="right">20.83</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Jack Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">26.15</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Jack Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">37.13</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Jack Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">29.87</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Jack Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">30.73</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Jack Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">36.06</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Jack Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">37.91</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Jack Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">31.25</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Jack Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">34.28</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Maple Unspecified</td>
 <td align="left">Sawtimber</td>
-<td align="right">36.05</td>
+<td align="right">33.98</td>
 </tr>
 <tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Maple Unspecified</td>
+<td align="left">Sawtimber</td>
+<td align="right">35.14</td>
+</tr>
+<tr class="odd">
 <td align="left">WI</td>
+<td align="left">3</td>
 <td align="left">Maple Unspecified</td>
 <td align="left">Sawtimber</td>
 <td align="right">114.44</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Mixed Hdwd</td>
 <td align="left">Sawtimber</td>
-<td align="right">89.35</td>
+<td align="right">68.50</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Mixed Hdwd</td>
+<td align="left">Sawtimber</td>
+<td align="right">103.39</td>
 </tr>
 <tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Mixed Hdwd</td>
+<td align="left">Sawtimber</td>
+<td align="right">108.08</td>
+</tr>
+<tr class="odd">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Mixed Hdwd</td>
 <td align="left">Sawtimber</td>
 <td align="right">22.03</td>
 </tr>
-<tr class="odd">
-<td align="left">WI</td>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
 <td align="left">Mixed Hdwd</td>
 <td align="left">Sawtimber</td>
-<td align="right">90.03</td>
+<td align="right">22.64</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Mixed Hdwd</td>
+<td align="left">Sawtimber</td>
+<td align="right">71.11</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Mixed Hdwd</td>
+<td align="left">Sawtimber</td>
+<td align="right">101.48</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Mixed Hdwd</td>
+<td align="left">Sawtimber</td>
+<td align="right">92.90</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Mixed Sftwd</td>
 <td align="left">Sawtimber</td>
-<td align="right">25.54</td>
+<td align="right">25.57</td>
 </tr>
 <tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Mixed Sftwd</td>
+<td align="left">Sawtimber</td>
+<td align="right">9.72</td>
+</tr>
+<tr class="even">
 <td align="left">MN</td>
+<td align="left">2</td>
 <td align="left">Mixed Sftwd</td>
 <td align="left">Sawtimber</td>
 <td align="right">31.82</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">WI</td>
+<td align="left">1</td>
 <td align="left">Mixed Sftwd</td>
 <td align="left">Sawtimber</td>
-<td align="right">100.76</td>
+<td align="right">41.67</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Mixed Sftwd</td>
+<td align="left">Sawtimber</td>
+<td align="right">107.30</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Mixed Sftwd</td>
+<td align="left">Sawtimber</td>
+<td align="right">141.25</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">Pulpwood</td>
+<td align="right">66.67</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">2</td>
 <td align="left">NA</td>
 <td align="left">Pulpwood</td>
-<td align="right">39.05</td>
+<td align="right">35.38</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">NA</td>
+<td align="left">Pulpwood</td>
+<td align="right">28.73</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">NA</td>
+<td align="left">Pulpwood</td>
+<td align="right">27.81</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
+<td align="left">2</td>
 <td align="left">NA</td>
 <td align="left">Pulpwood</td>
-<td align="right">58.52</td>
+<td align="right">57.58</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
+<td align="left">3</td>
 <td align="left">NA</td>
 <td align="left">Pulpwood</td>
 <td align="right">30.40</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Oak</td>
 <td align="left">Pulpwood</td>
-<td align="right">18.64</td>
+<td align="right">19.57</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Oak</td>
+<td align="left">Pulpwood</td>
+<td align="right">18.40</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Oak</td>
+<td align="left">Pulpwood</td>
+<td align="right">19.05</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Oak</td>
 <td align="left">Pulpwood</td>
-<td align="right">19.16</td>
+<td align="right">17.18</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Oak</td>
 <td align="left">Sawtimber</td>
-<td align="right">56.24</td>
+<td align="right">67.72</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Oak</td>
+<td align="left">Pulpwood</td>
+<td align="right">16.18</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">12.50</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
+<td align="left">1</td>
 <td align="left">Oak</td>
 <td align="left">Pulpwood</td>
-<td align="right">19.11</td>
+<td align="right">14.88</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Oak</td>
+<td align="left">Pulpwood</td>
+<td align="right">24.38</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Oak</td>
+<td align="left">Pulpwood</td>
+<td align="right">18.08</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
 <td align="left">Oak</td>
 <td align="left">Sawtimber</td>
 <td align="right">41.67</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Oak Unspecified</td>
 <td align="left">Sawtimber</td>
-<td align="right">82.40</td>
+<td align="right">78.26</td>
 </tr>
 <tr class="even">
-<td align="left">MN</td>
+<td align="left">MI</td>
+<td align="left">3</td>
 <td align="left">Oak Unspecified</td>
 <td align="left">Sawtimber</td>
-<td align="right">56.08</td>
+<td align="right">54.22</td>
 </tr>
 <tr class="odd">
-<td align="left">WI</td>
+<td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Oak Unspecified</td>
 <td align="left">Sawtimber</td>
-<td align="right">128.52</td>
-</tr>
-<tr class="even">
-<td align="left">MI</td>
-<td align="left">Other Hardwood</td>
-<td align="left">Pulpwood</td>
-<td align="right">15.80</td>
-</tr>
-<tr class="odd">
-<td align="left">MI</td>
-<td align="left">Other Hardwood</td>
-<td align="left">Sawtimber</td>
-<td align="right">72.02</td>
+<td align="right">68.56</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
-<td align="left">Other Hardwood</td>
-<td align="left">Pulpwood</td>
-<td align="right">9.22</td>
+<td align="left">2</td>
+<td align="left">Oak Unspecified</td>
+<td align="left">Sawtimber</td>
+<td align="right">42.14</td>
 </tr>
 <tr class="odd">
-<td align="left">MN</td>
-<td align="left">Other Hardwood</td>
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Oak Unspecified</td>
 <td align="left">Sawtimber</td>
-<td align="right">33.17</td>
+<td align="right">62.22</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
-<td align="left">Other Hardwood</td>
-<td align="left">Pulpwood</td>
-<td align="right">19.98</td>
+<td align="left">2</td>
+<td align="left">Oak Unspecified</td>
+<td align="left">Sawtimber</td>
+<td align="right">126.76</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
-<td align="left">Other Hardwood</td>
+<td align="left">3</td>
+<td align="left">Oak Unspecified</td>
 <td align="left">Sawtimber</td>
-<td align="right">65.36</td>
+<td align="right">129.29</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">14.33</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">70.07</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">16.17</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">76.29</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">17.12</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">65.89</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">7.45</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">47.95</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">10.59</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">32.32</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">16.57</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">49.39</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">20.05</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">70.96</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">20.67</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Other Hardwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">64.78</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Other Hdwd</td>
 <td align="left">Pulpwood</td>
-<td align="right">24.65</td>
+<td align="right">21.24</td>
 </tr>
 <tr class="odd">
-<td align="left">MN</td>
+<td align="left">MI</td>
+<td align="left">2</td>
 <td align="left">Other Hdwd</td>
 <td align="left">Pulpwood</td>
-<td align="right">11.38</td>
+<td align="right">26.23</td>
 </tr>
 <tr class="even">
-<td align="left">WI</td>
+<td align="left">MI</td>
+<td align="left">3</td>
 <td align="left">Other Hdwd</td>
 <td align="left">Pulpwood</td>
-<td align="right">25.96</td>
+<td align="right">25.75</td>
 </tr>
 <tr class="odd">
-<td align="left">MI</td>
-<td align="left">Other Sfwd</td>
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Other Hdwd</td>
 <td align="left">Pulpwood</td>
-<td align="right">25.36</td>
+<td align="right">10.85</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
-<td align="left">Other Sfwd</td>
+<td align="left">2</td>
+<td align="left">Other Hdwd</td>
 <td align="left">Pulpwood</td>
-<td align="right">7.10</td>
+<td align="right">11.39</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
-<td align="left">Other Sfwd</td>
+<td align="left">1</td>
+<td align="left">Other Hdwd</td>
 <td align="left">Pulpwood</td>
-<td align="right">27.91</td>
+<td align="right">16.69</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Other Hdwd</td>
+<td align="left">Pulpwood</td>
+<td align="right">27.13</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Other Hdwd</td>
+<td align="left">Pulpwood</td>
+<td align="right">25.60</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
-<td align="left">Other Softwood</td>
+<td align="left">1</td>
+<td align="left">Other Sfwd</td>
 <td align="left">Pulpwood</td>
-<td align="right">15.48</td>
+<td align="right">24.90</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Other Sfwd</td>
+<td align="left">Pulpwood</td>
+<td align="right">21.98</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Other Sfwd</td>
+<td align="left">Pulpwood</td>
+<td align="right">27.35</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Other Sfwd</td>
+<td align="left">Pulpwood</td>
+<td align="right">14.25</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Other Sfwd</td>
+<td align="left">Pulpwood</td>
+<td align="right">7.00</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Other Sfwd</td>
+<td align="left">Pulpwood</td>
+<td align="right">36.16</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Other Sfwd</td>
+<td align="left">Pulpwood</td>
+<td align="right">26.18</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Other Sfwd</td>
+<td align="left">Pulpwood</td>
+<td align="right">28.82</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">Other Softwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">12.43</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Other Softwood</td>
 <td align="left">Sawtimber</td>
-<td align="right">23.23</td>
+<td align="right">21.65</td>
 </tr>
 <tr class="even">
-<td align="left">MN</td>
+<td align="left">MI</td>
+<td align="left">2</td>
 <td align="left">Other Softwood</td>
 <td align="left">Pulpwood</td>
-<td align="right">9.61</td>
+<td align="right">16.40</td>
 </tr>
 <tr class="odd">
-<td align="left">MN</td>
+<td align="left">MI</td>
+<td align="left">2</td>
 <td align="left">Other Softwood</td>
 <td align="left">Sawtimber</td>
-<td align="right">29.40</td>
+<td align="right">26.99</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Other Softwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">18.07</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Other Softwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">21.12</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Other Softwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">12.76</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Other Softwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">41.67</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Other Softwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">9.50</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Other Softwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">30.26</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
+<td align="left">1</td>
 <td align="left">Other Softwood</td>
 <td align="left">Pulpwood</td>
-<td align="right">17.17</td>
+<td align="right">13.11</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
+<td align="left">1</td>
 <td align="left">Other Softwood</td>
 <td align="left">Sawtimber</td>
 <td align="right">34.38</td>
 </tr>
 <tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Other Softwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">16.77</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Other Softwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">34.95</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Other Softwood</td>
+<td align="left">Pulpwood</td>
+<td align="right">17.88</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Other Softwood</td>
+<td align="left">Sawtimber</td>
+<td align="right">37.50</td>
+</tr>
+<tr class="even">
 <td align="left">MN</td>
+<td align="left">2</td>
 <td align="left">Pine</td>
 <td align="left">Sawtimber</td>
 <td align="right">43.05</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Pine Unspecified</td>
 <td align="left">Sawtimber</td>
-<td align="right">87.46</td>
+<td align="right">66.37</td>
 </tr>
 <tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Pine Unspecified</td>
+<td align="left">Sawtimber</td>
+<td align="right">91.94</td>
+</tr>
+<tr class="odd">
 <td align="left">MN</td>
+<td align="left">2</td>
 <td align="left">Pine Unspecified</td>
 <td align="left">Sawtimber</td>
 <td align="right">49.16</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">WI</td>
+<td align="left">3</td>
 <td align="left">Pine Unspecified</td>
 <td align="left">Sawtimber</td>
 <td align="right">55.56</td>
 </tr>
-<tr class="even">
-<td align="left">MI</td>
-<td align="left">Red Oak</td>
-<td align="left">Sawtimber</td>
-<td align="right">122.92</td>
-</tr>
-<tr class="odd">
-<td align="left">MN</td>
-<td align="left">Red Oak</td>
-<td align="left">Sawtimber</td>
-<td align="right">135.80</td>
-</tr>
-<tr class="even">
-<td align="left">WI</td>
-<td align="left">Red Oak</td>
-<td align="left">Sawtimber</td>
-<td align="right">154.99</td>
-</tr>
 <tr class="odd">
 <td align="left">MI</td>
-<td align="left">Red Pine</td>
-<td align="left">Pulpwood</td>
-<td align="right">52.39</td>
+<td align="left">1</td>
+<td align="left">Red Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">123.69</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
-<td align="left">Red Pine</td>
+<td align="left">2</td>
+<td align="left">Red Oak</td>
 <td align="left">Sawtimber</td>
-<td align="right">80.26</td>
+<td align="right">140.89</td>
 </tr>
 <tr class="odd">
-<td align="left">MN</td>
-<td align="left">Red Pine</td>
-<td align="left">Pulpwood</td>
-<td align="right">31.96</td>
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Red Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">135.79</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
-<td align="left">Red Pine</td>
+<td align="left">1</td>
+<td align="left">Red Oak</td>
 <td align="left">Sawtimber</td>
-<td align="right">56.02</td>
-</tr>
-<tr class="odd">
-<td align="left">WI</td>
-<td align="left">Red Pine</td>
-<td align="left">Pulpwood</td>
-<td align="right">46.87</td>
-</tr>
-<tr class="even">
-<td align="left">WI</td>
-<td align="left">Red Pine</td>
-<td align="left">Sawtimber</td>
-<td align="right">53.29</td>
+<td align="right">151.61</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Red Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">62.06</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Red Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">152.10</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Red Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">146.20</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Red Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">150.59</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">Red Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">48.98</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">Red Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">81.46</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Red Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">59.56</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Red Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">82.93</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Red Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">48.50</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Red Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">74.51</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Red Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">28.15</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Red Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">32.78</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Red Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">31.08</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Red Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">56.71</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Red Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">36.82</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Red Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">44.42</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Red Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">45.00</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Red Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">54.67</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Red Pine</td>
+<td align="left">Pulpwood</td>
+<td align="right">48.52</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Red Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">51.33</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Scrub Oak</td>
 <td align="left">Sawtimber</td>
-<td align="right">40.47</td>
+<td align="right">37.19</td>
 </tr>
 <tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Scrub Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">43.75</td>
+</tr>
+<tr class="odd">
 <td align="left">WI</td>
+<td align="left">3</td>
 <td align="left">Scrub Oak</td>
 <td align="left">Sawtimber</td>
 <td align="right">106.25</td>
 </tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">Soft Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">66.16</td>
+</tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">2</td>
 <td align="left">Soft Maple</td>
 <td align="left">Sawtimber</td>
-<td align="right">75.20</td>
-</tr>
-<tr class="even">
-<td align="left">MN</td>
-<td align="left">Soft Maple</td>
-<td align="left">Sawtimber</td>
-<td align="right">39.21</td>
-</tr>
-<tr class="odd">
-<td align="left">WI</td>
-<td align="left">Soft Maple</td>
-<td align="left">Sawtimber</td>
-<td align="right">87.16</td>
+<td align="right">77.85</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
-<td align="left">Spruce</td>
+<td align="left">3</td>
+<td align="left">Soft Maple</td>
 <td align="left">Sawtimber</td>
-<td align="right">24.05</td>
+<td align="right">94.49</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
-<td align="left">Spruce</td>
+<td align="left">1</td>
+<td align="left">Soft Maple</td>
 <td align="left">Sawtimber</td>
-<td align="right">29.04</td>
+<td align="right">51.00</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Soft Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">32.46</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Soft Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">77.25</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Soft Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">89.35</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Soft Maple</td>
+<td align="left">Sawtimber</td>
+<td align="right">88.42</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Spruce</td>
 <td align="left">Sawtimber</td>
-<td align="right">35.24</td>
+<td align="right">27.63</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Spruce</td>
+<td align="left">Sawtimber</td>
+<td align="right">28.16</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Spruce</td>
+<td align="left">Sawtimber</td>
+<td align="right">23.99</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Spruce</td>
+<td align="left">Sawtimber</td>
+<td align="right">13.86</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Spruce</td>
+<td align="left">Sawtimber</td>
+<td align="right">31.54</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Spruce</td>
+<td align="left">Sawtimber</td>
+<td align="right">31.85</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Spruce</td>
+<td align="left">Sawtimber</td>
+<td align="right">31.65</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Spruce</td>
+<td align="left">Sawtimber</td>
+<td align="right">35.49</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Spruce Unspecified</td>
 <td align="left">Sawtimber</td>
-<td align="right">43.11</td>
+<td align="right">53.72</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Spruce Unspecified</td>
+<td align="left">Sawtimber</td>
+<td align="right">16.15</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
+<td align="left">2</td>
 <td align="left">Spruce Unspecified</td>
 <td align="left">Sawtimber</td>
 <td align="right">27.08</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Spruce/Fir</td>
 <td align="left">Pulpwood</td>
-<td align="right">24.26</td>
-</tr>
-<tr class="even">
-<td align="left">MN</td>
-<td align="left">Spruce/Fir</td>
-<td align="left">Pulpwood</td>
-<td align="right">17.05</td>
-</tr>
-<tr class="odd">
-<td align="left">WI</td>
-<td align="left">Spruce/Fir</td>
-<td align="left">Pulpwood</td>
-<td align="right">20.37</td>
+<td align="right">18.82</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
-<td align="left">White Ash</td>
-<td align="left">Sawtimber</td>
-<td align="right">55.53</td>
+<td align="left">2</td>
+<td align="left">Spruce/Fir</td>
+<td align="left">Pulpwood</td>
+<td align="right">23.05</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Spruce/Fir</td>
+<td align="left">Pulpwood</td>
+<td align="right">26.16</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">Spruce/Fir</td>
+<td align="left">Pulpwood</td>
+<td align="right">12.05</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Spruce/Fir</td>
+<td align="left">Pulpwood</td>
+<td align="right">18.89</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Spruce/Fir</td>
+<td align="left">Pulpwood</td>
+<td align="right">20.52</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">Spruce/Fir</td>
+<td align="left">Pulpwood</td>
+<td align="right">21.10</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Spruce/Fir</td>
+<td align="left">Pulpwood</td>
+<td align="right">19.86</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">White Ash</td>
+<td align="left">Sawtimber</td>
+<td align="right">55.18</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">White Ash</td>
+<td align="left">Sawtimber</td>
+<td align="right">37.50</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">White Ash</td>
+<td align="left">Sawtimber</td>
+<td align="right">95.83</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">White Ash</td>
 <td align="left">Sawtimber</td>
 <td align="right">53.54</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">WI</td>
+<td align="left">2</td>
 <td align="left">White Ash</td>
 <td align="left">Sawtimber</td>
-<td align="right">112.51</td>
+<td align="right">114.46</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">White Ash</td>
+<td align="left">Sawtimber</td>
+<td align="right">82.21</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">White Birch</td>
 <td align="left">Pulpwood</td>
-<td align="right">16.62</td>
+<td align="right">12.03</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">White Birch</td>
 <td align="left">Sawtimber</td>
-<td align="right">58.02</td>
+<td align="right">44.23</td>
 </tr>
 <tr class="odd">
-<td align="left">MN</td>
+<td align="left">MI</td>
+<td align="left">2</td>
 <td align="left">White Birch</td>
 <td align="left">Pulpwood</td>
-<td align="right">11.29</td>
+<td align="right">15.45</td>
 </tr>
 <tr class="even">
-<td align="left">MN</td>
+<td align="left">MI</td>
+<td align="left">2</td>
 <td align="left">White Birch</td>
 <td align="left">Sawtimber</td>
-<td align="right">23.17</td>
+<td align="right">65.30</td>
 </tr>
 <tr class="odd">
-<td align="left">WI</td>
+<td align="left">MI</td>
+<td align="left">3</td>
 <td align="left">White Birch</td>
 <td align="left">Pulpwood</td>
-<td align="right">22.92</td>
+<td align="right">19.91</td>
 </tr>
 <tr class="even">
-<td align="left">WI</td>
+<td align="left">MI</td>
+<td align="left">3</td>
 <td align="left">White Birch</td>
 <td align="left">Sawtimber</td>
-<td align="right">80.50</td>
-</tr>
-<tr class="odd">
-<td align="left">MI</td>
-<td align="left">White Oak</td>
-<td align="left">Sawtimber</td>
-<td align="right">41.39</td>
-</tr>
-<tr class="even">
-<td align="left">MN</td>
-<td align="left">White Oak</td>
-<td align="left">Sawtimber</td>
-<td align="right">83.99</td>
-</tr>
-<tr class="odd">
-<td align="left">WI</td>
-<td align="left">White Oak</td>
-<td align="left">Sawtimber</td>
-<td align="right">116.45</td>
-</tr>
-<tr class="even">
-<td align="left">MI</td>
-<td align="left">White Pine</td>
-<td align="left">Sawtimber</td>
-<td align="right">46.44</td>
+<td align="right">59.99</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
-<td align="left">White Pine</td>
+<td align="left">1</td>
+<td align="left">White Birch</td>
+<td align="left">Pulpwood</td>
+<td align="right">12.69</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">White Birch</td>
 <td align="left">Sawtimber</td>
-<td align="right">29.76</td>
+<td align="right">25.27</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">White Birch</td>
+<td align="left">Pulpwood</td>
+<td align="right">12.27</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">White Birch</td>
+<td align="left">Sawtimber</td>
+<td align="right">27.92</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">White Birch</td>
+<td align="left">Pulpwood</td>
+<td align="right">15.77</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
-<td align="left">White Pine</td>
+<td align="left">1</td>
+<td align="left">White Birch</td>
 <td align="left">Sawtimber</td>
-<td align="right">55.03</td>
+<td align="right">63.07</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">White Birch</td>
+<td align="left">Pulpwood</td>
+<td align="right">23.78</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">White Birch</td>
+<td align="left">Sawtimber</td>
+<td align="right">82.98</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">White Birch</td>
+<td align="left">Pulpwood</td>
+<td align="right">22.75</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">White Birch</td>
+<td align="left">Sawtimber</td>
+<td align="right">71.65</td>
 </tr>
 <tr class="odd">
 <td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">White Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">40.73</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">White Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">53.12</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">White Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">50.99</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">White Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">89.29</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">White Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">42.91</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">White Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">74.33</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">White Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">69.81</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">White Oak</td>
+<td align="left">Sawtimber</td>
+<td align="right">116.39</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">1</td>
+<td align="left">White Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">42.17</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">White Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">46.77</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">White Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">51.43</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">White Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">21.52</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">White Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">41.87</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">White Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">48.39</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">2</td>
+<td align="left">White Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">54.55</td>
+</tr>
+<tr class="even">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">White Pine</td>
+<td align="left">Sawtimber</td>
+<td align="right">55.51</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">White Spruce</td>
 <td align="left">Sawtimber</td>
-<td align="right">27.56</td>
+<td align="right">30.77</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">White Spruce</td>
+<td align="left">Sawtimber</td>
+<td align="right">17.92</td>
+</tr>
+<tr class="odd">
+<td align="left">MN</td>
+<td align="left">1</td>
+<td align="left">White Spruce</td>
+<td align="left">Sawtimber</td>
+<td align="right">6.81</td>
 </tr>
 <tr class="even">
 <td align="left">MN</td>
+<td align="left">2</td>
 <td align="left">White Spruce</td>
 <td align="left">Sawtimber</td>
-<td align="right">30.94</td>
+<td align="right">32.17</td>
 </tr>
 <tr class="odd">
 <td align="left">WI</td>
+<td align="left">2</td>
 <td align="left">White Spruce</td>
 <td align="left">Sawtimber</td>
 <td align="right">52.36</td>
 </tr>
 <tr class="even">
 <td align="left">MI</td>
+<td align="left">1</td>
 <td align="left">Yellow Birch</td>
 <td align="left">Sawtimber</td>
-<td align="right">97.05</td>
+<td align="right">83.61</td>
+</tr>
+<tr class="odd">
+<td align="left">MI</td>
+<td align="left">2</td>
+<td align="left">Yellow Birch</td>
+<td align="left">Sawtimber</td>
+<td align="right">97.28</td>
+</tr>
+<tr class="even">
+<td align="left">MI</td>
+<td align="left">3</td>
+<td align="left">Yellow Birch</td>
+<td align="left">Sawtimber</td>
+<td align="right">104.06</td>
 </tr>
 <tr class="odd">
 <td align="left">MN</td>
+<td align="left">1</td>
 <td align="left">Yellow Birch</td>
 <td align="left">Sawtimber</td>
-<td align="right">NA</td>
+<td align="right">62.37</td>
+</tr>
+<tr class="even">
+<td align="left">MN</td>
+<td align="left">2</td>
+<td align="left">Yellow Birch</td>
+<td align="left">Sawtimber</td>
+<td align="right">37.17</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">1</td>
+<td align="left">Yellow Birch</td>
+<td align="left">Sawtimber</td>
+<td align="right">75.02</td>
 </tr>
 <tr class="even">
 <td align="left">WI</td>
+<td align="left">2</td>
 <td align="left">Yellow Birch</td>
 <td align="left">Sawtimber</td>
-<td align="right">91.03</td>
+<td align="right">93.31</td>
+</tr>
+<tr class="odd">
+<td align="left">WI</td>
+<td align="left">3</td>
+<td align="left">Yellow Birch</td>
+<td align="left">Sawtimber</td>
+<td align="right">81.95</td>
 </tr>
 </tbody>
 </table>
@@ -10766,6 +12037,17 @@ Species</caption>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
 <pre class="r"><code>NA</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="create-a-crosswalk-between-tmn-price-regions-and-counties-for-mn-mi-and-wi" class="section level1">
+<h1>create a crosswalk between tmn price regions and counties for MN,
+MI, and WI</h1>
+</div>
+<div id="including-the-fia-survey-unit-codes" class="section level1">
+<h1>including the FIA survey unit codes</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -10844,7 +12126,7 @@ df &lt;- left_join(df, tmnPrices, by = c(&#39;SPGRPCD&#39; = &#39;Species&#39;))
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTkNBIFRpbWJlcjogUGlsb3QgQWNjb3VudHMgZm9yIHRoZSBHcmVhdCBMYWtlcyBhbmQgU291dGhlcm4gVS5TLiIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpgYGB7ciwgcmVzdWx0cyA9ICdoaWRlJywgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZWNobz1GQUxTRX0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoa25pdHIpCgojIEZ1bmN0aW9uIHRvIGNvbnZlcnQgcHJpY2UgZnJvbSBjb3JkcyB0byBNQkYKY29udmVydF9wcmljZV9jb3JkX21iZiA8LSBmdW5jdGlvbihwcmljZV9wZXJfY29yZCkgewogICMgQ29udmVyc2lvbiBmYWN0b3JzCiAgYm9hcmRfZmVldF9wZXJfY29yZCA8LSA1MDAKICBib2FyZF9mZWV0X3Blcl9tYmYgPC0gMTAwMAogIAogICMgQ2FsY3VsYXRlIHByaWNlIHBlciBib2FyZCBmb290CiAgcHJpY2VfcGVyX2JvYXJkX2Zvb3QgPC0gcHJpY2VfcGVyX2NvcmQgLyBib2FyZF9mZWV0X3Blcl9jb3JkCiAgCiAgIyBDYWxjdWxhdGUgcHJpY2UgcGVyIE1CRgogIHByaWNlX3Blcl9tYmYgPC0gcHJpY2VfcGVyX2JvYXJkX2Zvb3QgKiBib2FyZF9mZWV0X3Blcl9tYmYKICAKICByZXR1cm4ocHJpY2VfcGVyX21iZikKfQoKIyBGdW5jdGlvbiB0byBjb252ZXJ0IHByaWNlIGZyb20gTUJGIHRvIHRvbnMKY29udmVydF9wcmljZV9tYmZfdG9ucyA8LSBmdW5jdGlvbihwcmljZV9wZXJfbWJmKSB7CiAgIyBDb252ZXJzaW9uIGZhY3RvcgogIHRvbnNfcGVyX21iZiA8LSAyLjQKICAKICAjIENhbGN1bGF0ZSBwcmljZSBwZXIgdG9uCiAgcHJpY2VfcGVyX3RvbiA8LSBwcmljZV9wZXJfbWJmIC8gdG9uc19wZXJfbWJmCiAgCiAgcmV0dXJuKHByaWNlX3Blcl90b24pCn0KYGBgCgojIERlZmluZSB0aGUgc3BlY2llcyBncm91cHMgdG8gYmUgaW5jbHVkZWQgaW4gdGhlIHRpbWJlciBhc3NldCBhY2NvdW50IHBpbG90CgojIyBMb2FkIEZJQSBkYXRhCgpGSUEgZGF0YSBpcyBmcm9tIHRoZSAyMDIwIGV2YWx1YXRpb24gd2hpY2ggaW5jbHVkZXMgb2JzZXJ2YXRpb24gbWFkZSBmcm9tIDIwMTUtMjAyMAoKYGBge3IsIGVjaG89Rn0Kc3RhdGVOYW1lIDwtIGMoJzEnID0gJ0FsYWJhbWEnLAogICAgICAgICAgICAgICAgICc1JyA9ICdBcmthbnNhcycsCiAgICAgICAgICAgICAgICAgJzEyJyA9ICdGbG9yaWRhJywKICAgICAgICAgICAgICAgICAnMTMnID0gJ0dlb3JnaWEnLAogICAgICAgICAgICAgICAgICcyMicgPSAnTG91aXNpYW5hJywKICAgICAgICAgICAgICAgICAnMjYnID0gJ01pY2hpZ2FuJywKICAgICAgICAgICAgICAgICAnMjcnID0gJ01pbm5lc290YScsCiAgICAgICAgICAgICAgICAgJzI4JyA9ICdNaXNzaXNzaXBwaScsCiAgICAgICAgICAgICAgICAgJzM3JyA9ICdOb3J0aCBDYXJvbGluYScsCiAgICAgICAgICAgICAgICAgJzQ1JyA9ICdTb3V0aCBDYXJvbGluYScsCiAgICAgICAgICAgICAgICAgJzQ3JyA9ICdUZW5uZXNzZWUnLAogICAgICAgICAgICAgICAgICc0OCcgPSAnVGV4YXMnLAogICAgICAgICAgICAgICAgICc1NScgPSAnV2lzY29uc2luJywKICAgICAgICAgICAgICAgICAnNTEnID0gJ1ZpcmdpbmlhJykKCnN0YXRlUmVnaW9uIDwtIGMoJ0FsYWJhbWEnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnQXJrYW5zYXMnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnRmxvcmlkYScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdHZW9yZ2lhJyA9ICdTb3V0aCcsCiAgICAgICAgICAgICAgICAgJ0xvdWlzaWFuYScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdNaXNzaXNzaXBwaScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdOb3J0aCBDYXJvbGluYScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdTb3V0aCBDYXJvbGluYScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdUZW5uZXNzZWUnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnVGV4YXMnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnVmlyZ2luaWEnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnTWljaGlnYW4nID0gJ0dyZWF0IExha2VzJywKICAgICAgICAgICAgICAgICAnTWlubmVzb3RhJyA9ICdHcmVhdCBMYWtlcycsCiAgICAgICAgICAgICAgICAgJ1dpc2NvbnNpbicgPSAnR3JlYXQgTGFrZXMnKQoKc3Bnci5hcmVhIDwtIHJlYWQuY3N2KCJuY2Etc3BlY2llcy1ncm91cC1saXN0LmNzdiIpICU+JQogIGdyb3VwX2J5KFNQR1JQTk0sIENPVU5UWUNELCBTVEFURUNELCBVTklUQ0QpICU+JQogIHN1bW1hcml6ZShBUkVBID0gc3VtKEFSRUFUT1QsIG5hLnJtID0gVCksIC5ncm91cHMgPSAnZHJvcCcpICU+JQogIG11dGF0ZShTVEFURU5NID0gc3RhdGVOYW1lW2FzLmNoYXJhY3RlcihTVEFURUNEKV0sCiAgICAgICAgIFJFR0lPTiA9IHN0YXRlUmVnaW9uW1NUQVRFTk1dKQoKc3Bnci5saXN0IDwtIHNwZ3IuYXJlYSAlPiUKICBncm91cF9ieShTUEdSUE5NLCBSRUdJT04pICU+JQogIHN1bW1hcml6ZShBUkVBID0gc3VtKEFSRUEsIG5hLnJtID0gVCkgLyAxMDAwLCAuZ3JvdXBzID0gJ2Ryb3AnKSAlPiUKICBhcnJhbmdlKGRlc2MoUkVHSU9OKSwgZGVzYyhBUkVBKSkKCmthYmxlKHNwZ3IubGlzdCwKICAgICAgY2FwdGlvbiA9ICJUaW1iZXIgQWNjb3VudCBTcGVjaWVzIEdyb3VwcyBieSBSZWdpb24iLAogICAgICBjb2wubmFtZXMgPSBjKCJTcGVjaWVzIEdyb3VwIiwgIlJlZ2lvbiIsICJBcmVhICgxMDAwIGFjcmVzKSIpLAogICAgICBhbGlnbiA9ICJsY2MiLCBkaWdpdHMgPSAwKQpgYGAKCiMgbG9hZCB0aGUgYmlvbWFzcyBkYXRhIGZyb20gRklBCgoKYGBge3J9CgpiaW9tYXNzIDwtIHJlYWQuY3N2KCJuY2EtdGltYmVyLWJpb21hc3MuY3N2IikgJT4lCiAgc2VsZWN0KC1jKCdSRVNFUlZDRCcsICdFVkFMSUQnKSkKCm5hbWVzKGJpb21hc3MpIDwtIGMoJ1NUQVRFTk0nLCAnU1RBVEVDRCcsICdDT1VOVFlOTScsICdDT1VOVFlDRCcsICdTUEdSUENEJywKICAgICAgICAgICAgICAgICAgICAnU1BHUlBOTScsJ1NQQ0xBU1MnLCAnVU5JVENEJywnMycsICc0JywgJzUnLCAnNicsCiAgICAgICAgICAgICAgICAgICAgJzcnLCAnOCcsICc5JywgJzEwJywgJzExJywgJzEyJywgJzEzJywgJzE0JywgJzE1JywKICAgICAgICAgICAgICAgICAgICAnMTYnLCAnMTcnLCAnMTgnLCAnMTknLCAnMjAnLCAnMjEnKQoKc2l6ZUNsYXNzIDwtIGMoJzMnID0gJzUtNi45IGluY2hlcycsCiAgICAgICAgICAgICAgICc0JyA9ICc3LTguOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnNScgPSAnOS0xMC45IGluY2hlcycsCiAgICAgICAgICAgICAgICc2JyA9ICcxMS0xMi45IGluY2hlcycsCiAgICAgICAgICAgICAgICc3JyA9ICcxMy0xNC45IGluY2hlcycsCiAgICAgICAgICAgICAgICc4JyA9ICcxNS0xNi45IGluY2hlcycsCiAgICAgICAgICAgICAgICc5JyA9ICcxNy0xOC45IGluY2hlcycsCiAgICAgICAgICAgICAgICcxMCcgPSAnMTktMjAuOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnMTEnID0gJzIxLTIyLjkgaW5jaGVzJywKICAgICAgICAgICAgICAgJzEyJyA9ICcyMy0yNC45IGluY2hlcycsCiAgICAgICAgICAgICAgICcxMycgPSAnMjUtMjYuOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnMTQnID0gJzI3LTI4LjkgaW5jaGVzJywKICAgICAgICAgICAgICAgJzE1JyA9ICcyOS0zMC45IGluY2hlcycsCiAgICAgICAgICAgICAgICcxNicgPSAnMzEtMzIuOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnMTcnID0gJzMzLTM0LjkgaW5jaGVzJywKICAgICAgICAgICAgICAgJzE4JyA9ICczNS0zNi45IGluY2hlcycsCiAgICAgICAgICAgICAgICcxOScgPSAnMzctMzguOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnMjAnID0gJzM5LTQwLjkgaW5jaGVzJywKICAgICAgICAgICAgICAgJzIxJyA9ICc0MSsgaW5jaGVzJykKCmJpb21hc3MgPC0gYmlvbWFzcyAlPiUKICBwaXZvdF9sb25nZXIoY29scyA9IDk6MjcsCiAgICAgICAgICAgICAgICBuYW1lc190byA9ICdzaXplQ2xhc3NDb2RlJywKICAgICAgICAgICAgICAgIHZhbHVlc190byA9ICdiaW9tYXNzJykgJT4lCiAgbXV0YXRlKGJpb21hc3MgPSBpZmVsc2UoaXMubmEoYmlvbWFzcyksIDAsIGJpb21hc3MpLAogICAgICAgICBzaXplQ2xhc3MgPSBzaXplQ2xhc3Nbc2l6ZUNsYXNzQ29kZV0pCgoKYGBgCgpgYGB7cn0KIyBjcmVhdGUgYSB0YWJsZSB0aGF0IHNob3dzIHRoZSBkaXN0cmlidXRpb24gb2YgYmlvbWFzcyBieSBzaXplIGNsYXNzIGFuZCBzdGF0ZQpiaW9tYXNzLnRhYmxlIDwtIGJpb21hc3MgJT4lCiAgZ3JvdXBfYnkoU1RBVEVOTSwgU1BHUlBOTSwgc2l6ZUNsYXNzKSAlPiUKICBzdW1tYXJpc2UodG90YWxCaW9tYXNzID0gcm91bmQoc3VtKGJpb21hc3MpLzEwMDAwMDAsIGRpZ2l0cyA9IDEpLCAuZ3JvdXBzID0gJ2Ryb3AnKSAlPiUKICBwaXZvdF93aWRlcihuYW1lc19mcm9tID0gc2l6ZUNsYXNzLCB2YWx1ZXNfZnJvbSA9IHRvdGFsQmlvbWFzcykgJT4lCiAgcmVuYW1lKCdTdGF0ZScgPSBTVEFURU5NLCAnU3BlY2llcyBHcm91cCcgPSBTUEdSUE5NKSAlPiUKICBzZWxlY3QoU3RhdGUsICdTcGVjaWVzIEdyb3VwJywgJzUtNi45IGluY2hlcycsICc3LTguOSBpbmNoZXMnLCAnOS0xMC45IGluY2hlcycsCiAgICAgICAgICcxMS0xMi45IGluY2hlcycsICcxMy0xNC45IGluY2hlcycsICcxNS0xNi45IGluY2hlcycsICcxNy0xOC45IGluY2hlcycsCiAgICAgICAgICcxOS0yMC45IGluY2hlcycsICcyMS0yMi45IGluY2hlcycsICcyMy0yNC45IGluY2hlcycsICcyNS0yNi45IGluY2hlcycsCiAgICAgICAgICcyNy0yOC45IGluY2hlcycsICcyOS0zMC45IGluY2hlcycsICczMS0zMi45IGluY2hlcycsICczMy0zNC45IGluY2hlcycsCiAgICAgICAgICczNS0zNi45IGluY2hlcycsICczNy0zOC45IGluY2hlcycsICczOS00MC45IGluY2hlcycsICc0MSsgaW5jaGVzJykKCmthYmxlKGJpb21hc3MudGFibGUsCiAgICAgIGNhcHRpb24gPSAiVGltYmVyIEFjY291bnQgQmlvbWFzcyBieSBTcGVjaWVzIEdyb3VwLCBTaXplIENsYXNzLCBhbmQgU3RhdGUvbihtaWxsaW9uIHRvbnMpIiwKICAgICAgZGlnaXRzID0gMSkKYGBgCgojIE9yZ2FuaXplIHRoZSBwcmljZSBkYXRhCgoKYGBge3J9CgpsaWJyYXJ5KHJlYWR4bCkKdG1uUHJpY2VzIDwtIHN1cHByZXNzV2FybmluZ3MocmVhZF9leGNlbCgiVE1OX1ByaWNlX1Nlcmllc19TZXB0ZW1iZXIyMDIzLnhsc3giKSkgJT4lCiAgZmlsdGVyKE1hcmtldCA9PSAnU3R1bXBhZ2UnLAogICAgICAgICBSZWdpb24gJWluJSBjKCdNSScsJ01OJywnV0knKSwKICAgICAgICAgU3BlY2llcyAhPSAnU2F3dGltYmVyICgkL21iZiknKSAlPiUKICByZW5hbWUoU3RhdGUgPSBgUmVnaW9uYCwKICAgICAgICAgcHJpY2VSYXcgPSBgJCBQZXIgVW5pdGApICU+JQogIG11dGF0ZShwcmljZVRvbnMgPSBpZmVsc2UoVW5pdHMgPT0gJ21iZicsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb252ZXJ0X3ByaWNlX21iZl90b25zKHByaWNlUmF3KSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnZlcnRfcHJpY2VfbWJmX3RvbnMoY29udmVydF9wcmljZV9jb3JkX21iZihwcmljZVJhdykpKSwKICAgICAgICAgbW9udGggPSBhcy5pbnRlZ2VyKGZvcm1hdCh0bW5QcmljZXMkYFBlcmlvZCBFbmQgRGF0ZWAsICIlbSIpKSwKICAgICAgICAgeWVhciA9IGFzLmludGVnZXIoZm9ybWF0KHRtblByaWNlcyRgUGVyaW9kIEVuZCBEYXRlYCwgIiVZIikpKSAlPiUKICBzZWxlY3QoLWMoJ01hcmtldCcsICdVbml0cycsICdwcmljZVJhdycsICdQZXJpb2QgRW5kIERhdGUnKSkKCiMgbWFrZSBhIGthYmxlIHRhYmxlIHdpdGggYXZlcmFnZSBwcmljZXMgZm9yIGVhY2ggc3BlY2llcyBhbmQgc3RhdGUKdG1uUHJpY2VzLnRhYmxlIDwtIHRtblByaWNlcyAlPiUKICBncm91cF9ieShTdGF0ZSwgU3BlY2llcywgUHJvZHVjdCkgJT4lCiAgc3VtbWFyaXplKFByaWNlID0gbWVhbihwcmljZVRvbnMpLCAuZ3JvdXBzID0gJ2Ryb3AnKSAlPiUKICBhcnJhbmdlKFNwZWNpZXMpCgprYWJsZSh0bW5QcmljZXMudGFibGUsCiAgICAgIGNhcHRpb24gPSAiR3JlYXQgTGFrZXM6IFRpbWJlciBBY2NvdW50IFN0dW1wYWdlIFByaWNlcyBieSBTdGF0ZSBhbmQgU3BlY2llcyIsCiAgICAgIGNvbC5uYW1lcyA9IGMoIlN0YXRlIiwgIlNwZWNpZXMiLCAiUHJvZHVjdCIsICJBdmVyYWdlIFByaWNlIiksCiAgICAgIGRpZ2l0cyA9IDIpCgpgYGAKCgpgYGB7cn0KIyBwcmludCB0aGUgbGlzdCBvZiB1bmlxdWUgc3BlY2llcyBpbiBhbHBoYWJldGljYWwgb3JkZXIgZnJvbSBtZXJjaEJJTyB1c2luZyBTUEdSUE5NCm1lcmNoQmlvICU+JSBzZWxlY3QoU1BHUlBOTSkgJT4lIHVuaXF1ZSgpICU+JSBhcnJhbmdlKFNQR1JQTk0pCmBgYApgYGB7cn0KIyBjcmVhdGUgYSBjcm9zc3dhbGsgYmV0d2VlbiB0bW5QcmljZXMkU3BlY2llcyBhbmQgbWVyY2hCaW8kU1BHUlBOTQojIHRoaXMgd2lsbCBhbGxvdyB1cyB0byBqb2luCmNyb3Nzd2FsayA8LSB0cmliYmxlKAogIH5TUEdSUE5NLCB+U3BlY2llcywKICAnQXNoJywgJ0FzaCcsCiAgJ0Jhc3N3b29kJywgJ0Jhc3N3b29kJywKICAnQmVlY2gnLCAnQmVlY2gnLAogICdCbGFjayBXYWxudXQnLCAnQmxhY2sgV2FsbnV0JywKICAnQ290dG9ud29vZCBhbmQgYXNwZW4gKEVhc3QpJywgJ0FzcGVuJywgCiAgJ0Vhc3Rlcm4gaGVtbG9jaycsICdIZW1sb2NrJywgCiAgJ0Vhc3Rlcm4gd2hpdGUgYW5kIHJlZCBwaW5lcycsICdXaGl0ZSBQaW5lJywKICAnRWFzdGVybiB3aGl0ZSBhbmQgcmVkIHBpbmVzJywgJ1JlZCBQaW5lJywKICAnSGFyZCBtYXBsZScsICdNYXBsZScsCiAgJ0hpY2tvcnknLCAnSGlja29yeScsCiAgJ0phY2sgcGluZScsICdKYWNrIFBpbmUnLAogICdMb2Jsb2xseSBhbmQgc2hvcnRsZWFmIHBpbmVzJywgJycsCiAgJ090aGVyIGVhc3Rlcm4gaGFyZCBoYXJkd29vZHMnLCAnJywKICAnT3RoZXIgZWFzdGVybiBzb2Z0IGhhcmR3b29kcycsICcnLAogICdPdGhlciBlYXN0ZXJuIHNvZnR3b29kcycsICcnLAogICdPdGhlciByZWQgb2FrcycsICcnLAogICdPdGhlciB3aGl0ZSBvYWtzJywgJycsCiAgJ1NlbGVjdCByZWQgb2FrcycsICdSZWQgT2FrJywKICAnU2VsZWN0IHdoaXRlIG9ha3MnLCAnV2hpdGUgT2FrJywKICAnU29mdCBtYXBsZScsICdTb2Z0IE1hcGxlJywKICAnU3BydWNlIGFuZCBiYWxzYW0gZmlyJywgJ1NwcnVjZScsCiAgJ1NwcnVjZSBhbmQgYmFsc2FtIGZpcicsICdTcHJ1Y2UvRmlyJywKICAnVHVwZWxvIGFuZCBibGFja2d1bScsICcnLAogICdZZWxsb3ctcG9wbGFyJywgJycsCiAgJ1llbGxvdyBiaXJjaCcsICdZZWxsb3cgQmlyY2gnKQogIAoKYGBgCgoKCiMgT3JnYW5pemUgdGhlIEZJQSBkYXRhCgpgYGB7cn0KIyBqb2luIHRoZSB0d28gZGF0YWZyYW1lcwpkZiA8LSBsZWZ0X2pvaW4obWVyY2hCaW8sIHByZW1lcmNoQmlvLCBieSA9IGMoJ1NUQVRFTk0nLCdTVEFURUNEJywgJ0NPVU5UWU5NJywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICdDT1VOVFlDRCcsICdTUEdSUENEJywgJ1NQR1JQTk0nLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJ1NQQ0xBU1MnLCAnVU5JVENEJywgJ0VWQUxJRCcsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAnUkVTRVJWQ0QnKSkKCiMgcGl2b3QgbG9uZ2VyIG9uIGNvbHVtbnMgMTEgdG8gMzMKIyBkcm9wIGlmIGJpb21hc3MgaXMgTkEKZGYgPC0gZGYgJT4lIHBpdm90X2xvbmdlcihjb2xzID0gMTE6MzMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgbmFtZXNfdG8gPSAnc2l6ZUNsYXNzJywKICAgICAgICAgICAgICAgICAgICAgICAgICB2YWx1ZXNfdG8gPSAnYmlvbWFzcycpICU+JQogICAgICAgICAgICBmaWx0ZXIoIWlzLm5hKGJpb21hc3MpKQoKYGBgCgpgYGB7cn0KIyBqb2luIHByaWNlcyB0byBkZgpkZiA8LSBsZWZ0X2pvaW4oZGYsIHRtblByaWNlcywgYnkgPSBjKCdTUEdSUENEJyA9ICdTcGVjaWVzJykpCmBgYAoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTkNBIFRpbWJlcjogUGlsb3QgQWNjb3VudHMgZm9yIHRoZSBHcmVhdCBMYWtlcyBhbmQgU291dGhlcm4gVS5TLiIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpgYGB7ciwgcmVzdWx0cyA9ICdoaWRlJywgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZWNobz1GQUxTRX0KbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoa25pdHIpCgojIEZ1bmN0aW9uIHRvIGNvbnZlcnQgcHJpY2UgZnJvbSBjb3JkcyB0byBNQkYKY29udmVydF9wcmljZV9jb3JkX21iZiA8LSBmdW5jdGlvbihwcmljZV9wZXJfY29yZCkgewogICMgQ29udmVyc2lvbiBmYWN0b3JzCiAgYm9hcmRfZmVldF9wZXJfY29yZCA8LSA1MDAKICBib2FyZF9mZWV0X3Blcl9tYmYgPC0gMTAwMAogIAogICMgQ2FsY3VsYXRlIHByaWNlIHBlciBib2FyZCBmb290CiAgcHJpY2VfcGVyX2JvYXJkX2Zvb3QgPC0gcHJpY2VfcGVyX2NvcmQgLyBib2FyZF9mZWV0X3Blcl9jb3JkCiAgCiAgIyBDYWxjdWxhdGUgcHJpY2UgcGVyIE1CRgogIHByaWNlX3Blcl9tYmYgPC0gcHJpY2VfcGVyX2JvYXJkX2Zvb3QgKiBib2FyZF9mZWV0X3Blcl9tYmYKICAKICByZXR1cm4ocHJpY2VfcGVyX21iZikKfQoKIyBGdW5jdGlvbiB0byBjb252ZXJ0IHByaWNlIGZyb20gTUJGIHRvIHRvbnMKY29udmVydF9wcmljZV9tYmZfdG9ucyA8LSBmdW5jdGlvbihwcmljZV9wZXJfbWJmKSB7CiAgIyBDb252ZXJzaW9uIGZhY3RvcgogIHRvbnNfcGVyX21iZiA8LSAyLjQKICAKICAjIENhbGN1bGF0ZSBwcmljZSBwZXIgdG9uCiAgcHJpY2VfcGVyX3RvbiA8LSBwcmljZV9wZXJfbWJmIC8gdG9uc19wZXJfbWJmCiAgCiAgcmV0dXJuKHByaWNlX3Blcl90b24pCn0KYGBgCgojIERlZmluZSB0aGUgc3BlY2llcyBncm91cHMgdG8gYmUgaW5jbHVkZWQgaW4gdGhlIHRpbWJlciBhc3NldCBhY2NvdW50IHBpbG90CgojIyBMb2FkIEZJQSBkYXRhCgpGSUEgZGF0YSBpcyBmcm9tIHRoZSAyMDIwIGV2YWx1YXRpb24gd2hpY2ggaW5jbHVkZXMgb2JzZXJ2YXRpb24gbWFkZSBmcm9tIDIwMTUtMjAyMAoKYGBge3IsIGVjaG89Rn0Kc3RhdGVOYW1lIDwtIGMoJzEnID0gJ0FsYWJhbWEnLAogICAgICAgICAgICAgICAgICc1JyA9ICdBcmthbnNhcycsCiAgICAgICAgICAgICAgICAgJzEyJyA9ICdGbG9yaWRhJywKICAgICAgICAgICAgICAgICAnMTMnID0gJ0dlb3JnaWEnLAogICAgICAgICAgICAgICAgICcyMicgPSAnTG91aXNpYW5hJywKICAgICAgICAgICAgICAgICAnMjYnID0gJ01pY2hpZ2FuJywKICAgICAgICAgICAgICAgICAnMjcnID0gJ01pbm5lc290YScsCiAgICAgICAgICAgICAgICAgJzI4JyA9ICdNaXNzaXNzaXBwaScsCiAgICAgICAgICAgICAgICAgJzM3JyA9ICdOb3J0aCBDYXJvbGluYScsCiAgICAgICAgICAgICAgICAgJzQ1JyA9ICdTb3V0aCBDYXJvbGluYScsCiAgICAgICAgICAgICAgICAgJzQ3JyA9ICdUZW5uZXNzZWUnLAogICAgICAgICAgICAgICAgICc0OCcgPSAnVGV4YXMnLAogICAgICAgICAgICAgICAgICc1NScgPSAnV2lzY29uc2luJywKICAgICAgICAgICAgICAgICAnNTEnID0gJ1ZpcmdpbmlhJykKCnN0YXRlUmVnaW9uIDwtIGMoJ0FsYWJhbWEnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnQXJrYW5zYXMnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnRmxvcmlkYScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdHZW9yZ2lhJyA9ICdTb3V0aCcsCiAgICAgICAgICAgICAgICAgJ0xvdWlzaWFuYScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdNaXNzaXNzaXBwaScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdOb3J0aCBDYXJvbGluYScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdTb3V0aCBDYXJvbGluYScgPSAnU291dGgnLAogICAgICAgICAgICAgICAgICdUZW5uZXNzZWUnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnVGV4YXMnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnVmlyZ2luaWEnID0gJ1NvdXRoJywKICAgICAgICAgICAgICAgICAnTWljaGlnYW4nID0gJ0dyZWF0IExha2VzJywKICAgICAgICAgICAgICAgICAnTWlubmVzb3RhJyA9ICdHcmVhdCBMYWtlcycsCiAgICAgICAgICAgICAgICAgJ1dpc2NvbnNpbicgPSAnR3JlYXQgTGFrZXMnKQoKc3Bnci5hcmVhIDwtIHJlYWQuY3N2KCJuY2Etc3BlY2llcy1ncm91cC1saXN0LmNzdiIpICU+JQogIGdyb3VwX2J5KFNQR1JQTk0sIENPVU5UWUNELCBTVEFURUNELCBVTklUQ0QpICU+JQogIHN1bW1hcml6ZShBUkVBID0gc3VtKEFSRUFUT1QsIG5hLnJtID0gVCksIC5ncm91cHMgPSAnZHJvcCcpICU+JQogIG11dGF0ZShTVEFURU5NID0gc3RhdGVOYW1lW2FzLmNoYXJhY3RlcihTVEFURUNEKV0sCiAgICAgICAgIFJFR0lPTiA9IHN0YXRlUmVnaW9uW1NUQVRFTk1dKQoKc3Bnci5saXN0IDwtIHNwZ3IuYXJlYSAlPiUKICBncm91cF9ieShTUEdSUE5NLCBSRUdJT04pICU+JQogIHN1bW1hcml6ZShBUkVBID0gc3VtKEFSRUEsIG5hLnJtID0gVCkgLyAxMDAwLCAuZ3JvdXBzID0gJ2Ryb3AnKSAlPiUKICBhcnJhbmdlKGRlc2MoUkVHSU9OKSwgZGVzYyhBUkVBKSkKCmthYmxlKHNwZ3IubGlzdCwKICAgICAgY2FwdGlvbiA9ICJUaW1iZXIgQWNjb3VudCBTcGVjaWVzIEdyb3VwcyBieSBSZWdpb24iLAogICAgICBjb2wubmFtZXMgPSBjKCJTcGVjaWVzIEdyb3VwIiwgIlJlZ2lvbiIsICJBcmVhICgxMDAwIGFjcmVzKSIpLAogICAgICBhbGlnbiA9ICJsY2MiLCBkaWdpdHMgPSAwKQpgYGAKCiMgbG9hZCB0aGUgYmlvbWFzcyBkYXRhIGZyb20gRklBCgoKYGBge3J9CgpiaW9tYXNzIDwtIHJlYWQuY3N2KCJuY2EtdGltYmVyLWJpb21hc3MuY3N2IikgJT4lCiAgc2VsZWN0KC1jKCdSRVNFUlZDRCcsICdFVkFMSUQnKSkKCm5hbWVzKGJpb21hc3MpIDwtIGMoJ1NUQVRFTk0nLCAnU1RBVEVDRCcsICdDT1VOVFlOTScsICdDT1VOVFlDRCcsICdTUEdSUENEJywKICAgICAgICAgICAgICAgICAgICAnU1BHUlBOTScsJ1NQQ0xBU1MnLCAnVU5JVENEJywnMycsICc0JywgJzUnLCAnNicsCiAgICAgICAgICAgICAgICAgICAgJzcnLCAnOCcsICc5JywgJzEwJywgJzExJywgJzEyJywgJzEzJywgJzE0JywgJzE1JywKICAgICAgICAgICAgICAgICAgICAnMTYnLCAnMTcnLCAnMTgnLCAnMTknLCAnMjAnLCAnMjEnKQoKc2l6ZUNsYXNzIDwtIGMoJzMnID0gJzUtNi45IGluY2hlcycsCiAgICAgICAgICAgICAgICc0JyA9ICc3LTguOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnNScgPSAnOS0xMC45IGluY2hlcycsCiAgICAgICAgICAgICAgICc2JyA9ICcxMS0xMi45IGluY2hlcycsCiAgICAgICAgICAgICAgICc3JyA9ICcxMy0xNC45IGluY2hlcycsCiAgICAgICAgICAgICAgICc4JyA9ICcxNS0xNi45IGluY2hlcycsCiAgICAgICAgICAgICAgICc5JyA9ICcxNy0xOC45IGluY2hlcycsCiAgICAgICAgICAgICAgICcxMCcgPSAnMTktMjAuOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnMTEnID0gJzIxLTIyLjkgaW5jaGVzJywKICAgICAgICAgICAgICAgJzEyJyA9ICcyMy0yNC45IGluY2hlcycsCiAgICAgICAgICAgICAgICcxMycgPSAnMjUtMjYuOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnMTQnID0gJzI3LTI4LjkgaW5jaGVzJywKICAgICAgICAgICAgICAgJzE1JyA9ICcyOS0zMC45IGluY2hlcycsCiAgICAgICAgICAgICAgICcxNicgPSAnMzEtMzIuOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnMTcnID0gJzMzLTM0LjkgaW5jaGVzJywKICAgICAgICAgICAgICAgJzE4JyA9ICczNS0zNi45IGluY2hlcycsCiAgICAgICAgICAgICAgICcxOScgPSAnMzctMzguOSBpbmNoZXMnLAogICAgICAgICAgICAgICAnMjAnID0gJzM5LTQwLjkgaW5jaGVzJywKICAgICAgICAgICAgICAgJzIxJyA9ICc0MSsgaW5jaGVzJykKCmJpb21hc3MgPC0gYmlvbWFzcyAlPiUKICBwaXZvdF9sb25nZXIoY29scyA9IDk6MjcsCiAgICAgICAgICAgICAgICBuYW1lc190byA9ICdzaXplQ2xhc3NDb2RlJywKICAgICAgICAgICAgICAgIHZhbHVlc190byA9ICdiaW9tYXNzJykgJT4lCiAgbXV0YXRlKGJpb21hc3MgPSBpZmVsc2UoaXMubmEoYmlvbWFzcyksIDAsIGJpb21hc3MpLAogICAgICAgICBzaXplQ2xhc3MgPSBzaXplQ2xhc3Nbc2l6ZUNsYXNzQ29kZV0pCgoKYGBgCgpgYGB7cn0KIyBjcmVhdGUgYSB0YWJsZSB0aGF0IHNob3dzIHRoZSBkaXN0cmlidXRpb24gb2YgYmlvbWFzcyBieSBzaXplIGNsYXNzIGFuZCBzdGF0ZQpiaW9tYXNzLnRhYmxlIDwtIGJpb21hc3MgJT4lCiAgZ3JvdXBfYnkoU1RBVEVOTSwgU1BHUlBOTSwgc2l6ZUNsYXNzKSAlPiUKICBzdW1tYXJpc2UodG90YWxCaW9tYXNzID0gcm91bmQoc3VtKGJpb21hc3MpLzEwMDAwMDAsIGRpZ2l0cyA9IDEpLCAuZ3JvdXBzID0gJ2Ryb3AnKSAlPiUKICBwaXZvdF93aWRlcihuYW1lc19mcm9tID0gc2l6ZUNsYXNzLCB2YWx1ZXNfZnJvbSA9IHRvdGFsQmlvbWFzcykgJT4lCiAgcmVuYW1lKCdTdGF0ZScgPSBTVEFURU5NLCAnU3BlY2llcyBHcm91cCcgPSBTUEdSUE5NKSAlPiUKICBzZWxlY3QoU3RhdGUsICdTcGVjaWVzIEdyb3VwJywgJzUtNi45IGluY2hlcycsICc3LTguOSBpbmNoZXMnLCAnOS0xMC45IGluY2hlcycsCiAgICAgICAgICcxMS0xMi45IGluY2hlcycsICcxMy0xNC45IGluY2hlcycsICcxNS0xNi45IGluY2hlcycsICcxNy0xOC45IGluY2hlcycsCiAgICAgICAgICcxOS0yMC45IGluY2hlcycsICcyMS0yMi45IGluY2hlcycsICcyMy0yNC45IGluY2hlcycsICcyNS0yNi45IGluY2hlcycsCiAgICAgICAgICcyNy0yOC45IGluY2hlcycsICcyOS0zMC45IGluY2hlcycsICczMS0zMi45IGluY2hlcycsICczMy0zNC45IGluY2hlcycsCiAgICAgICAgICczNS0zNi45IGluY2hlcycsICczNy0zOC45IGluY2hlcycsICczOS00MC45IGluY2hlcycsICc0MSsgaW5jaGVzJykKCmthYmxlKGJpb21hc3MudGFibGUsCiAgICAgIGNhcHRpb24gPSAiVGltYmVyIEFjY291bnQgQmlvbWFzcyBieSBTcGVjaWVzIEdyb3VwLCBTaXplIENsYXNzLCBhbmQgU3RhdGUvbihtaWxsaW9uIHRvbnMpIiwKICAgICAgZGlnaXRzID0gMSkKYGBgCgojIE9yZ2FuaXplIHRoZSBwcmljZSBkYXRhCgoKYGBge3J9CgpsaWJyYXJ5KHJlYWR4bCkKdG1uUHJpY2VzIDwtIHN1cHByZXNzV2FybmluZ3MocmVhZF9leGNlbCgiVE1OX1ByaWNlX1Nlcmllc19TZXB0ZW1iZXIyMDIzLnhsc3giKSkgJT4lCiAgZmlsdGVyKE1hcmtldCA9PSAnU3R1bXBhZ2UnLAogICAgICAgICBTcGVjaWVzICE9ICdTYXd0aW1iZXIgKCQvbWJmKScpICU+JQogIHJlbmFtZShTdGF0ZSA9IGBSZWdpb25gLAogICAgICAgICBwcmljZVJhdyA9IGAkIFBlciBVbml0YCkgJT4lCiAgbXV0YXRlKFJlZ2lvbiA9IHN1YnN0cihTdGF0ZSwgNCwgNCksCiAgICAgICAgIFN0YXRlID0gc3Vic3RyKFN0YXRlLCAxLCAyKSwKICAgICAgICAgcHJpY2VUb25zID0gaWZlbHNlKFVuaXRzID09ICdtYmYnLAogICAgICAgICAgICAgICAgICAgICAgY29udmVydF9wcmljZV9tYmZfdG9ucyhwcmljZVJhdyksCiAgICAgICAgICAgICAgICAgICAgICBjb252ZXJ0X3ByaWNlX21iZl90b25zKGNvbnZlcnRfcHJpY2VfY29yZF9tYmYocHJpY2VSYXcpKSksCiAgICAgICAgIG1vbnRoID0gYXMuaW50ZWdlcihmb3JtYXQoYFBlcmlvZCBFbmQgRGF0ZWAsICIlbSIpKSwKICAgICAgICAgeWVhciA9IGFzLmludGVnZXIoZm9ybWF0KGBQZXJpb2QgRW5kIERhdGVgLCAiJVkiKSkpICU+JQogIHNlbGVjdCgtYygnTWFya2V0JywgJ1VuaXRzJywgJ3ByaWNlUmF3JywgJ1BlcmlvZCBFbmQgRGF0ZScpKSAlPiUKICBmaWx0ZXIoUmVnaW9uICE9ICIiKQoKIyBtYWtlIGEga2FibGUgdGFibGUgd2l0aCBhdmVyYWdlIHByaWNlcyBmb3IgZWFjaCBzcGVjaWVzIGFuZCBzdGF0ZQp0bW5QcmljZXMudGFibGUgPC0gdG1uUHJpY2VzICU+JQogIGdyb3VwX2J5KFN0YXRlLCBSZWdpb24sIFNwZWNpZXMsIFByb2R1Y3QpICU+JQogIHN1bW1hcml6ZShQcmljZSA9IG1lYW4ocHJpY2VUb25zLCBuYS5ybSA9IFQpLCAuZ3JvdXBzID0gJ2Ryb3AnKSAlPiUKICBhcnJhbmdlKFNwZWNpZXMpCgprYWJsZSh0bW5QcmljZXMudGFibGUsCiAgICAgIGNhcHRpb24gPSAiR3JlYXQgTGFrZXM6IFRpbWJlciBBY2NvdW50IFN0dW1wYWdlIFByaWNlcyBieSBTdGF0ZSBhbmQgU3BlY2llcyIsCiAgICAgIGNvbC5uYW1lcyA9IGMoIlN0YXRlIiwgIlJlZ2lvbiIsICJTcGVjaWVzIiwgIlByb2R1Y3QiLCAiUHJpY2UiKSwKICAgICAgZGlnaXRzID0gMikKCmBgYAoKIyBjcmVhdGUgYSBjcm9zc3dhbGsgYmV0d2VlbiB0bW4gcHJpY2UgcmVnaW9ucyBhbmQgY291bnRpZXMgZm9yIE1OLCBNSSwgYW5kIFdJCiMgaW5jbHVkaW5nIHRoZSBGSUEgc3VydmV5IHVuaXQgY29kZXMKCmBgYHtyfQojIGNyZWF0ZSBhIGNyb3Nzd2FsayBiZXR3ZWVuIHRtblByaWNlcyRSZWdpb24gYW5kIEZJQSBzdXJ2ZXkgdW5pdCBjb2RlcwoKY3Jvc3N3YWxrMSA8LSB0cmliYmxlKAogIH5TdGF0ZSwgfkZJQVVOSVQsIH5TVEFURUNELCB+Q09VTlRZQ0QsIH5UTVNSRUdJT04sCiAgJ01JJywgJzEnLCAnMjYnLCAnMTA5JywgJ01JLTMnLAogICdNSScsICcxJywgJzI2JywgJzA0MScsICdNSS0yJywKICAnTUknLCAnMScsICcyNicsICcwMDMnLCAnTUktMicsCiAgJ01JJywgJzEnLCAnMjYnLCAnMTUzJywgJ01JLTInLAogICdNSScsICcxJywgJzI2JywgJzA5NScsICdNSS0yJywKICAnTUknLCAnMScsICcyNicsICcwOTcnLCAnTUktMicsCiAgJ01JJywgJzEnLCAnMjYnLCAnMDMzJywgJ01JLTInLAogICdNSScsICcyJywgJzI2JywgJzA4MycsICdNSS0zJywKICAnTUknLCAnMicsICcyNicsICcwNjEnLCAnTUktMycsCiAgJ01JJywgJzInLCAnMjYnLCAnMTMxJywgJ01JLTMnLAogICdNSScsICcyJywgJzI2JywgJzA1MycsICdNSS0zJywKICAnTUknLCAnMicsICcyNicsICcwNzEnLCAnTUktMycsCiAgJ01JJywgJzInLCAnMjYnLCAnMDQzJywgJ01JLTMnLAogICdNSScsICcyJywgJzI2JywgJzAxMycsICdNSS0zJywKICAnTUknLCAnMicsICcyNicsICcxMDMnLCAnTUktMycsCiAgJ01JJywgJzMnLCAnMjYnLCAnMDQ3JywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzAzMScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcxNDEnLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMDI5JywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzAwOScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcwODknLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMTM3JywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzExOScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcwMDcnLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMDE5JywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzA1NScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcwNzknLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMDM5JywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzEzNScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcwMDEnLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMTAxJywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzE2NScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcxMTMnLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMTQzJywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzEyOScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcwNjknLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMTA1JywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzA4NScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcxMzMnLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMDM1JywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzA1MScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcwMTEnLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMTI3JywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzEyMycsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcxMDcnLCAnTUktMScsCiAgJ01JJywgJzMnLCAnMjYnLCAnMDczJywgJ01JLTEnLAogICdNSScsICczJywgJzI2JywgJzExMScsICdNSS0xJywKICAnTUknLCAnMycsICcyNicsICcwMTcnLCAnTUktMScsCiAgJ01OJywgJzEnLCAnMjcnLCAnMDMxJywgJ01OLTInLAogICdNTicsICcxJywgJzI3JywgJzA3NScsICdNTi0yJywKICAnTU4nLCAnMScsICcyNycsICcxMzcnLCAnTU4tMicsCiAgJ01OJywgJzEnLCAnMjcnLCAnMDE3JywgJ01OLTInLAogICdNTicsICcxJywgJzI3JywgJzA3MScsICdNTi0yJywKICAnTU4nLCAnMicsICcyNycsICcwNzcnLCAnTU4tMicsCiAgJ01OJywgJzInLCAnMjcnLCAnMTM1JywgJ01OLTInLAogICdNTicsICcyJywgJzI3JywgJzAwNycsICdNTi0yJywKICAnTU4nLCAnMicsICcyNycsICcwMjknLCAnTU4tMicsCiAgJ01OJywgJzInLCAnMjcnLCAnMDg3JywgJ01OLTInLAogICdNTicsICcyJywgJzI3JywgJzAwNScsICdNTi0yJywKICAnTU4nLCAnMicsICcyNycsICcwNTcnLCAnTU4tMicsCiAgJ01OJywgJzInLCAnMjcnLCAnMDIxJywgJ01OLTInLAogICdNTicsICcyJywgJzI3JywgJzE1OScsICdNTi0yJywKICAnTU4nLCAnMicsICcyNycsICcwNjEnLCAnTU4tMicsCiAgJ01OJywgJzInLCAnMjcnLCAnMDM1JywgJ01OLTInLAogICdNTicsICcyJywgJzI3JywgJzAwMScsICdNTi0yJywKICAnTU4nLCAnMycsICcyNycsICcxMTEnLCAnTU4tMScsCiAgJ01OJywgJzMnLCAnMjcnLCAnMDQxJywgJ01OLTEnLAogICdNTicsICczJywgJzI3JywgJzE1MycsICdNTi0xJywKICAnTU4nLCAnMycsICcyNycsICcwOTcnLCAnTU4tMicsCiAgJ01OJywgJzMnLCAnMjcnLCAnMDk1JywgJ01OLTInLAogICdNTicsICczJywgJzI3JywgJzA2NScsICdNTi0yJywKICAnTU4nLCAnMycsICcyNycsICcxMTUnLCAnTU4tMicsCiAgJ01OJywgJzMnLCAnMjcnLCAnMTQ1JywgJ01OLTEnLAogICdNTicsICc0JywgJzI3JywgJzAwOScsICdNTi0xJywKICAnTU4nLCAnMycsICcyNycsICcwNTknLCAnTU4tMicsCiAgJ01OJywgJzMnLCAnMjcnLCAnMDI1JywgJ01OLTInLAogICdNTicsICczJywgJzI3JywgJzE3MScsICdNTi0xJywKICAnTU4nLCAnMycsICcyNycsICcxNDEnLCAnTU4tMScsCiAgJ01OJywgJzMnLCAnMjcnLCAnMDAzJywgJ01OLTEnLAogICdNTicsICczJywgJzI3JywgJzE2MycsICdNTi0xJywKICAnTU4nLCAnMycsICcyNycsICcxMjMnLCAnTU4tMScsCiAgJ01OJywgJzMnLCAnMjcnLCAnMDUzJywgJ01OLTEnLAogICdNTicsICczJywgJzI3JywgJzE3MScsICdNTi0xJywKICAnTU4nLCAnMycsICcyNycsICcwNTMnLCAnTU4tMScsCiAgJ01OJywgJzMnLCAnMjcnLCAnMDE5JywgJ01OLTEnLAogICdNTicsICczJywgJzI3JywgJzEzOScsICdNTi0xJywKICAnTU4nLCAnMycsICcyNycsICcwMzcnLCAnTU4tMScsCiAgJ01OJywgJzMnLCAnMjcnLCAnMDc5JywgJ01OLTEnLAogICdNTicsICczJywgJzI3JywgJzEzMScsICdNTi0xJywKICAnTU4nLCAnMycsICcyNycsICcwNDknLCAnTU4tMScsCiAgJ01OJywgJzMnLCAnMjcnLCAnMTU3JywgJ01OLTEnLAogICdNTicsICczJywgJzI3JywgJzEwOScsICdNTi0xJywKICAnTU4nLCAnMycsICcyNycsICcxNjknLCAnTU4tMScsCiAgJ01OJywgJzMnLCAnMjcnLCAnMDQ1JywgJ01OLTEnLAogICdNTicsICczJywgJzI3JywgJzA1NScsICdNTi0xJywKICAnTU4nLCAnNCcsICcyNycsICcxMjEnLCAnTU4tMScsCiAgJ01OJywgJzQnLCAnMjcnLCAnMDY3JywgJ01OLTEnLAogICdNTicsICc0JywgJzI3JywgJzEyOScsICdNTi0xJywKICAnTU4nLCAnNCcsICcyNycsICcxMDMnLCAnTU4tMScsCiAgJ01OJywgJzQnLCAnMjcnLCAnMDEzJywgJ01OLTEnLAogICdNTicsICc0JywgJzI3JywgJzA0MycsICdNTi0xJywKICAnTU4nLCAnNCcsICcyNycsICcwNDcnLCAnTU4tMScsCiAgJ01OJywgJzQnLCAnMjcnLCAnMDk5JywgJ01OLTEnLAogICdNTicsICc0JywgJzI3JywgJzAzOScsICdNTi0xJywKICAnTU4nLCAnNCcsICcyNycsICcxNDcnLCAnTU4tMScsCiAgJ01OJywgJzQnLCAnMjcnLCAnMTYxJywgJ01OLTEnLAogICdNTicsICc0JywgJzI3JywgJzA5MycsICdNTi0xJywKICAnTU4nLCAnNCcsICcyNycsICcxNDMnLCAnTU4tMScsCiAgJ01OJywgJzQnLCAnMjcnLCAnMDg1JywgJ01OLTEnLAogICdXSScsICcxJywgJzU1JywgJzEyNScsICdXSS0yJywKICAnV0knLCAnMScsICc1NScsICcwODUnLCAnV0ktMicsCiAgJ1dJJywgJzEnLCAnNTUnLCAnMDY5JywgJ1dJLTMnLAogICdXSScsICcxJywgJzU1JywgJzA2NycsICdXSS0yJywKICAnV0knLCAnMScsICc1NScsICcwNDEnLCAnV0ktMicsCiAgJ1dJJywgJzEnLCAnNTUnLCAnMDM3JywgJ1dJLTInLAogICdXSScsICcxJywgJzU1JywgJzA3NScsICdXSS0yJywKICAnV0knLCAnMScsICc1NScsICcwODMnLCAnV0ktMicsCiAgJ1dJJywgJzEnLCAnNTUnLCAnMDc4JywgJ1dJLTInLAogICdXSScsICcxJywgJzU1JywgJzExNScsICdXSS0yJywKICAnV0knLCAnMicsICc1NScsICcxMTknLCAnV0ktMycsCiAgJ1dJJywgJzInLCAnNTUnLCAnMDk5JywgJ1dJLTMnLAogICdXSScsICcyJywgJzU1JywgJzA1MScsICdXSS0zJywKICAnV0knLCAnMicsICc1NScsICcwMDMnLCAnV0ktMycsCiAgJ1dJJywgJzInLCAnNTUnLCAnMDA3JywgJ1dJLTMnLAogICdXSScsICcyJywgJzU1JywgJzAzMScsICdXSS0zJywKICAnV0knLCAnMicsICc1NScsICcwMTMnLCAnV0ktMycsCiAgJ1dJJywgJzInLCAnNTUnLCAnMTI5JywgJ1dJLTMnLAogICdXSScsICcyJywgJzU1JywgJzExMycsICdXSS0zJywKICAnV0knLCAnMicsICc1NScsICcwOTUnLCAnV0ktMycsCiAgJ1dJJywgJzInLCAnNTUnLCAnMDA1JywgJ1dJLTMnLAogICdXSScsICcyJywgJzU1JywgJzEwNycsICdXSS0zJywKICAnV0knLCAnMycsICc1NScsICcwMTcnLCAnV0ktMycsCiAgJ1dJJywgJzMnLCAnNTUnLCAnMDM1JywgJ1dJLTMnLAogICdXSScsICczJywgJzU1JywgJzAxOScsICdXSS0zJywKICAnV0knLCAnMycsICc1NScsICcwNTMnLCAnV0ktMycsCiAgJ1dJJywgJzMnLCAnNTUnLCAnMDgxJywgJ1dJLTEnLAogICdXSScsICczJywgJzU1JywgJzA1NycsICdXSS0xJywKICAnV0knLCAnMycsICc1NScsICcwMDEnLCAnV0ktMScsCiAgJ1dJJywgJzMnLCAnNTUnLCAnMDc3JywgJ1dJLTEnLAogICdXSScsICczJywgJzU1JywgJzEzNycsICdXSS0yJywKICAnV0knLCAnMycsICc1NScsICcxMzUnLCAnV0ktMicsCiAgJ1dJJywgJzMnLCAnNTUnLCAnMDk3JywgJ1dJLTMnLAogICdXSScsICczJywgJzU1JywgJzA3MycsICdXSS0zJywKICAnV0knLCAnMycsICc1NScsICcxNDEnLCAnV0ktMycsCiAgJ1dJJywgJzQnLCAnNTUnLCAnMDYzJywgJ1dJLTEnLAogICdXSScsICc0JywgJzU1JywgJzEyMycsICdXSS0xJywKICAnV0knLCAnNCcsICc1NScsICcwMjMnLCAnV0ktMScsCiAgJ1dJJywgJzQnLCAnNTUnLCAnMTAzJywgJ1dJLTEnLAogICdXSScsICc0JywgJzU1JywgJzA0MycsICdXSS0xJywKICAnV0knLCAnNCcsICc1NScsICcwNjUnLCAnV0ktMScsCiAgJ1dJJywgJzUnLCAnNTUnLCAnMDQ1JywgJ1dJLTEnLAogICdXSScsICc0JywgJzU1JywgJzA0OScsICdXSS0xJywKICAnV0knLCAnNCcsICc1NScsICcxMTEnLCAnV0ktMScsCiAgJ1dJJywgJzUnLCAnNTUnLCAnMTA1JywgJ1dJLTEnLAogICdXSScsICc1JywgJzU1JywgJzAyNScsICdXSS0xJywKICAnV0knLCAnNScsICc1NScsICcwMjEnLCAnV0ktMScsCiAgJ1dJJywgJzUnLCAnNTUnLCAnMTI3JywgJ1dJLTEnLAogICdXSScsICc1JywgJzU1JywgJzA1OScsICdXSS0xJywKICAnV0knLCAnNScsICc1NScsICcxMDEnLCAnV0ktMScsCiAgJ1dJJywgJzUnLCAnNTUnLCAnMDc5JywgJ1dJLTEnLAogICdXSScsICc1JywgJzU1JywgJzA1NScsICdXSS0xJywKICAnV0knLCAnNScsICc1NScsICcxMzMnLCAnV0ktMScsCiAgJ1dJJywgJzUnLCAnNTUnLCAnMDg5JywgJ1dJLTEnLAogICdXSScsICc1JywgJzU1JywgJzEzMScsICdXSS0xJywKICAnV0knLCAnNScsICc1NScsICcwMjcnLCAnV0ktMScsCiAgJ1dJJywgJzUnLCAnNTUnLCAnMDQ3JywgJ1dJLTEnLAogICdXSScsICc1JywgJzU1JywgJzAzOScsICdXSS0xJywKICAnV0knLCAnNScsICc1NScsICcxMTcnLCAnV0ktMScsCiAgJ1dJJywgJzUnLCAnNTUnLCAnMTM5JywgJ1dJLTInLAogICdXSScsICc1JywgJzU1JywgJzExNycsICdXSS0xJywKICAnV0knLCAnNScsICc1NScsICcwMTUnLCAnV0ktMicsCiAgJ1dJJywgJzUnLCAnNTUnLCAnMDcxJywgJ1dJLTInLAogICdXSScsICc1JywgJzU1JywgJzA4NycsICdXSS0yJywKICAnV0knLCAnNScsICc1NScsICcwMDknLCAnV0ktMicsCiAgJ1dJJywgJzUnLCAnNTUnLCAnMDYxJywgJ1dJLTInLAogICdXSScsICc1JywgJzU1JywgJzAyOScsICdXSS0yJykKCmBgYAoKYGBge3J9CiMgcHJpbnQgdGhlIGxpc3Qgb2YgdW5pcXVlIHNwZWNpZXMgaW4gYWxwaGFiZXRpY2FsIG9yZGVyIGZyb20gbWVyY2hCSU8gdXNpbmcgU1BHUlBOTQptZXJjaEJpbyAlPiUgc2VsZWN0KFNQR1JQTk0pICU+JSB1bmlxdWUoKSAlPiUgYXJyYW5nZShTUEdSUE5NKQpgYGAKYGBge3J9CiMgY3JlYXRlIGEgY3Jvc3N3YWxrIGJldHdlZW4gdG1uUHJpY2VzJFNwZWNpZXMgYW5kIG1lcmNoQmlvJFNQR1JQTk0KIyB0aGlzIHdpbGwgYWxsb3cgdXMgdG8gam9pbgpjcm9zc3dhbGsgPC0gdHJpYmJsZSgKICB+U1BHUlBOTSwgflNwZWNpZXMsCiAgJ0FzaCcsICdBc2gnLAogICdCYXNzd29vZCcsICdCYXNzd29vZCcsCiAgJ0JlZWNoJywgJ0JlZWNoJywKICAnQmxhY2sgV2FsbnV0JywgJ0JsYWNrIFdhbG51dCcsCiAgJ0NvdHRvbndvb2QgYW5kIGFzcGVuIChFYXN0KScsICdBc3BlbicsIAogICdFYXN0ZXJuIGhlbWxvY2snLCAnSGVtbG9jaycsIAogICdFYXN0ZXJuIHdoaXRlIGFuZCByZWQgcGluZXMnLCAnV2hpdGUgUGluZScsCiAgJ0Vhc3Rlcm4gd2hpdGUgYW5kIHJlZCBwaW5lcycsICdSZWQgUGluZScsCiAgJ0hhcmQgbWFwbGUnLCAnTWFwbGUnLAogICdIaWNrb3J5JywgJ0hpY2tvcnknLAogICdKYWNrIHBpbmUnLCAnSmFjayBQaW5lJywKICAnTG9ibG9sbHkgYW5kIHNob3J0bGVhZiBwaW5lcycsICcnLAogICdPdGhlciBlYXN0ZXJuIGhhcmQgaGFyZHdvb2RzJywgJycsCiAgJ090aGVyIGVhc3Rlcm4gc29mdCBoYXJkd29vZHMnLCAnJywKICAnT3RoZXIgZWFzdGVybiBzb2Z0d29vZHMnLCAnJywKICAnT3RoZXIgcmVkIG9ha3MnLCAnJywKICAnT3RoZXIgd2hpdGUgb2FrcycsICcnLAogICdTZWxlY3QgcmVkIG9ha3MnLCAnUmVkIE9haycsCiAgJ1NlbGVjdCB3aGl0ZSBvYWtzJywgJ1doaXRlIE9haycsCiAgJ1NvZnQgbWFwbGUnLCAnU29mdCBNYXBsZScsCiAgJ1NwcnVjZSBhbmQgYmFsc2FtIGZpcicsICdTcHJ1Y2UnLAogICdTcHJ1Y2UgYW5kIGJhbHNhbSBmaXInLCAnU3BydWNlL0ZpcicsCiAgJ1R1cGVsbyBhbmQgYmxhY2tndW0nLCAnJywKICAnWWVsbG93LXBvcGxhcicsICcnLAogICdZZWxsb3cgYmlyY2gnLCAnWWVsbG93IEJpcmNoJykKICAKCmBgYAoKCgojIE9yZ2FuaXplIHRoZSBGSUEgZGF0YQoKYGBge3J9CiMgam9pbiB0aGUgdHdvIGRhdGFmcmFtZXMKZGYgPC0gbGVmdF9qb2luKG1lcmNoQmlvLCBwcmVtZXJjaEJpbywgYnkgPSBjKCdTVEFURU5NJywnU1RBVEVDRCcsICdDT1VOVFlOTScsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAnQ09VTlRZQ0QnLCAnU1BHUlBDRCcsICdTUEdSUE5NJywKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICdTUENMQVNTJywgJ1VOSVRDRCcsICdFVkFMSUQnLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJ1JFU0VSVkNEJykpCgojIHBpdm90IGxvbmdlciBvbiBjb2x1bW5zIDExIHRvIDMzCiMgZHJvcCBpZiBiaW9tYXNzIGlzIE5BCmRmIDwtIGRmICU+JSBwaXZvdF9sb25nZXIoY29scyA9IDExOjMzLAogICAgICAgICAgICAgICAgICAgICAgICAgIG5hbWVzX3RvID0gJ3NpemVDbGFzcycsCiAgICAgICAgICAgICAgICAgICAgICAgICAgdmFsdWVzX3RvID0gJ2Jpb21hc3MnKSAlPiUKICAgICAgICAgICAgZmlsdGVyKCFpcy5uYShiaW9tYXNzKSkKCmBgYAoKYGBge3J9CiMgam9pbiBwcmljZXMgdG8gZGYKZGYgPC0gbGVmdF9qb2luKGRmLCB0bW5QcmljZXMsIGJ5ID0gYygnU1BHUlBDRCcgPSAnU3BlY2llcycpKQpgYGAKCgo=</div>
 
 
 
