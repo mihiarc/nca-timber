@@ -1,0 +1,1045 @@
+ State,ST,County,Stfip,FIPS Code,Old TMS Area,New TMS Area,OldTMS,NewTMS,STTMS
+ Alabama,AL,Autauga,1,1001,2,1,2,1,1001
+ Alabama,AL,Baldwin,1,1003,3,2,3,2,1002
+ Alabama,AL,Barbour,1,1005,2,2,2,2,1002
+ Alabama,AL,Bibb,1,1007,2,1,2,1,1001
+ Alabama,AL,Blount,1,1009,1,1,1,1,1001
+ Alabama,AL,Bullock,1,1011,2,2,2,2,1002
+ Alabama,AL,Butler,1,1013,2,2,2,2,1002
+ Alabama,AL,Calhoun,1,1015,1,1,1,1,1001
+ Alabama,AL,Chambers,1,1017,2,1&2,2,3,1003
+ Alabama,AL,Cherokee,1,1019,1,1,1,1,1001
+ Alabama,AL,Chilton,1,1021,2,1,2,1,1001
+ Alabama,AL,Choctaw,1,1023,3,2,3,2,1002
+ Alabama,AL,Clarke,1,1025,3,2,3,2,1002
+ Alabama,AL,Clay,1,1027,1,1,1,1,1001
+ Alabama,AL,Cleburne,1,1029,1,1,1,1,1001
+ Alabama,AL,Coffee,1,1031,2,2,2,2,1002
+ Alabama,AL,Colbert,1,1033,1,1,1,1,1001
+ Alabama,AL,Conecuh,1,1035,3,2,3,2,1002
+ Alabama,AL,Coosa,1,1037,2,1,2,1,1001
+ Alabama,AL,Covington,1,1039,3,2,3,2,1002
+ Alabama,AL,Crenshaw,1,1041,2,2,2,2,1002
+ Alabama,AL,Cullman,1,1043,1,1,1,1,1001
+ Alabama,AL,Dale,1,1045,2,2,2,2,1002
+ Alabama,AL,Dallas,1,1047,2,1&2,2,3,1003
+ Alabama,AL,De Kalb,1,1049,1,1,1,1,1001
+ Alabama,AL,Elmore,1,1051,2,1&2,2,3,1003
+ Alabama,AL,Escambia,1,1053,3,2,3,2,1002
+ Alabama,AL,Etowah,1,1055,1,1,1,1,1001
+ Alabama,AL,Fayette,1,1057,1,1,1,1,1001
+ Alabama,AL,Franklin,1,1059,1,1,1,1,1001
+ Alabama,AL,Geneva,1,1061,2,2,2,2,1002
+ Alabama,AL,Greene,1,1063,2,1,2,1,1001
+ Alabama,AL,Hale,1,1065,2,1,2,1,1001
+ Alabama,AL,Henry,1,1067,2,2,2,2,1002
+ Alabama,AL,Houston,1,1069,2,2,2,2,1002
+ Alabama,AL,Jackson,1,1071,1,1,1,1,1001
+ Alabama,AL,Jefferson,1,1073,1,1,1,1,1001
+ Alabama,AL,Lamar,1,1075,1,1,1,1,1001
+ Alabama,AL,Lauderdale,1,1077,1,1,1,1,1001
+ Alabama,AL,Lawrence,1,1079,1,1,1,1,1001
+ Alabama,AL,Lee,1,1081,2,2,2,2,1002
+ Alabama,AL,Limestone,1,1083,1,1,1,1,1001
+ Alabama,AL,Lowndes,1,1085,2,2,2,2,1002
+ Alabama,AL,Macon,1,1087,2,2,2,2,1002
+ Alabama,AL,Madison,1,1089,1,1,1,1,1001
+ Alabama,AL,Marengo,1,1091,3,2,3,2,1002
+ Alabama,AL,Marion,1,1093,1,1,1,1,1001
+ Alabama,AL,Marshall,1,1095,1,1,1,1,1001
+ Alabama,AL,Mobile,1,1097,3,2,3,2,1002
+ Alabama,AL,Monroe,1,1099,3,2,3,2,1002
+ Alabama,AL,Montgomery,1,1101,2,2,2,2,1002
+ Alabama,AL,Morgan,1,1103,1,1,1,1,1001
+ Alabama,AL,Perry,1,1105,2,1,2,1,1001
+ Alabama,AL,Pickens,1,1107,2,1,2,1,1001
+ Alabama,AL,Pike,1,1109,2,2,2,2,1002
+ Alabama,AL,Randolph,1,1111,2,1,2,1,1001
+ Alabama,AL,Russell,1,1113,2,2,2,2,1002
+ Alabama,AL,St. Clair,1,1115,1,1,1,1,1001
+ Alabama,AL,Shelby,1,1117,1,1,1,1,1001
+ Alabama,AL,Sumter,1,1119,2,1,2,1,1001
+ Alabama,AL,Tallapoosa,1,1121,2,1,2,1,1001
+ Alabama,AL,Talledega,1,1123,1,1,1,1,1001
+ Alabama,AL,Tuscaloosa,1,1125,2,1,2,1,1001
+ Alabama,AL,Walker,1,1127,1,1,1,1,1001
+ Alabama,AL,Washington,1,1129,3,2,3,2,1002
+ Alabama,AL,Wilcox,1,1131,3,2,3,2,1002
+ Alabama,AL,Winston,1,1133,1,1,1,1,1001
+ Arkansas,AR,Arkansas,5,5001,3,1,3,1,5001
+ Arkansas,AR,Ashley,5,5003,1,1,1,1,5001
+ Arkansas,AR,Baxter,5,5005,2,2,2,2,5002
+ Arkansas,AR,Benton,5,5007,2,2,2,2,5002
+ Arkansas,AR,Boone,5,5009,2,2,2,2,5002
+ Arkansas,AR,Bradley,5,5011,1,1,1,1,5001
+ Arkansas,AR,Calhoun,5,5013,1,1,1,1,5001
+ Arkansas,AR,Carroll,5,5015,2,2,2,2,5002
+ Arkansas,AR,Chicot,5,5017,3,1,3,1,5001
+ Arkansas,AR,Clark,5,5019,1,1,1,1,5001
+ Arkansas,AR,Clay,5,5021,3,2,3,2,5002
+ Arkansas,AR,Cleburne,5,5023,2,2,2,2,5002
+ Arkansas,AR,Cleveland,5,5025,1,1,1,1,5001
+ Arkansas,AR,Columbia,5,5027,1,1,1,1,5001
+ Arkansas,AR,Conway,5,5029,2,2,2,2,5002
+ Arkansas,AR,Craighead,5,5031,3,2,3,2,5002
+ Arkansas,AR,Crawford,5,5033,2,2,2,2,5002
+ Arkansas,AR,Crittenden,5,5035,3,2,3,2,5002
+ Arkansas,AR,Cross,5,5037,3,2,3,2,5002
+ Arkansas,AR,Dallas,5,5039,1,1,1,1,5001
+ Arkansas,AR,Desha,5,5041,3,1,3,1,5001
+ Arkansas,AR,Drew,5,5043,1,1,1,1,5001
+ Arkansas,AR,Faulkner,5,5045,2,1&2,2,3,5003
+ Arkansas,AR,Franklin,5,5047,2,2,2,2,5002
+ Arkansas,AR,Fulton,5,5049,2,2,2,2,5002
+ Arkansas,AR,Garland,5,5051,2,1,2,1,5001
+ Arkansas,AR,Grant,5,5053,1,1,1,1,5001
+ Arkansas,AR,Greene,5,5055,3,2,3,2,5002
+ Arkansas,AR,Hempstead,5,5057,1,1,1,1,5001
+ Arkansas,AR,Hot Spring,5,5059,1,1,1,1,5001
+ Arkansas,AR,Howard,5,5061,1,1,1,1,5001
+ Arkansas,AR,Independence,5,5063,2,2,2,2,5002
+ Arkansas,AR,Izard,5,5065,2,2,2,2,5002
+ Arkansas,AR,Jackson,5,5067,3,2,3,2,5002
+ Arkansas,AR,Jefferson,5,5069,1,1,1,1,5001
+ Arkansas,AR,Johnson,5,5071,2,2,2,2,5002
+ Arkansas,AR,Lafayette,5,5073,1,1,1,1,5001
+ Arkansas,AR,Lawrence,5,5075,2,2,2,2,5002
+ Arkansas,AR,Lee,5,5077,3,2,3,2,5002
+ Arkansas,AR,Lincoln,5,5079,1,1,1,1,5001
+ Arkansas,AR,Little River,5,5081,1,1,1,1,5001
+ Arkansas,AR,Logan,5,5083,2,1,2,1,5001
+ Arkansas,AR,Lonoke,5,5085,2,1,2,1,5001
+ Arkansas,AR,Madison,5,5087,2,2,2,2,5002
+ Arkansas,AR,Marion,5,5089,2,2,2,2,5002
+ Arkansas,AR,Miller,5,5091,1,1,1,1,5001
+ Arkansas,AR,Mississippi,5,5093,3,2,3,2,5002
+ Arkansas,AR,Monroe,5,5095,3,1,3,1,5001
+ Arkansas,AR,Montgomery,5,5097,2,1,2,1,5001
+ Arkansas,AR,Nevada,5,5099,1,1,1,1,5001
+ Arkansas,AR,Newton,5,5101,2,2,2,2,5002
+ Arkansas,AR,Ouachita,5,5103,1,1,1,1,5001
+ Arkansas,AR,Perry,5,5105,2,1,2,1,5001
+ Arkansas,AR,Phillips,5,5107,3,1,3,1,5001
+ Arkansas,AR,Pike,5,5109,1,1,1,1,5001
+ Arkansas,AR,Poinsett,5,5111,3,2,3,2,5002
+ Arkansas,AR,Polk,5,5113,2,1,2,1,5001
+ Arkansas,AR,Pope,5,5115,2,2,2,2,5002
+Arkansas,AR,Prairie,5,5117,3,1,3,1,5001
+ Arkansas,AR,Pulaski,5,5119,2,1,2,1,5001
+ Arkansas,AR,Randolph,5,5121,2,2,2,2,5002
+ Arkansas,AR,St. Francis,5,5123,3,2,3,2,5002
+ Arkansas,AR,Saline,5,5125,2,1,2,1,5001
+ Arkansas,AR,Scott,5,5127,2,1,2,1,5001
+ Arkansas,AR,Searcy,5,5129,2,2,2,2,5002
+ Arkansas,AR,Sebastian,5,5131,2,1,2,1,5001
+ Arkansas,AR,Sevier,5,5133,1,1,1,1,5001
+Arkansas,AR,Sharp,5,5135,2,2,2,2,5002
+ Arkansas,AR,Stone,5,5137,2,2,2,2,5002
+ Arkansas,AR,Union,5,5139,1,1,1,1,5001
+ Arkansas,AR,Van Buren,5,5141,2,2,2,2,5002
+ Arkansas,AR,Washington,5,5143,2,2,2,2,5002
+ Arkansas,AR,White,5,5145,2,2,2,2,5002
+ Arkansas,AR,Woodruff,5,5147,3,2,3,2,5002
+ Arkansas,AR,Yell,5,5149,2,1,2,1,5001
+ Florida,FL,Alachua,12,12001,1,1,1,1,12001
+ Florida,FL,Baker,12,12003,1,1,1,1,12001
+ Florida,FL,Bay,12,12005,3,2,3,2,12002
+ Florida,FL,Bradford,12,12007,1,1,1,1,12001
+ Florida,FL,Brevard,12,12009,2,1&2,2,3,12003
+ Florida,FL,Broward,12,12011,2,1&2,2,3,12003
+ Florida,FL,Calhoun,12,12013,3,2,3,2,12002
+ Florida,FL,Charlotte,12,12015,2,1&2,2,3,12003
+ Florida,FL,Citrus,12,12017,1,1,1,1,12001
+ Florida,FL,Clay,12,12019,1,1,1,1,12001
+ Florida,FL,Collier,12,12021,2,1&2,2,3,12003
+ Florida,FL,Columbia,12,12023,1,1,1,1,12001
+ Florida,FL,Dade,12,12025,2,1&2,2,3,12003
+ Florida,FL,De Soto,12,12027,2,1&2,2,3,12003
+ Florida,FL,Dixie,12,12029,1,1,1,1,12001
+ Florida,FL,Duval,12,12031,1,1,1,1,12001
+ Florida,FL,Escambia,12,12033,3,2,3,2,12002
+ Florida,FL,Flagler,12,12035,1,1,1,1,12001
+ Florida,FL,Franklin,12,12037,3,2,3,2,12002
+ Florida,FL,Gadsden,12,12039,3,2,3,2,12002
+ Florida,FL,Gilchrist,12,12041,1,1,1,1,12001
+ Florida,FL,Glades,12,12043,2,1&2,2,3,12003
+ Florida,FL,Gulf,12,12045,3,2,3,2,12002
+ Florida,FL,Hamilton,12,12047,1,1,1,1,12001
+ Florida,FL,Hardee,12,12049,2,1&2,2,3,12003
+ Florida,FL,Hendry,12,12051,2,1&2,2,3,12003
+ Florida,FL,Hernando,12,12053,1,1,1,1,12001
+ Florida,FL,Highlands,12,12055,2,1&2,2,3,12003
+ Florida,FL,Hillsborough,12,12057,2,1&2,2,3,12003
+ Florida,FL,Holmes,12,12059,3,2,3,2,12002
+ Florida,FL,Indian River,12,12061,2,1&2,2,3,12003
+ Florida,FL,Jackson,12,12063,3,2,3,2,12002
+ Florida,FL,Jefferson,12,12065,3,2,3,2,12002
+ Florida,FL,Lafayette,12,12067,1,1,1,1,12001
+ Florida,FL,Lake,12,12069,1,1,1,1,12001
+ Florida,FL,Lee,12,12071,2,1&2,2,3,12003
+ Florida,FL,Leon,12,12073,3,2,3,2,12002
+ Florida,FL,Levy,12,12075,1,1,1,1,12001
+ Florida,FL,Liberty,12,12077,3,2,3,2,12002
+ Florida,FL,Madison,12,12079,1,2,1,2,12002
+ Florida,FL,Manatee,12,12081,2,1&2,2,3,12003
+ Florida,FL,Marion,12,12083,1,1,1,1,12001
+ Florida,FL,Martin,12,12085,2,1&2,2,3,12003
+ Florida,FL,Monroe,12,12087,2,1&2,2,3,12003
+ Florida,FL,Nassau,12,12089,1,1,1,1,12001
+ Florida,FL,Okaloosa,12,12091,3,2,3,2,12002
+ Florida,FL,Okeechobee,12,12093,2,1&2,2,3,12003
+ Florida,FL,Orange,12,12095,1,1,1,1,12001
+ Florida,FL,Osceola,12,12097,2,1&2,2,3,12003
+ Florida,FL,Palm Beach,12,12099,2,1&2,2,3,12003
+ Florida,FL,Pasco,12,12101,1,1,1,1,12001
+ Florida,FL,Pinellas,12,12103,2,1&2,2,3,12003
+ Florida,FL,Polk,12,12105,2,1&2,2,3,12003
+ Florida,FL,Putnam,12,12107,1,1,1,1,12001
+ Florida,FL,St. Johns,12,12109,1,1,1,1,12001
+ Florida,FL,St. Lucie,12,12111,2,1&2,2,3,12003
+ Florida,FL,Santa Rosa,12,12113,3,2,3,2,12002
+ Florida,FL,Sarasota,12,12115,2,1&2,2,3,12003
+ Florida,FL,Seminole,12,12117,1,1,1,1,12001
+ Florida,FL,Sumter,12,12119,1,1,1,1,12001
+ Florida,FL,Suwannee,12,12121,1,1,1,1,12001
+ Florida,FL,Taylor,12,12123,1,2,1,2,12002
+ Florida,FL,Union,12,12125,1,1,1,1,12001
+ Florida,FL,Volusia,12,12127,1,1,1,1,12001
+ Florida,FL,Wakulla,12,12129,3,2,3,2,12002
+ Florida,FL,Walton,12,12131,3,2,3,2,12002
+ Florida,FL,Washington,12,12133,3,2,3,2,12002
+ Georgia,GA,Appling,13,13001,3,2,3,2,13002
+ Georgia,GA,Atkinson,13,13003,3,2,3,2,13002
+ Georgia,GA,Bacon,13,13005,3,2,3,2,13002
+ Georgia,GA,Baker,13,13007,3,2,3,2,13002
+ Georgia,GA,Baldwin,13,13009,2,2,2,2,13002
+ Georgia,GA,Banks,13,13011,1,1,1,1,13001
+ Georgia,GA,Barrow,13,13013,1,1,1,1,13001
+ Georgia,GA,Bartow,13,13015,1,1,1,1,13001
+ Georgia,GA,Ben Hill,13,13017,3,2,3,2,13002
+ Georgia,GA,Berrien,13,13019,3,2,3,2,13002
+ Georgia,GA,Bibb,13,13021,2,2,2,2,13002
+ Georgia,GA,Bleckley,13,13023,2,2,2,2,13002
+ Georgia,GA,Brantley,13,13025,3,2,3,2,13002
+ Georgia,GA,Brooks,13,13027,3,2,3,2,13002
+ Georgia,GA,Bryan,13,13029,3,2,3,2,13002
+ Georgia,GA,Bulloch,13,13031,3,2,3,2,13002
+ Georgia,GA,Burke,13,13033,2,2,2,2,13002
+ Georgia,GA,Butts,13,13035,2,1&2,2,3,13003
+ Georgia,GA,Calhoun,13,13037,3,2,3,2,13002
+ Georgia,GA,Camden,13,13039,3,2,3,2,13002
+ Georgia,GA,Candler,13,13043,3,2,3,2,13002
+ Georgia,GA,Carroll,13,13045,2,1,2,1,13001
+ Georgia,GA,Catoosa,13,13047,1,1,1,1,13001
+ Georgia,GA,Charlton,13,13049,3,2,3,2,13002
+ Georgia,GA,Chatham,13,13051,3,2,3,2,13002
+ Georgia,GA,Chattahoochee,13,13053,2,2,2,2,13002
+ Georgia,GA,Chattooga,13,13055,1,1,1,1,13001
+ Georgia,GA,Cherokee,13,13057,1,1,1,1,13001
+ Georgia,GA,Clarke,13,13059,1,1,1,1,13001
+ Georgia,GA,Clay,13,13061,2,2,2,2,13002
+ Georgia,GA,Clayton,13,13063,1,1,1,1,13001
+ Georgia,GA,Clinch,13,13065,3,2,3,2,13002
+ Georgia,GA,Cobb,13,13067,1,1,1,1,13001
+ Georgia,GA,Coffee,13,13069,3,2,3,2,13002
+ Georgia,GA,Colquitt,13,13071,3,2,3,2,13002
+ Georgia,GA,Columbia,13,13073,2,2,2,2,13002
+ Georgia,GA,Cook,13,13075,3,2,3,2,13002
+ Georgia,GA,Coweta,13,13077,2,1,2,1,13001
+ Georgia,GA,Crawford,13,13079,2,2,2,2,13002
+ Georgia,GA,Crisp,13,13081,2,2,2,2,13002
+Georgia,GA,Dade,13,13083,1,1,1,1,13001
+ Georgia,GA,Dawson,13,13085,1,1,1,1,13001
+ Georgia,GA,Decatur,13,13087,3,2,3,2,13002
+ Georgia,GA,Dekalb,13,13089,1,1,1,1,13001
+ Georgia,GA,Dodge,13,13091,2,2,2,2,13002
+ Georgia,GA,Dooly,13,13093,2,2,2,2,13002
+ Georgia,GA,Dougherty,13,13095,3,2,3,2,13002
+ Georgia,GA,Douglas,13,13097,1,1,1,1,13001
+ Georgia,GA,Early,13,13099,3,2,3,2,13002
+ Georgia,GA,Echols,13,13101,3,2,3,2,13002
+ Georgia,GA,Effingham,13,13103,3,2,3,2,13002
+ Georgia,GA,Elbert,13,13105,1,1,1,1,13001
+ Georgia,GA,Emanuel,13,13107,2,2,2,2,13002
+ Georgia,GA,Evans,13,13109,3,2,3,2,13002
+ Georgia,GA,Fannin,13,13111,1,1,1,1,13001
+ Georgia,GA,Fayette,13,13113,2,1,2,1,13001
+ Georgia,GA,Floyd,13,13115,1,1,1,1,13001
+ Georgia,GA,Forsyth,13,13117,1,1,1,1,13001
+ Georgia,GA,Franklin,13,13119,1,1,1,1,13001
+ Georgia,GA,Fulton,13,13121,1,1,1,1,13001
+ Georgia,GA,Gilmer,13,13123,1,1,1,1,13001
+ Georgia,GA,Glascock,13,13125,2,2,2,2,13002
+ Georgia,GA,Glynn,13,13127,3,2,3,2,13002
+ Georgia,GA,Gordon,13,13129,1,1,1,1,13001
+ Georgia,GA,Grady,13,13131,3,2,3,2,13002
+ Georgia,GA,Greene,13,13133,2,2,2,2,13002
+ Georgia,GA,Gwinnett,13,13135,1,1,1,1,13001
+ Georgia,GA,Habersham,13,13137,1,1,1,1,13001
+ Georgia,GA,Hall,13,13139,1,1,1,1,13001
+ Georgia,GA,Hancock,13,13141,2,2,2,2,13002
+ Georgia,GA,Haralson,13,13143,1,1,1,1,13001
+ Georgia,GA,Harris,13,13145,2,2,2,2,13002
+ Georgia,GA,Hart,13,13147,1,1,1,1,13001
+ Georgia,GA,Heard,13,13149,2,1,2,1,13001
+ Georgia,GA,Henry,13,13151,1,1,1,1,13001
+ Georgia,GA,Houston,13,13153,2,2,2,2,13002
+ Georgia,GA,Irwin,13,13155,3,2,3,2,13002
+ Georgia,GA,Jackson,13,13157,1,1,1,1,13001
+ Georgia,GA,Jasper,13,13159,2,2,2,2,13002
+ Georgia,GA,Jeff Davis,13,13161,3,2,3,2,13002
+ Georgia,GA,Jefferson,13,13163,2,2,2,2,13002
+ Georgia,GA,Jenkins,13,13165,2,2,2,2,13002
+ Georgia,GA,Johnson,13,13167,2,2,2,2,13002
+ Georgia,GA,Jones,13,13169,2,2,2,2,13002
+ Georgia,GA,Lamar,13,13171,2,2,2,2,13002
+ Georgia,GA,Lanier,13,13173,3,2,3,2,13002
+ Georgia,GA,Laurens,13,13175,2,2,2,2,13002
+ Georgia,GA,Lee,13,13177,2,2,2,2,13002
+ Georgia,GA,Liberty,13,13179,3,2,3,2,13002
+ Georgia,GA,Lincoln,13,13181,2,2,2,2,13002
+ Georgia,GA,Long,13,13183,3,2,3,2,13002
+ Georgia,GA,Lowndes,13,13185,3,2,3,2,13002
+ Georgia,GA,Lumpkin,13,13187,1,1,1,1,13001
+ Georgia,GA,Mcduffie,13,13189,2,2,2,2,13002
+ Georgia,GA,Mcintosh,13,13191,3,2,3,2,13002
+ Georgia,GA,Macon,13,13193,2,2,2,2,13002
+ Georgia,GA,Madison,13,13195,1,1,1,1,13001
+ Georgia,GA,Marion,13,13197,2,2,2,2,13002
+ Georgia,GA,Meriwether,13,13199,2,1&2,2,3,13003
+ Georgia,GA,Miller,13,13201,3,2,3,2,13002
+ Georgia,GA,Mitchell,13,13205,3,2,3,2,13002
+ Georgia,GA,Monroe,13,13207,2,2,2,2,13002
+ Georgia,GA,Montgomery,13,13209,3,2,3,2,13002
+ Georgia,GA,Morgan,13,13211,2,1&2,2,3,13003
+ Georgia,GA,Murray,13,13213,1,1,1,1,13001
+ Georgia,GA,Muscogee,13,13215,2,2,2,2,13002
+ Georgia,GA,Newton,13,13217,1,1,1,1,13001
+ Georgia,GA,Oconee,13,13219,1,1,1,1,13001
+ Georgia,GA,Oglethorpe,13,13221,1,1,1,1,13001
+ Georgia,GA,Paulding,13,13223,1,1,1,1,13001
+ Georgia,GA,Peach,13,13225,2,2,2,2,13002
+ Georgia,GA,Pickens,13,13227,1,1,1,1,13001
+ Georgia,GA,Pierce,13,13229,3,2,3,2,13002
+ Georgia,GA,Pike,13,13231,2,1&2,2,3,13003
+ Georgia,GA,Polk,13,13233,1,1,1,1,13001
+ Georgia,GA,Pulaski,13,13235,2,2,2,2,13002
+ Georgia,GA,Putnam,13,13237,2,2,2,2,13002
+ Georgia,GA,Quitman,13,13239,2,2,2,2,13002
+ Georgia,GA,Rabun,13,13241,1,1,1,1,13001
+ Georgia,GA,Randolph,13,13243,2,2,2,2,13002
+ Georgia,GA,Richmond,13,13245,2,2,2,2,13002
+ Georgia,GA,Rockdale,13,13247,1,1,1,1,13001
+ Georgia,GA,Schley,13,13249,2,2,2,2,13002
+ Georgia,GA,Screven,13,13251,3,2,3,2,13002
+ Georgia,GA,Seminole,13,13253,3,2,3,2,13002
+ Georgia,GA,Spalding,13,13255,2,1,2,1,13001
+ Georgia,GA,Stephens,13,13257,1,1,1,1,13001
+ Georgia,GA,Stewart,13,13259,2,2,2,2,13002
+ Georgia,GA,Sumter,13,13261,2,2,2,2,13002
+ Georgia,GA,Talbot,13,13263,2,2,2,2,13002
+ Georgia,GA,Taliaferro,13,13265,2,2,2,2,13002
+ Georgia,GA,Tattnall,13,13267,3,2,3,2,13002
+ Georgia,GA,Taylor,13,13269,2,2,2,2,13002
+ Georgia,GA,Telfair,13,13271,3,2,3,2,13002
+ Georgia,GA,Terrell,13,13273,2,2,2,2,13002
+ Georgia,GA,Thomas,13,13275,3,2,3,2,13002
+ Georgia,GA,Tift,13,13277,3,2,3,2,13002
+ Georgia,GA,Toombs,13,13279,3,2,3,2,13002
+ Georgia,GA,Towns,13,13281,1,1,1,1,13001
+ Georgia,GA,Treutlen,13,13283,2,2,2,2,13002
+ Georgia,GA,Troup,13,13285,2,1&2,2,3,13003
+ Georgia,GA,Turner,13,13287,3,2,3,2,13002
+ Georgia,GA,Twiggs,13,13289,2,2,2,2,13002
+ Georgia,GA,Union,13,13291,1,1,1,1,13001
+ Georgia,GA,Upson,13,13293,2,2,2,2,13002
+ Georgia,GA,Walker,13,13295,1,1,1,1,13001
+ Georgia,GA,Walton,13,13297,1,1,1,1,13001
+ Georgia,GA,Ware,13,13299,3,2,3,2,13002
+ Georgia,GA,Warren,13,13301,2,2,2,2,13002
+ Georgia,GA,Washington,13,13303,2,2,2,2,13002
+ Georgia,GA,Wayne,13,13305,3,2,3,2,13002
+ Georgia,GA,Webster,13,13307,2,2,2,2,13002
+ Georgia,GA,Wheeler,13,13309,3,2,3,2,13002
+ Georgia,GA,White,13,13311,1,1,1,1,13001
+ Georgia,GA,Whitfield,13,13313,1,1,1,1,13001
+ Georgia,GA,Wilcox,13,13315,2,2,2,2,13002
+ Georgia,GA,Wilkes,13,13317,2,1&2,2,3,13003
+ Georgia,GA,Wilkinson,13,13319,2,2,2,2,13002
+ Georgia,GA,Worth,13,13321,3,2,3,2,13002
+Kentucky,KY,Adair,21,21001,2,1,2,1,21001
+Kentucky,KY,Allen,21,21003,2,2,2,2,21002
+Kentucky,KY,Anderson,21,21005,2,2,2,2,21002
+Kentucky,KY,Ballard,21,21007,3,2,3,2,21002
+Kentucky,KY,Barren,21,21009,2,2,2,2,21002
+Kentucky,KY,Bath,21,21011,2,1,2,1,21001
+Kentucky,KY,Bell,21,21013,1,1,1,1,21001
+Kentucky,KY,Boone,21,21015,2,2,2,2,21002
+Kentucky,KY,Bourbon,21,21017,2,2,2,2,21002
+Kentucky,KY,Boyd,21,21019,1,1,1,1,21001
+Kentucky,KY,Boyle,21,21021,2,1&2,2,3,21003
+Kentucky,KY,Bracken,21,21023,2,2,2,2,21002
+Kentucky,KY,Breathitt,21,21025,1,1,1,1,21001
+Kentucky,KY,Breckinridge,21,21027,3,2,3,2,21002
+Kentucky,KY,Bullitt,21,21029,2,2,2,2,21002
+Kentucky,KY,Butler,21,21031,3,2,3,2,21002
+Kentucky,KY,Caldwell,21,21033,3,2,3,2,21002
+Kentucky,KY,Calloway,21,21035,3,2,3,2,21002
+Kentucky,KY,Campbell,21,21037,2,2,2,2,21002
+Kentucky,KY,Carlisle,21,21039,3,2,3,2,21002
+Kentucky,KY,Carroll,21,21041,2,2,2,2,21002
+Kentucky,KY,Carter,21,21043,1,1,1,1,21001
+Kentucky,KY,Casey,21,21045,2,1,2,1,21001
+Kentucky,KY,Christian,21,21047,3,2,3,2,21002
+Kentucky,KY,Clark,21,21049,2,1&2,2,3,21003
+Kentucky,KY,Clay,21,21051,1,1,1,1,21001
+Kentucky,KY,Clinton,21,21053,2,1,2,1,21001
+Kentucky,KY,Crittenden,21,21055,3,2,3,2,21002
+Kentucky,KY,Cumberland,21,21057,2,1,2,1,21001
+Kentucky,KY,Daviess,21,21059,3,2,3,2,21002
+Kentucky,KY,Edmonson,21,21061,2,2,2,2,21002
+Kentucky,KY,Elliott,21,21063,1,1,1,1,21001
+Kentucky,KY,Estill,21,21065,2,1,2,1,21001
+Kentucky,KY,Fayette,21,21067,2,1&2,2,3,21003
+Kentucky,KY,Fleming,21,21069,2,1&2,2,3,21003
+Kentucky,KY,Floyd,21,21071,1,1,1,1,21001
+Kentucky,KY,Franklin,21,21073,2,2,2,2,21002
+Kentucky,KY,Fulton,21,21075,3,2,3,2,21002
+Kentucky,KY,Gallatin,21,21077,2,2,2,2,21002
+Kentucky,KY,Garrard,21,21079,2,1,2,1,21001
+Kentucky,KY,Grant,21,21081,2,2,2,2,21002
+Kentucky,KY,Graves,21,21083,3,2,3,2,21002
+Kentucky,KY,Grayson,21,21085,2,2,2,2,21002
+Kentucky,KY,Green,21,21087,2,1&2,2,3,21003
+Kentucky,KY,Greenup,21,21089,1,1,1,1,21001
+Kentucky,KY,Hancock,21,21091,3,2,3,2,21002
+Kentucky,KY,Hardin,21,21093,2,2,2,2,21002
+Kentucky,KY,Harlan,21,21095,1,1,1,1,21001
+Kentucky,KY,Harrison,21,21097,2,2,2,2,21002
+Kentucky,KY,Hart,21,21099,2,2,2,2,21002
+Kentucky,KY,Henderson,21,21101,3,2,3,2,21002
+Kentucky,KY,Henry,21,21103,2,2,2,2,21002
+Kentucky,KY,Hickman,21,21105,3,2,3,2,21002
+Kentucky,KY,Hopkins,21,21107,3,2,3,2,21002
+Kentucky,KY,Jackson,21,21109,2,1,2,1,21001
+Kentucky,KY,Jefferson,21,21111,2,2,2,2,21002
+Kentucky,KY,Jessamine,21,21113,2,1&2,2,3,21003
+Kentucky,KY,Johnson,21,21115,1,1,1,1,21001
+Kentucky,KY,Kenton,21,21117,2,2,2,2,21002
+Kentucky,KY,Knott,21,21119,1,1,1,1,21001
+Kentucky,KY,Knox,21,21121,1,1,1,1,21001
+Kentucky,KY,Larue,21,21123,2,2,2,2,21002
+Kentucky,KY,Laurel,21,21125,1,1,1,1,21001
+Kentucky,KY,Lawrence,21,21127,1,1,1,1,21001
+Kentucky,KY,Lee,21,21129,1,1,1,1,21001
+Kentucky,KY,Leslie,21,21131,1,1,1,1,21001
+Kentucky,KY,Letcher,21,21133,1,1,1,1,21001
+Kentucky,KY,Lewis,21,21135,2,1&2,2,3,21003
+Kentucky,KY,Lincoln,21,21137,2,1,2,1,21001
+Kentucky,KY,Livingston,21,21139,3,2,3,2,21002
+Kentucky,KY,Logan,21,21141,3,2,3,2,21002
+Kentucky,KY,Lyon,21,21143,3,2,3,2,21002
+Kentucky,KY,Mccracken,21,21145,3,2,3,2,21002
+Kentucky,KY,Mccreary,21,21147,2,1,2,1,21001
+Kentucky,KY,Mclean,21,21149,3,2,3,2,21002
+Kentucky,KY,Madison,21,21151,2,1,2,1,21001
+Kentucky,KY,Magoffin,21,21153,1,1,1,1,21001
+Kentucky,KY,Marion,21,21155,2,1&2,2,3,21003
+Kentucky,KY,Marshall,21,21157,3,2,3,2,21002
+Kentucky,KY,Martin,21,21159,1,1,1,1,21001
+Kentucky,KY,Mason,21,21161,2,2,2,2,21002
+Kentucky,KY,Meade,21,21163,2,2,2,2,21002
+Kentucky,KY,Menifee,21,21165,2,1,2,1,21001
+Kentucky,KY,Mercer,21,21167,2,1&2,2,3,21003
+Kentucky,KY,Metcalfe,21,21169,2,1&2,2,3,21003
+Kentucky,KY,Monroe,21,21171,2,1&2,2,3,21003
+Kentucky,KY,Montgomery,21,21173,2,1,2,1,21001
+Kentucky,KY,Morgan,21,21175,1,1,1,1,21001
+Kentucky,KY,Muhlenberg,21,21177,3,2,3,2,21002
+Kentucky,KY,Nelson,21,21179,2,2,2,2,21002
+Kentucky,KY,Nicholas,21,21181,2,2,2,2,21002
+Kentucky,KY,Ohio,21,21183,3,2,3,2,21002
+Kentucky,KY,Oldham,21,21185,2,2,2,2,21002
+Kentucky,KY,Owen,21,21187,2,2,2,2,21002
+Kentucky,KY,Owsley,21,21189,1,1,1,1,21001
+Kentucky,KY,Pendleton,21,21191,2,2,2,2,21002
+Kentucky,KY,Perry,21,21193,1,1,1,1,21001
+Kentucky,KY,Pike,21,21195,1,1,1,1,21001
+Kentucky,KY,Powell,21,21197,2,1,2,1,21001
+Kentucky,KY,Pulaski,21,21199,2,1,2,1,21001
+Kentucky,KY,Robertson,21,21201,2,2,2,2,21002
+Kentucky,KY,Rockcastle,21,21203,2,1,2,1,21001
+Kentucky,KY,Rowan,21,21205,2,1,2,1,21001
+Kentucky,KY,Russell,21,21207,2,1,2,1,21001
+Kentucky,KY,Scott,21,21209,2,2,2,2,21002
+Kentucky,KY,Shelby,21,21211,2,2,2,2,21002
+Kentucky,KY,Simpson,21,21213,3,2,3,2,21002
+Kentucky,KY,Spencer,21,21215,2,2,2,2,21002
+Kentucky,KY,Taylor,21,21217,2,1&2,2,3,21003
+Kentucky,KY,Todd,21,21219,3,2,3,2,21002
+Kentucky,KY,Trigg,21,21221,3,2,3,2,21002
+Kentucky,KY,Trimble,21,21223,2,2,2,2,21002
+Kentucky,KY,Union,21,21225,3,2,3,2,21002
+Kentucky,KY,Warren,21,21227,2,2,2,2,21002
+Kentucky,KY,Washington,21,21229,2,2,2,2,21002
+Kentucky,KY,Wayne,21,21231,2,1,2,1,21001
+Kentucky,KY,Webster,21,21233,3,2,3,2,21002
+Kentucky,KY,Whitley,21,21235,1,1,1,1,21001
+Kentucky,KY,Wolfe,21,21237,1,1,1,1,21001
+Kentucky,KY,Woodford,21,21239,2,2,2,2,21002
+ Louisiana,LA,Acadia,22,22001,3,1&2,3,3,22003
+ Louisiana,LA,Allen,22,22003,1,1,1,1,22001
+ Louisiana,LA,Ascension,22,22005,3,2,3,2,22002
+ Louisiana,LA,Assumption,22,22007,3,2,3,2,22002
+ Louisiana,LA,Avoyelles,22,22009,1,1,1,1,22001
+ Louisiana,LA,Beauregard,22,22011,1,1,1,1,22001
+ Louisiana,LA,Bienville,22,22013,1,1,1,1,22001
+ Louisiana,LA,Bossier,22,22015,1,1,1,1,22001
+ Louisiana,LA,Caddo,22,22017,1,1,1,1,22001
+ Louisiana,LA,Calcasieu,22,22019,1,1,1,1,22001
+ Louisiana,LA,Caldwell,22,22021,1,1,1,1,22001
+ Louisiana,LA,Cameron,22,22023,3,2,3,2,22002
+ Louisiana,LA,Catahoula,22,22025,2,1,2,1,22001
+ Louisiana,LA,Claiborne,22,22027,1,1,1,1,22001
+ Louisiana,LA,Concordia,22,22029,2,1,2,1,22001
+ Louisiana,LA,De Soto,22,22031,1,1,1,1,22001
+ Louisiana,LA,E. Baton Rouge,22,22033,3,2,3,2,22002
+ Louisiana,LA,E. Carroll,22,22035,2,1,2,1,22001
+ Louisiana,LA,E. Feliciana,22,22037,3,2,3,2,22002
+ Louisiana,LA,Evangeline,22,22039,1,1,1,1,22001
+ Louisiana,LA,Franklin,22,22041,2,1,2,1,22001
+ Louisiana,LA,Grant,22,22043,1,1,1,1,22001
+ Louisiana,LA,Iberia,22,22045,3,2,3,2,22002
+ Louisiana,LA,Iberville,22,22047,3,2,3,2,22002
+ Louisiana,LA,Jackson,22,22049,1,1,1,1,22001
+ Louisiana,LA,Jefferson,22,22051,3,2,3,2,22002
+ Louisiana,LA,Jeff Davis,22,22053,1,1,1,1,22001
+ Louisiana,LA,Lafayette,22,22055,3,2,3,2,22002
+ Louisiana,LA,LaFourche,22,22057,3,2,3,2,22002
+ Louisiana,LA,La Salle,22,22059,1,1,1,1,22001
+ Louisiana,LA,Lincoln,22,22061,1,1,1,1,22001
+ Louisiana,LA,Livingston,22,22063,3,2,3,2,22002
+ Louisiana,LA,Madison,22,22065,2,1,2,1,22001
+ Louisiana,LA,Morehouse,22,22067,1,1,1,1,22001
+ Louisiana,LA,Natchitoches,22,22069,1,1,1,1,22001
+ Louisiana,LA,Orleans,22,22071,3,2,3,2,22002
+ Louisiana,LA,Ouachita,22,22073,1,1,1,1,22001
+ Louisiana,LA,Plaquemines,22,22075,3,2,3,2,22002
+ Louisiana,LA,Pointe Coupee,22,22077,3,2,3,2,22002
+ Louisiana,LA,Rapides,22,22079,1,1,1,1,22001
+ Louisiana,LA,Red River,22,22081,1,1,1,1,22001
+ Louisiana,LA,Richland,22,22083,2,1,2,1,22001
+ Louisiana,LA,Sabine,22,22085,1,1,1,1,22001
+ Louisiana,LA,St. Bernard,22,22087,3,2,3,2,22002
+ Louisiana,LA,St. Charles,22,22089,3,2,3,2,22002
+ Louisiana,LA,St. Helena,22,22091,3,2,3,2,22002
+ Louisiana,LA,St. James,22,22093,3,2,3,2,22002
+ Louisiana,LA,St. John the Baptist,22,22095,3,2,3,2,22002
+ Louisiana,LA,St. Landry,22,22097,3,1&2,3,3,22003
+ Louisiana,LA,St. Martin,22,22099,3,2,3,2,22002
+ Louisiana,LA,St. Mary,22,22101,3,2,3,2,22002
+ Louisiana,LA,St. Tammany,22,22103,3,2,3,2,22002
+ Louisiana,LA,Tangipahoa,22,22105,3,2,3,2,22002
+ Louisiana,LA,Tensas,22,22107,2,1,2,1,22001
+ Louisiana,LA,Terrebonne,22,22109,3,2,3,2,22002
+ Louisiana,LA,Union,22,22111,1,1,1,1,22001
+ Louisiana,LA,Vermilion,22,22113,3,2,3,2,22002
+ Louisiana,LA,Vernon,22,22115,1,1,1,1,22001
+ Louisiana,LA,Washington,22,22117,3,2,3,2,22002
+ Louisiana,LA,Webster,22,22119,1,1,1,1,22001
+ Louisiana,LA,W. Baton Rouge,22,22121,3,2,3,2,22002
+ Louisiana,LA,W. Carroll,22,22123,2,1,2,1,22001
+ Louisiana,LA,W. Feliciana,22,22125,3,2,3,2,22002
+ Louisiana,LA,Winn,22,22127,1,1,1,1,22001
+ Mississippi,MS,Adams,28,28001,3,2,3,2,28002
+ Mississippi,MS,Alcorn,28,28003,2,1,2,1,28001
+ Mississippi,MS,Amite,28,28005,3,2,3,2,28002
+ Mississippi,MS,Attala,28,28007,3,1,3,1,28001
+ Mississippi,MS,Benton,28,28009,2,1,2,1,28001
+ Mississippi,MS,Bolivar,28,28011,1,1,1,1,28001
+ Mississippi,MS,Calhoun,28,28013,2,1,2,1,28001
+ Mississippi,MS,Carroll,28,28015,2,1,2,1,28001
+ Mississippi,MS,Chickasaw,28,28017,2,1,2,1,28001
+ Mississippi,MS,Choctaw,28,28019,2,1,2,1,28001
+ Mississippi,MS,Claiborne,28,28021,3,2,3,2,28002
+ Mississippi,MS,Clarke,28,28023,3,2,3,2,28002
+ Mississippi,MS,Clay,28,28025,2,1,2,1,28001
+ Mississippi,MS,Coahoma,28,28027,1,1,1,1,28001
+ Mississippi,MS,Copiah,28,28029,3,2,3,2,28002
+ Mississippi,MS,Covington,28,28031,3,2,3,2,28002
+ Mississippi,MS,De Soto,28,28033,2,1,2,1,28001
+ Mississippi,MS,Forrest,28,28035,3,2,3,2,28002
+ Mississippi,MS,Franklin,28,28037,3,2,3,2,28002
+ Mississippi,MS,George,28,28039,3,2,3,2,28002
+ Mississippi,MS,Greene,28,28041,3,2,3,2,28002
+ Mississippi,MS,Grenada,28,28043,2,1,2,1,28001
+ Mississippi,MS,Hancock,28,28045,3,2,3,2,28002
+ Mississippi,MS,Harrison,28,28047,3,2,3,2,28002
+ Mississippi,MS,Hinds,28,28049,3,2,3,2,28002
+ Mississippi,MS,Holmes,28,28051,3,1,3,1,28001
+ Mississippi,MS,Humphreys,28,28053,1,1,1,1,28001
+ Mississippi,MS,Issaquena,28,28055,1,1,1,1,28001
+ Mississippi,MS,Itawamba,28,28057,2,1,2,1,28001
+ Mississippi,MS,Jackson,28,28059,3,2,3,2,28002
+ Mississippi,MS,Jasper,28,28061,3,2,3,2,28002
+ Mississippi,MS,Jefferson,28,28063,3,2,3,2,28002
+ Mississippi,MS,Jeff Davis,28,28065,3,2,3,2,28002
+ Mississippi,MS,Jones,28,28067,3,2,3,2,28002
+ Mississippi,MS,Kemper,28,28069,3,1,3,1,28001
+ Mississippi,MS,Lafayette,28,28071,2,1,2,1,28001
+ Mississippi,MS,Lamar,28,28073,3,2,3,2,28002
+ Mississippi,MS,Lauderdale,28,28075,3,2,3,2,28002
+ Mississippi,MS,Lawrence,28,28077,3,2,3,2,28002
+ Mississippi,MS,Leake,28,28079,3,1,3,1,28001
+ Mississippi,MS,Lee,28,28081,2,1,2,1,28001
+ Mississippi,MS,LeFlore,28,28083,1,1,1,1,28001
+ Mississippi,MS,Lincoln,28,28085,3,2,3,2,28002
+ Mississippi,MS,Lowndes,28,28087,2,1,2,1,28001
+ Mississippi,MS,Madison,28,28089,3,1,3,1,28001
+ Mississippi,MS,Marion,28,28091,3,2,3,2,28002
+ Mississippi,MS,Marshall,28,28093,2,1,2,1,28001
+ Mississippi,MS,Monroe,28,28095,2,1,2,1,28001
+ Mississippi,MS,Montgomery,28,28097,2,1,2,1,28001
+ Mississippi,MS,Neshoba,28,28099,3,1,3,1,28001
+ Mississippi,MS,Newton,28,28101,3,2,3,2,28002
+ Mississippi,MS,Noxubee,28,28103,3,1,3,1,28001
+ Mississippi,MS,Oktibbeha,28,28105,2,1,2,1,28001
+ Mississippi,MS,Panola,28,28107,2,1,2,1,28001
+ Mississippi,MS,Pearl River,28,28109,3,2,3,2,28002
+ Mississippi,MS,Perry,28,28111,3,2,3,2,28002
+ Mississippi,MS,Pike,28,28113,3,2,3,2,28002
+ Mississippi,MS,Pontotoc,28,28115,2,1,2,1,28001
+ Mississippi,MS,Prentiss,28,28117,2,1,2,1,28001
+ Mississippi,MS,Quitman,28,28119,1,1,1,1,28001
+ Mississippi,MS,Rankin,28,28121,3,2,3,2,28002
+ Mississippi,MS,Scott,28,28123,3,2,3,2,28002
+ Mississippi,MS,Sharkey,28,28125,1,1,1,1,28001
+ Mississippi,MS,Simpson,28,28127,3,2,3,2,28002
+ Mississippi,MS,Smith,28,28129,3,2,3,2,28002
+ Mississippi,MS,Stone,28,28131,3,2,3,2,28002
+ Mississippi,MS,Sunflower,28,28133,1,1,1,1,28001
+ Mississippi,MS,Tallahatchie,28,28135,1,1,1,1,28001
+ Mississippi,MS,Tate,28,28137,2,1,2,1,28001
+ Mississippi,MS,Tippah,28,28139,2,1,2,1,28001
+ Mississippi,MS,Tishomingo,28,28141,2,1,2,1,28001
+ Mississippi,MS,Tunica,28,28143,1,1,1,1,28001
+ Mississippi,MS,Union,28,28145,2,1,2,1,28001
+ Mississippi,MS,Walthall,28,28147,3,2,3,2,28002
+ Mississippi,MS,Warren,28,28149,1,1,1,1,28001
+ Mississippi,MS,Washington,28,28151,1,1,1,1,28001
+ Mississippi,MS,Wayne,28,28153,3,2,3,2,28002
+ Mississippi,MS,Webster,28,28155,2,1,2,1,28001
+ Mississippi,MS,Wilkinson,28,28157,3,2,3,2,28002
+ Mississippi,MS,Winston,28,28159,3,1,3,1,28001
+ Mississippi,MS,Yalobusha,28,28161,2,1,2,1,28001
+ Mississippi,MS,Yazoo,28,28163,3,1,3,1,28001
+ North Carolina,NC,Alamance,37,37001,2,2,2,2,37002
+ North Carolina,NC,Alexander,37,37003,1,1,1,1,37001
+ North Carolina,NC,Alleghany,37,37005,1,1,1,1,37001
+ North Carolina,NC,Anson,37,37007,2,2,2,2,37002
+ North Carolina,NC,Ashe,37,37009,1,1,1,1,37001
+ North Carolina,NC,Avery,37,37011,1,1,1,1,37001
+ North Carolina,NC,Beaufort,37,37013,3,2,3,2,37002
+ North Carolina,NC,Bertie,37,37015,3,2,3,2,37002
+ North Carolina,NC,Bladen,37,37017,3,2,3,2,37002
+ North Carolina,NC,Brunswick,37,37019,3,2,3,2,37002
+ North Carolina,NC,Buncombe,37,37021,1,1,1,1,37001
+ North Carolina,NC,Burke,37,37023,1,1,1,1,37001
+ North Carolina,NC,Cabarrus,37,37025,2,1,2,1,37001
+ North Carolina,NC,Caldwell,37,37027,1,1,1,1,37001
+ North Carolina,NC,Camden,37,37029,3,2,3,2,37002
+ North Carolina,NC,Carteret,37,37031,3,2,3,2,37002
+ North Carolina,NC,Caswell,37,37033,2,2,2,2,37002
+ North Carolina,NC,Catawba,37,37035,1,1,1,1,37001
+ North Carolina,NC,Chatham,37,37037,2,2,2,2,37002
+ North Carolina,NC,Cherokee,37,37039,1,1,1,1,37001
+ North Carolina,NC,Chowan,37,37041,3,2,3,2,37002
+ North Carolina,NC,Clay,37,37043,1,1,1,1,37001
+ North Carolina,NC,Cleveland,37,37045,1,1,1,1,37001
+ North Carolina,NC,Columbus,37,37047,3,2,3,2,37002
+ North Carolina,NC,Craven,37,37049,3,2,3,2,37002
+ North Carolina,NC,Cumberland,37,37051,3,2,3,2,37002
+ North Carolina,NC,Currituck,37,37053,3,2,3,2,37002
+ North Carolina,NC,Dare,37,37055,3,2,3,2,37002
+ North Carolina,NC,Davidson,37,37057,2,1,2,1,37001
+ North Carolina,NC,Davie,37,37059,2,1,2,1,37001
+ North Carolina,NC,Duplin,37,37061,3,2,3,2,37002
+ North Carolina,NC,Durham,37,37063,2,2,2,2,37002
+ North Carolina,NC,Edgecombe,37,37065,3,2,3,2,37002
+ North Carolina,NC,Forsyth,37,37067,2,1,2,1,37001
+ North Carolina,NC,Franklin,37,37069,2,2,2,2,37002
+ North Carolina,NC,Gaston,37,37071,1,1,1,1,37001
+ North Carolina,NC,Gates,37,37073,3,2,3,2,37002
+ North Carolina,NC,Graham,37,37075,1,1,1,1,37001
+ North Carolina,NC,Granville,37,37077,2,2,2,2,37002
+ North Carolina,NC,Greene,37,37079,3,2,3,2,37002
+ North Carolina,NC,Guilford,37,37081,2,1&2,2,3,37003
+ North Carolina,NC,Halifax,37,37083,2,2,2,2,37002
+ North Carolina,NC,Harnett,37,37085,2,2,2,2,37002
+ North Carolina,NC,Haywood,37,37087,1,1,1,1,37001
+ North Carolina,NC,Henderson,37,37089,1,1,1,1,37001
+ North Carolina,NC,Hertford,37,37091,3,2,3,2,37002
+ North Carolina,NC,Hoke,37,37093,2,2,2,2,37002
+ North Carolina,NC,Hyde,37,37095,3,2,3,2,37002
+ North Carolina,NC,Iredell,37,37097,2,1,2,1,37001
+ North Carolina,NC,Jackson,37,37099,1,1,1,1,37001
+ North Carolina,NC,Johnston,37,37101,2,2,2,2,37002
+ North Carolina,NC,Jones,37,37103,3,2,3,2,37002
+ North Carolina,NC,Lee,37,37105,2,2,2,2,37002
+ North Carolina,NC,Lenoir,37,37107,3,2,3,2,37002
+ North Carolina,NC,Lincoln,37,37109,1,1,1,1,37001
+ North Carolina,NC,Mcdowell,37,37111,1,1,1,1,37001
+ North Carolina,NC,Macon,37,37113,1,1,1,1,37001
+ North Carolina,NC,Madison,37,37115,1,1,1,1,37001
+ North Carolina,NC,Martin,37,37117,3,2,3,2,37002
+ North Carolina,NC,Mecklenburg,37,37119,2,1,2,1,37001
+ North Carolina,NC,Mitchell,37,37121,1,1,1,1,37001
+ North Carolina,NC,Montgomery,37,37123,2,2,2,2,37002
+ North Carolina,NC,Moore,37,37125,2,2,2,2,37002
+ North Carolina,NC,Nash,37,37127,2,2,2,2,37002
+ North Carolina,NC,New Hanover,37,37129,3,2,3,2,37002
+ North Carolina,NC,Northampton,37,37131,2,2,2,2,37002
+ North Carolina,NC,Onslow,37,37133,3,2,3,2,37002
+ North Carolina,NC,Orange,37,37135,2,2,2,2,37002
+ North Carolina,NC,Pamlico,37,37137,3,2,3,2,37002
+ North Carolina,NC,Pasquotank,37,37139,3,2,3,2,37002
+ North Carolina,NC,Pender,37,37141,3,2,3,2,37002
+ North Carolina,NC,Perquimans,37,37143,3,2,3,2,37002
+ North Carolina,NC,Person,37,37145,2,2,2,2,37002
+ North Carolina,NC,Pitt,37,37147,3,2,3,2,37002
+ North Carolina,NC,Polk,37,37149,1,1,1,1,37001
+ North Carolina,NC,Randolph,37,37151,2,2,2,2,37002
+ North Carolina,NC,Richmond,37,37153,2,2,2,2,37002
+ North Carolina,NC,Robeson,37,37155,3,2,3,2,37002
+ North Carolina,NC,Rockingham,37,37157,2,1&2,2,3,37003
+ North Carolina,NC,Rowan,37,37159,2,1,2,1,37001
+ North Carolina,NC,Rutherford,37,37161,1,1,1,1,37001
+ North Carolina,NC,Sampson,37,37163,3,2,3,2,37002
+ North Carolina,NC,Scotland,37,37165,2,2,2,2,37002
+ North Carolina,NC,Stanly,37,37167,2,2,2,2,37002
+ North Carolina,NC,Stokes,37,37169,1,1,1,1,37001
+ North Carolina,NC,Surry,37,37171,1,1,1,1,37001
+ North Carolina,NC,Swain,37,37173,1,1,1,1,37001
+ North Carolina,NC,Transylvania,37,37175,1,1,1,1,37001
+ North Carolina,NC,Tyrrell,37,37177,3,2,3,2,37002
+ North Carolina,NC,Union,37,37179,2,2,2,2,37002
+ North Carolina,NC,Vance,37,37181,2,2,2,2,37002
+ North Carolina,NC,Wake,37,37183,2,2,2,2,37002
+ North Carolina,NC,Warren,37,37185,2,2,2,2,37002
+ North Carolina,NC,Washington,37,37187,3,2,3,2,37002
+ North Carolina,NC,Watauga,37,37189,1,1,1,1,37001
+ North Carolina,NC,Wayne,37,37191,3,2,3,2,37002
+ North Carolina,NC,Wilkes,37,37193,1,1,1,1,37001
+ North Carolina,NC,Wilson,37,37195,3,2,3,2,37002
+ North Carolina,NC,Yadkin,37,37197,2,1,2,1,37001
+ North Carolina,NC,Yancey,37,37199,1,1,1,1,37001
+ Oklahoma,OK,Adair,40,40001,2,2,2,2,40002
+ Oklahoma,OK,Atoka,40,40005,3,2,3,2,40002
+ Oklahoma,OK,Bryan,40,40013,3,2,3,2,40002
+ Oklahoma,OK,Cherokee,40,40021,2,2,2,2,40002
+ Oklahoma,OK,Choctaw,40,40023,1,1,1,1,40001
+ Oklahoma,OK,Coal,40,40029,3,2,3,2,40002
+ Oklahoma,OK,Delaware,40,40041,2,2,2,2,40002
+ Oklahoma,OK,Haskell,40,40061,2,1,2,1,40001
+ Oklahoma,OK,Latimer,40,40077,2,1,2,1,40001
+ Oklahoma,OK,Le Flore,40,40079,1,1,1,1,40001
+ Oklahoma,OK,Mccurtain,40,40089,1,1,1,1,40001
+ Oklahoma,OK,Mcintosh,40,40091,3,2,3,2,40002
+ Oklahoma,OK,Mayes,40,40097,3,2,3,2,40002
+ Oklahoma,OK,Muskogee,40,40101,2,1&2,2,3,40003
+ Oklahoma,OK,Ottawa,40,40115,2,2,2,2,40002
+ Oklahoma,OK,Pittsburg,40,40121,3,2,3,2,40002
+ Oklahoma,OK,Pushmataha,40,40127,1,1,1,1,40001
+ Oklahoma,OK,Sequoyah,40,40135,2,1,2,1,40001
+ South Carolina,SC,Abbeville,45,45001,2,2,2,2,45002
+ South Carolina,SC,Aiken,45,45003,2,2,2,2,45002
+ South Carolina,SC,Allendale,45,45005,3,2,3,2,45002
+ South Carolina,SC,Anderson,45,45007,1,1,1,1,45001
+ South Carolina,SC,Bamberg,45,45009,3,2,3,2,45002
+ South Carolina,SC,Barnwell,45,45011,2,2,2,2,45002
+ South Carolina,SC,Beaufort,45,45013,3,2,3,2,45002
+ South Carolina,SC,Berkeley,45,45015,3,2,3,2,45002
+ South Carolina,SC,Calhoun,45,45017,2,2,2,2,45002
+ South Carolina,SC,Charleston,45,45019,3,2,3,2,45002
+ South Carolina,SC,Cherokee,45,45021,1,1,1,1,45001
+ South Carolina,SC,Chester,45,45023,2,2,2,2,45002
+ South Carolina,SC,Chesterfield,45,45025,2,2,2,2,45002
+ South Carolina,SC,Clarendon,45,45027,3,2,3,2,45002
+ South Carolina,SC,Colleton,45,45029,3,2,3,2,45002
+ South Carolina,SC,Darlington,45,45031,2,2,2,2,45002
+ South Carolina,SC,Dillon,45,45033,3,2,3,2,45002
+ South Carolina,SC,Dorchester,45,45035,3,2,3,2,45002
+ South Carolina,SC,Edgefield,45,45037,2,2,2,2,45002
+ South Carolina,SC,Fairfield,45,45039,2,2,2,2,45002
+ South Carolina,SC,Florence,45,45041,3,2,3,2,45002
+ South Carolina,SC,Georgetown,45,45043,3,2,3,2,45002
+ South Carolina,SC,Greenville,45,45045,1,1,1,1,45001
+ South Carolina,SC,Greenwood,45,45047,2,2,2,2,45002
+ South Carolina,SC,Hampton,45,45049,3,2,3,2,45002
+ South Carolina,SC,Horry,45,45051,3,2,3,2,45002
+ South Carolina,SC,Jasper,45,45053,3,2,3,2,45002
+ South Carolina,SC,Kershaw,45,45055,2,2,2,2,45002
+ South Carolina,SC,Lancaster,45,45057,2,2,2,2,45002
+ South Carolina,SC,Laurens,45,45059,2,2,2,2,45002
+ South Carolina,SC,Lee,45,45061,2,2,2,2,45002
+ South Carolina,SC,Lexington,45,45063,2,2,2,2,45002
+ South Carolina,SC,Mccormick,45,45065,2,2,2,2,45002
+ South Carolina,SC,Marion,45,45067,3,2,3,2,45002
+ South Carolina,SC,Marlboro,45,45069,2,2,2,2,45002
+ South Carolina,SC,Newberry,45,45071,2,2,2,2,45002
+ South Carolina,SC,Oconee,45,45073,1,1,1,1,45001
+ South Carolina,SC,Orangeburg,45,45075,3,2,3,2,45002
+ South Carolina,SC,Pickens,45,45077,1,1,1,1,45001
+ South Carolina,SC,Richland,45,45079,2,2,2,2,45002
+ South Carolina,SC,Saluda,45,45081,2,2,2,2,45002
+ South Carolina,SC,Spartanburg,45,45083,1,1,1,1,45001
+ South Carolina,SC,Sumter,45,45085,2,2,2,2,45002
+ South Carolina,SC,Union,45,45087,2,2,2,2,45002
+ South Carolina,SC,Williamsburg,45,45089,3,2,3,2,45002
+ South Carolina,SC,York,45,45091,2,1,2,1,45001
+ Tennessee,TN,Anderson,47,47001,1,1,1,1,47001
+ Tennessee,TN,Bedford,47,47003,2,2,2,2,47002
+ Tennessee,TN,Benton,47,47005,3,2,3,2,47002
+ Tennessee,TN,Bledsoe,47,47007,1,1,1,1,47001
+ Tennessee,TN,Blount,47,47009,1,1,1,1,47001
+ Tennessee,TN,Bradley,47,47011,1,1,1,1,47001
+ Tennessee,TN,Campbell,47,47013,1,1,1,1,47001
+ Tennessee,TN,Cannon,47,47015,2,2,2,2,47002
+ Tennessee,TN,Carroll,47,47017,3,2,3,2,47002
+ Tennessee,TN,Carter,47,47019,1,1,1,1,47001
+ Tennessee,TN,Cheatham,47,47021,2,2,2,2,47002
+ Tennessee,TN,Chester,47,47023,3,2,3,2,47002
+ Tennessee,TN,Claiborne,47,47025,1,1,1,1,47001
+ Tennessee,TN,Clay,47,47027,2,1,2,1,47001
+ Tennessee,TN,Cocke,47,47029,1,1,1,1,47001
+ Tennessee,TN,Coffee,47,47031,2,1&2,2,3,47003
+ Tennessee,TN,Crockett,47,47033,3,2,3,2,47002
+ Tennessee,TN,Cumberland,47,47035,2,1,2,1,47001
+ Tennessee,TN,Davidson,47,47037,2,2,2,2,47002
+ Tennessee,TN,Decatur,47,47039,3,2,3,2,47002
+ Tennessee,TN,De Kalb,47,47041,2,2,2,2,47002
+ Tennessee,TN,Dickson,47,47043,2,2,2,2,47002
+ Tennessee,TN,Dyer,47,47045,3,2,3,2,47002
+ Tennessee,TN,Fayette,47,47047,3,2,3,2,47002
+ Tennessee,TN,Fentress,47,47049,2,1,2,1,47001
+ Tennessee,TN,Franklin,47,47051,2,1&2,2,3,47003
+ Tennessee,TN,Gibson,47,47053,3,2,3,2,47002
+ Tennessee,TN,Giles,47,47055,2,2,2,2,47002
+ Tennessee,TN,Grainger,47,47057,1,1,1,1,47001
+ Tennessee,TN,Greene,47,47059,1,1,1,1,47001
+ Tennessee,TN,Grundy,47,47061,1,1,1,1,47001
+ Tennessee,TN,Hamblen,47,47063,1,1,1,1,47001
+ Tennessee,TN,Hamilton,47,47065,1,1,1,1,47001
+ Tennessee,TN,Hancock,47,47067,1,1,1,1,47001
+ Tennessee,TN,Hardeman,47,47069,3,2,3,2,47002
+ Tennessee,TN,Hardin,47,47071,2,2,2,2,47002
+ Tennessee,TN,Hawkins,47,47073,1,1,1,1,47001
+ Tennessee,TN,Haywood,47,47075,3,2,3,2,47002
+ Tennessee,TN,Henderson,47,47077,3,2,3,2,47002
+ Tennessee,TN,Henry,47,47079,3,2,3,2,47002
+ Tennessee,TN,Hickman,47,47081,2,2,2,2,47002
+ Tennessee,TN,Houston,47,47083,2,2,2,2,47002
+ Tennessee,TN,Humphreys,47,47085,2,2,2,2,47002
+ Tennessee,TN,Jackson,47,47087,2,1,2,1,47001
+ Tennessee,TN,Jefferson,47,47089,1,1,1,1,47001
+ Tennessee,TN,Johnson,47,47091,1,1,1,1,47001
+ Tennessee,TN,Knox,47,47093,1,1,1,1,47001
+ Tennessee,TN,Lake,47,47095,3,2,3,2,47002
+ Tennessee,TN,Lauderdale,47,47097,3,2,3,2,47002
+ Tennessee,TN,Lawrence,47,47099,2,2,2,2,47002
+ Tennessee,TN,Lewis,47,47101,2,2,2,2,47002
+ Tennessee,TN,Lincoln,47,47103,2,2,2,2,47002
+ Tennessee,TN,Loudon,47,47105,1,1,1,1,47001
+ Tennessee,TN,Mcminn,47,47107,1,1,1,1,47001
+ Tennessee,TN,Mcnairy,47,47109,3,2,3,2,47002
+ Tennessee,TN,Macon,47,47111,2,2,2,2,47002
+ Tennessee,TN,Madison,47,47113,3,2,3,2,47002
+ Tennessee,TN,Marion,47,47115,1,1,1,1,47001
+ Tennessee,TN,Marshall,47,47117,2,2,2,2,47002
+ Tennessee,TN,Maury,47,47119,2,2,2,2,47002
+ Tennessee,TN,Meigs,47,47121,1,1,1,1,47001
+ Tennessee,TN,Monroe,47,47123,1,1,1,1,47001
+ Tennessee,TN,Montgomery,47,47125,2,2,2,2,47002
+ Tennessee,TN,Moore,47,47127,2,2,2,2,47002
+ Tennessee,TN,Morgan,47,47129,1,1,1,1,47001
+ Tennessee,TN,Obion,47,47131,3,2,3,2,47002
+ Tennessee,TN,Overton,47,47133,2,1,2,1,47001
+ Tennessee,TN,Perry,47,47135,2,2,2,2,47002
+ Tennessee,TN,Pickett,47,47137,2,1,2,1,47001
+ Tennessee,TN,Polk,47,47139,1,1,1,1,47001
+ Tennessee,TN,Putnam,47,47141,2,1,2,1,47001
+ Tennessee,TN,Rhea,47,47143,1,1,1,1,47001
+ Tennessee,TN,Roane,47,47145,1,1,1,1,47001
+ Tennessee,TN,Robertson,47,47147,2,2,2,2,47002
+ Tennessee,TN,Rutherford,47,47149,2,2,2,2,47002
+ Tennessee,TN,Scott,47,47151,1,1,1,1,47001
+ Tennessee,TN,Sequatchie,47,47153,1,1,1,1,47001
+ Tennessee,TN,Sevier,47,47155,1,1,1,1,47001
+ Tennessee,TN,Shelby,47,47157,3,2,3,2,47002
+ Tennessee,TN,Smith,47,47159,2,2,2,2,47002
+ Tennessee,TN,Stewart,47,47161,2,2,2,2,47002
+ Tennessee,TN,Sullivan,47,47163,1,1,1,1,47001
+ Tennessee,TN,Sumner,47,47165,2,2,2,2,47002
+ Tennessee,TN,Tipton,47,47167,3,2,3,2,47002
+ Tennessee,TN,Trousdale,47,47169,2,2,2,2,47002
+ Tennessee,TN,Unicoi,47,47171,1,1,1,1,47001
+ Tennessee,TN,Union,47,47173,1,1,1,1,47001
+ Tennessee,TN,Van Buren,47,47175,1,1,1,1,47001
+ Tennessee,TN,Warren,47,47177,2,1,2,1,47001
+ Tennessee,TN,Washington,47,47179,1,1,1,1,47001
+ Tennessee,TN,Wayne,47,47181,2,2,2,2,47002
+ Tennessee,TN,Weakley,47,47183,3,2,3,2,47002
+ Tennessee,TN,White,47,47185,2,1,2,1,47001
+ Tennessee,TN,Williamson,47,47187,2,2,2,2,47002
+ Tennessee,TN,Wilson,47,47189,2,2,2,2,47002
+ Texas,TX,Anderson,48,48001,2,2,2,2,48002
+ Texas,TX,Angelina,48,48005,2,2,2,2,48002
+ Texas,TX,Bowie,48,48037,1,1,1,1,48001
+ Texas,TX,Brazoria,48,48039,2,2,2,2,48002
+ Texas,TX,Camp,48,48063,1,1,1,1,48001
+ Texas,TX,Cass,48,48067,1,1,1,1,48001
+ Texas,TX,Chambers,48,48071,2,2,2,2,48002
+ Texas,TX,Cherokee,48,48073,2,2,2,2,48002
+ Texas,TX,Delta,48,48119,1,1,1,1,48001
+ Texas,TX,Ft. Bend,48,48157,2,2,2,2,48002
+ Texas,TX,Franklin,48,48159,1,1,1,1,48001
+ Texas,TX,Galveston,48,48167,2,2,2,2,48002
+ Texas,TX,Gregg,48,48183,1,1,1,1,48001
+ Texas,TX,Grimes,48,48185,2,2,2,2,48002
+ Texas,TX,Hardin,48,48199,2,2,2,2,48002
+ Texas,TX,Harris,48,48201,2,2,2,2,48002
+ Texas,TX,Harrison,48,48203,1,1,1,1,48001
+ Texas,TX,Henderson,48,48213,1,1,1,1,48001
+ Texas,TX,Hopkins,48,48223,1,1,1,1,48001
+ Texas,TX,Houston,48,48225,2,2,2,2,48002
+ Texas,TX,Jasper,48,48241,2,2,2,2,48002
+ Texas,TX,Jefferson,48,48245,2,2,2,2,48002
+ Texas,TX,Lamar,48,48277,1,1,1,1,48001
+ Texas,TX,Leon,48,48289,2,2,2,2,48002
+ Texas,TX,Liberty,48,48291,2,2,2,2,48002
+ Texas,TX,Madison,48,48313,2,2,2,2,48002
+ Texas,TX,Marion,48,48315,1,1,1,1,48001
+ Texas,TX,Matagorda,48,48321,2,2,2,2,48002
+ Texas,TX,Montgomery,48,48339,2,2,2,2,48002
+ Texas,TX,Morris,48,48343,1,1,1,1,48001
+ Texas,TX,Nacogdoches,48,48347,2,2,2,2,48002
+ Texas,TX,Newton,48,48351,2,2,2,2,48002
+ Texas,TX,Orange,48,48361,2,2,2,2,48002
+ Texas,TX,Panola,48,48365,1,1,1,1,48001
+ Texas,TX,Polk,48,48373,2,2,2,2,48002
+ Texas,TX,Rains,48,48379,1,1,1,1,48001
+ Texas,TX,Red River,48,48387,1,1,1,1,48001
+ Texas,TX,Rusk,48,48401,1,1,1,1,48001
+ Texas,TX,Sabine,48,48403,2,2,2,2,48002
+ Texas,TX,San Augustine,48,48405,2,2,2,2,48002
+ Texas,TX,San Jacinto,48,48407,2,2,2,2,48002
+ Texas,TX,Shelby,48,48419,2,2,2,2,48002
+ Texas,TX,Smith,48,48423,1,1,1,1,48001
+ Texas,TX,Titus,48,48449,1,1,1,1,48001
+ Texas,TX,Trinity,48,48455,2,2,2,2,48002
+ Texas,TX,Tyler,48,48457,2,2,2,2,48002
+ Texas,TX,Upshur,48,48459,1,1,1,1,48001
+ Texas,TX,Van Zandt,48,48467,1,1,1,1,48001
+ Texas,TX,Walker,48,48471,2,2,2,2,48002
+ Texas,TX,Waller,48,48473,2,2,2,2,48002
+ Texas,TX,Wood,48,48499,1,1,1,1,48001
+ Virginia,VA,Accomack,51,51001,3,2,3,2,51002
+ Virginia,VA,Albemarle,51,51003,1,1,1,1,51001
+ Virginia,VA,Alleghany,51,51005,1,1,1,1,51001
+ Virginia,VA,Amelia,51,51007,2,2,2,2,51002
+ Virginia,VA,Amherst,51,51009,1,1,1,1,51001
+ Virginia,VA,Appomattox,51,51011,2,2,2,2,51002
+ Virginia,VA,Arlington,51,51013,2,2,2,2,51002
+ Virginia,VA,Augusta,51,51015,1,1,1,1,51001
+ Virginia,VA,Bath,51,51017,1,1,1,1,51001
+ Virginia,VA,Bedford,51,51019,1,1,1,1,51001
+ Virginia,VA,Bland,51,51021,1,1,1,1,51001
+ Virginia,VA,Botetourt,51,51023,1,1,1,1,51001
+ Virginia,VA,Brunswick,51,51025,2,2,2,2,51002
+ Virginia,VA,Buchanan,51,51027,1,1,1,1,51001
+ Virginia,VA,Buckingham,51,51029,2,2,2,2,51002
+ Virginia,VA,Campbell,51,51031,2,2,2,2,51002
+ Virginia,VA,Caroline,51,51033,3,2,3,2,51002
+ Virginia,VA,Carroll,51,51035,1,1,1,1,51001
+ Virginia,VA,Charles City,51,51036,3,2,3,2,51002
+ Virginia,VA,Charlotte,51,51037,2,2,2,2,51002
+ Virginia,VA,Chesterfield,51,51041,2,2,2,2,51002
+ Virginia,VA,Clarke,51,51043,1,1,1,1,51001
+ Virginia,VA,Craig,51,51045,1,1,1,1,51001
+ Virginia,VA,Culpeper,51,51047,2,2,2,2,51002
+ Virginia,VA,Cumberland,51,51049,2,2,2,2,51002
+ Virginia,VA,Dickenson,51,51051,1,1,1,1,51001
+ Virginia,VA,Dinwiddie,51,51053,2,2,2,2,51002
+ Virginia,VA,Essex,51,51057,3,2,3,2,51002
+ Virginia,VA,Fairfax,51,51059,2,2,2,2,51002
+ Virginia,VA,Fauquier,51,51061,2,2,2,2,51002
+ Virginia,VA,Floyd,51,51063,1,1,1,1,51001
+ Virginia,VA,Fluvanna,51,51065,2,2,2,2,51002
+ Virginia,VA,Franklin,51,51067,1,1,1,1,51001
+ Virginia,VA,Frederick,51,51069,1,1,1,1,51001
+ Virginia,VA,Giles,51,51071,1,1,1,1,51001
+ Virginia,VA,Gloucester,51,51073,3,2,3,2,51002
+ Virginia,VA,Goochland,51,51075,2,2,2,2,51002
+ Virginia,VA,Grayson,51,51077,1,1,1,1,51001
+ Virginia,VA,Greene,51,51079,1,1,1,1,51001
+ Virginia,VA,Greensville,51,51081,3,2,3,2,51002
+ Virginia,VA,Halifax,51,51083,2,2,2,2,51002
+ Virginia,VA,Hanover,51,51085,2,2,2,2,51002
+ Virginia,VA,Henrico,51,51087,2,2,2,2,51002
+ Virginia,VA,Henry,51,51089,2,1,2,1,51001
+ Virginia,VA,Highland,51,51091,1,1,1,1,51001
+ Virginia,VA,Isle Of Wight,51,51093,3,2,3,2,51002
+ Virginia,VA,James City,51,51095,3,2,3,2,51002
+ Virginia,VA,King And Queen,51,51097,3,2,3,2,51002
+ Virginia,VA,King George,51,51099,3,2,3,2,51002
+ Virginia,VA,King William,51,51101,3,2,3,2,51002
+ Virginia,VA,Lancaster,51,51103,3,2,3,2,51002
+ Virginia,VA,Lee,51,51105,1,1,1,1,51001
+ Virginia,VA,Loudoun,51,51107,1,1,1,1,51001
+ Virginia,VA,Louisa,51,51109,2,2,2,2,51002
+ Virginia,VA,Lunenburg,51,51111,2,2,2,2,51002
+ Virginia,VA,Madison,51,51113,1,1,1,1,51001
+ Virginia,VA,Mathews,51,51115,3,2,3,2,51002
+ Virginia,VA,Mecklenburg,51,51117,2,2,2,2,51002
+ Virginia,VA,Middlesex,51,51119,3,2,3,2,51002
+ Virginia,VA,Montgomery,51,51121,1,1,1,1,51001
+ Virginia,VA,Nelson,51,51125,1,1,1,1,51001
+ Virginia,VA,New Kent,51,51127,3,2,3,2,51002
+ Virginia,VA,Northampton,51,51131,3,2,3,2,51002
+ Virginia,VA,Northumberland,51,51133,3,2,3,2,51002
+ Virginia,VA,Nottoway,51,51135,2,2,2,2,51002
+ Virginia,VA,Orange,51,51137,2,2,2,2,51002
+ Virginia,VA,Page,51,51139,1,1,1,1,51001
+ Virginia,VA,Patrick,51,51141,1,1,1,1,51001
+ Virginia,VA,Pittsylvania,51,51143,2,2,2,2,51002
+ Virginia,VA,Powhatan,51,51145,2,2,2,2,51002
+ Virginia,VA,Prince Edward,51,51147,2,2,2,2,51002
+ Virginia,VA,Prince George,51,51149,3,2,3,2,51002
+ Virginia,VA,Prince William,51,51153,2,2,2,2,51002
+ Virginia,VA,Pulaski,51,51155,1,1,1,1,51001
+ Virginia,VA,Rappahannock,51,51157,1,1,1,1,51001
+ Virginia,VA,Richmond,51,51159,3,2,3,2,51002
+ Virginia,VA,Roanoke,51,51161,1,1,1,1,51001
+ Virginia,VA,Rockbridge,51,51163,1,1,1,1,51001
+ Virginia,VA,Rockingham,51,51165,1,1,1,1,51001
+ Virginia,VA,Russell,51,51167,1,1,1,1,51001
+ Virginia,VA,Scott,51,51169,1,1,1,1,51001
+ Virginia,VA,Shenandoah,51,51171,1,1,1,1,51001
+ Virginia,VA,Smyth,51,51173,1,1,1,1,51001
+ Virginia,VA,Southampton,51,51175,3,2,3,2,51002
+ Virginia,VA,Spotsylvania,51,51177,2,2,2,2,51002
+ Virginia,VA,Stafford,51,51179,2,2,2,2,51002
+ Virginia,VA,Surry,51,51181,3,2,3,2,51002
+ Virginia,VA,Sussex,51,51183,3,2,3,2,51002
+ Virginia,VA,Tazewell,51,51185,1,1,1,1,51001
+ Virginia,VA,Warren,51,51187,1,1,1,1,51001
+ Virginia,VA,Washington,51,51191,1,1,1,1,51001
+ Virginia,VA,Westmoreland,51,51193,3,2,3,2,51002
+ Virginia,VA,Wise,51,51195,1,1,1,1,51001
+ Virginia,VA,Wythe,51,51197,1,1,1,1,51001
+ Virginia,VA,York,51,51199,3,2,3,2,51002
+ Virginia,VA,Chesapeake,51,51550,3,2,3,2,51002
+ Virginia,VA,Hampton,51,51650,3,2,3,2,51002
+ Virginia,VA,Newport News,51,51700,3,2,3,2,51002
+ Virginia,VA,Suffolk,51,51800,3,2,3,2,51002
+ Virginia,VA,Virginia Beach,51,51810,3,2,3,2,51002
