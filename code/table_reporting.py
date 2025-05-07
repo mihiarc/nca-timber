@@ -17,7 +17,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import docx
 from pathlib import Path
-from utils import DATA_DIR, convert_to_billions, convert_to_megatonnes
+from geo_crosswalks import DATA_DIR
+from species_crosswalks import convert_to_billions, convert_to_megatonnes
 
 
 def load_processed_data(region):

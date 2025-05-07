@@ -18,13 +18,21 @@ The module processes the following data:
 
 import pandas as pd
 import numpy as np
-from utils import (
+from geo_crosswalks import (
     # Constants
-    SOUTH_STATES, STATE_FIPS, DATA_DIR, PRODUCT_TYPES,
+    SOUTH_STATES, STATE_FIPS, DATA_DIR,
+    # Data formatting
+    format_fips, format_unit_code,
+    # Loading functions
+    load_crosswalk_price_regions
+)
+from species_crosswalks import (
+    # Constants
+    PRODUCT_TYPES,
     # Data loading
     load_csv, load_excel,
     # Data formatting
-    format_fips, format_unit_code, standardize_column_names,
+    standardize_column_names,
     # Data transformation
     convert_to_billions, convert_to_megatonnes, convert_price_ton_to_cubic_feet,
     # Species utilities

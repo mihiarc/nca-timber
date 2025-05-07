@@ -17,13 +17,17 @@ The module processes the following data:
 
 import pandas as pd
 import numpy as np
-from utils import (
+from geo_crosswalks import (
     # Constants
     GREAT_LAKES_STATES, STATE_FIPS, DATA_DIR,
+    # Data formatting
+    format_fips, format_unit_code
+)
+from species_crosswalks import (
     # Data loading
     load_csv, load_excel,
     # Data formatting
-    format_fips, format_unit_code, standardize_column_names,
+    standardize_column_names,
     # Data transformation
     convert_to_billions, convert_to_megatonnes,
     # Species utilities

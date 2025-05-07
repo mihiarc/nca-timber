@@ -12,7 +12,7 @@ serving as a coordinator rather than implementing logic directly.
 import argparse
 import os
 from pathlib import Path
-from utils import DATA_DIR, PROCESSED_DIR, REPORTS_DIR
+from geo_crosswalks import DATA_DIR, PROCESSED_DIR, REPORTS_DIR
 
 # Import processing modules
 from south_assets import process_south_data
