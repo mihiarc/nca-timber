@@ -8,7 +8,11 @@ from pathlib import Path
 # ===============================
 
 # Path constants
-DATA_DIR = Path('../data')
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / 'data'
+INPUT_DIR = DATA_DIR / 'input'
+PROCESSED_DIR = DATA_DIR / 'processed'
+REPORTS_DIR = DATA_DIR / 'reports'
 
 # Region definitions
 SOUTH_STATES = ['AL', 'AR', 'FL', 'GA', 'LA', 'MS', 'NC', 'SC', 'TN', 'TX', 'VA']
@@ -377,5 +381,79 @@ def categorize_species_by_region(spcd):
         return 'Great Lakes'
     else:
         return 'Unknown'
+
+# File loading functions
+def load_species_dict():
+    """Load species dictionary mapping"""
+    return pd.read_csv(INPUT_DIR / 'speciesDict.csv')
+
+def load_species_group_dict():
+    """Load species group dictionary mapping"""
+    return pd.read_csv(INPUT_DIR / 'speciesGroupDict.csv')
+
+def load_table_south_merch():
+    """Load South merchantable timber data"""
+    return pd.read_csv(INPUT_DIR / 'tableSouthMerch.csv')
+
+def load_table_south_premerch():
+    """Load South pre-merchantable timber data"""
+    return pd.read_csv(INPUT_DIR / 'tableSouthPremerch.csv')
+
+def load_table_south_by_product():
+    """Load South by-product timber data"""
+    return pd.read_csv(INPUT_DIR / 'tableSouthByProduct.csv')
+
+def load_table_gl():
+    """Load Great Lakes timber data"""
+    return pd.read_csv(INPUT_DIR / 'tableGL.csv')
+
+def load_georef():
+    """Load geographic reference data"""
+    return pd.read_csv(INPUT_DIR / 'georef.csv')
+
+def load_nca_timber_biomass():
+    """Load national timber biomass data"""
+    return pd.read_csv(INPUT_DIR / 'nca-timber-biomass.csv')
+
+def load_southern_harvested_species():
+    """Load Southern harvested species data"""
+    return pd.read_csv(INPUT_DIR / 'southern_harvested_tree_species.csv')
+
+def load_crosswalk_micromarket_county():
+    """Load micromarket to county mapping"""
+    return pd.read_csv(INPUT_DIR / 'crosswalk_micromarket_county.csv')
+
+def load_crosswalk_price_regions():
+    """Load price region mappings"""
+    return pd.read_csv(INPUT_DIR / 'crosswalk_priceRegions.csv')
+
+def load_crosswalk_south_species():
+    """Load Southern species crosswalk"""
+    return pd.read_csv(INPUT_DIR / 'crosswalk_southSpecies.csv')
+
+def load_crosswalk_tms_counties():
+    """Load TMS counties mapping"""
+    return pd.read_csv(INPUT_DIR / 'crosswalk_tmsCounties.csv')
+
+# Excel file loading functions
+def load_merch_bio_south():
+    """Load South merchantable biomass by species"""
+    return pd.read_excel(INPUT_DIR / 'Merch Bio South by spp 08-28-2024.xlsx')
+
+def load_premerch_bio_south():
+    """Load South pre-merchantable biomass by species"""
+    return pd.read_excel(INPUT_DIR / 'Premerch Bio South by spp 08-28-2024.xlsx')
+
+def load_merch_bio_glakes():
+    """Load Great Lakes merchantable biomass by species"""
+    return pd.read_excel(INPUT_DIR / 'Merch Bio GLakes by spp 08-28-2024.xlsx')
+
+def load_premerch_bio_glakes():
+    """Load Great Lakes pre-merchantable biomass by species"""
+    return pd.read_excel(INPUT_DIR / 'Premerch Bio GLakes by spp 08-28-2024.xlsx')
+
+def load_glakes_harvested_species():
+    """Load Great Lakes harvested species data"""
+    return pd.read_excel(INPUT_DIR / 'GLakes harvested tree species V2.xlsx')
 
 # Add more shared utility functions as needed 
