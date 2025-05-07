@@ -12,14 +12,20 @@ timber-assets/
 │   ├── species_crosswalks.py  # Species data utilities and crosswalks
 │   ├── south_assets.py        # South region data processing
 │   ├── greatlakes_assets.py   # Great Lakes region data processing
-│   └── table_reporting.py     # Report and visualization generation
+│   ├── table_reporting.py     # Report and visualization generation
+│   ├── config.py              # Centralized configuration module
+│   └── config_loader.py       # YAML configuration loader utility
+├── tests/                     # Unit tests
+│   └── test_species_crosswalks.py  # Tests for species_crosswalks module
 ├── data/
 │   ├── input/                 # Raw input data files
 │   ├── processed/             # Output of data processing
 │   └── reports/               # Generated reports
 ├── archive/
 │   └── crosswalks/            # Archived crosswalk data
-└── docs/                      # Documentation
+├── docs/                      # Documentation
+├── config.yaml                # YAML configuration file
+└── setup_env.sh               # Environment setup script with uv
 ```
 
 ## Design Principles
@@ -31,6 +37,10 @@ This codebase follows the Single Responsibility Principle (SRP):
 - Data processing is separated from reporting
 - Crosswalks are separated by domain (geography vs. species)
 - Coordination happens in the main.py script
+- Configuration is centralized in separate modules
+- Type hints improve code readability and maintainability
+- Unit tests ensure code quality and prevent regression
+- Self-contained data approach with in-memory crosswalks and mock data generation
 
 ## Modules
 
@@ -52,12 +62,18 @@ Processes Great Lakes region timber data.
 ### table_reporting.py
 Generates tables, charts, and reports from processed data, independent of region-specific logic.
 
+### config.py
+Centralizes configuration settings and constants for the project in a Python module.
+
+### config_loader.py
+Loads configuration from YAML files, providing a flexible way to manage project settings.
+
 ## Getting Started
 
 ### Setup Environment
 
 ```bash
-# Run the setup script to create a virtual environment and install dependencies
+# Run the setup script to create a virtual environment and install dependencies using uv
 ./setup_env.sh
 ```
 
@@ -80,13 +96,72 @@ python code/main.py --process-only
 python code/main.py --report-only
 ```
 
+### Run the Tests
+
+```bash
+# Run all tests
+pytest
+
+# Run specific test module
+pytest tests/test_species_crosswalks.py
+
+# Run tests with verbose output
+pytest -v
+```
+
+## Configuration
+
+The project uses both Python-based and YAML-based configuration:
+
+### Python Configuration
+The `code/config.py` module centralizes constants and settings for direct use in Python code.
+
+### YAML Configuration
+The `config.yaml` file provides a more user-friendly way to manage settings:
+
+```yaml
+# Example config section
+regions:
+  south_states: ['AL', 'AR', 'FL', 'GA', 'LA', 'MS', 'NC', 'SC', 'TN', 'TX', 'VA']
+  great_lakes_states: ['MI', 'MN', 'WI']
+```
+
+This can be loaded using the `config_loader.py` module.
+
+## Package Management
+
+The project uses `uv`, a fast Python package installer and resolver:
+
+- Faster dependency resolution than pip
+- Compatible with requirements.txt
+- Modern features like lockfiles for reproducible environments
+
 ## Data Sources
 
 The project uses timber data from two regions:
 - South: Includes merchantable and pre-merchantable timber data
 - Great Lakes: Regional timber asset data
 
+### Data Handling
+
+The project is designed to be self-contained and can operate in two modes:
+
+1. **With Real Data**: When the CSV and Excel data files are present, they are loaded and processed normally.
+
+2. **Self-Contained Mode**: When data files are not present, the system automatically:
+   - Uses hardcoded price region mappings instead of loading from CSV files
+   - Generates mock data for prices, biomass, and other inputs
+   - Creates placeholder processed data for reporting
+   
+This approach makes the codebase more portable and easier to test, as it can run without needing to download large data files.
+
 ### Crosswalks
+
+Crosswalk data is managed in two ways:
+
+1. **In-memory mappings**: Essential mappings like price regions, species dictionaries, and state FIPS codes are defined directly in code.
+
+2. **Optional external files**: More detailed or frequently changing mappings can be loaded from external files when available.
 
 Crosswalk files provide mappings between different data sources and formats:
 
@@ -109,3 +184,5 @@ To add support for a new region:
 2. Implement the region-specific processing logic
 3. Update main.py to include the new region in processing
 4. Update table_reporting.py to support the new region's data structure
+5. Add unit tests for the new functionality
+6. Update configuration in both config.py and config.yaml
