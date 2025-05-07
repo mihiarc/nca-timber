@@ -7,18 +7,19 @@ This project analyzes timber data from two regions: South and Great Lakes. It pr
 ```
 timber-assets/
 ├── code/
-│   ├── main.py              # Orchestrates the workflow
-│   ├── utils.py             # Shared utilities and constants
-│   ├── south_assets.py      # South region data processing
-│   ├── greatlakes_assets.py # Great Lakes region data processing
-│   ├── table_reporting.py   # Report and visualization generation
-│   └── archive/             # Deprecated code
+│   ├── main.py                # Orchestrates the workflow
+│   ├── geo_crosswalks.py      # Geographic data utilities and crosswalks
+│   ├── species_crosswalks.py  # Species data utilities and crosswalks
+│   ├── south_assets.py        # South region data processing
+│   ├── greatlakes_assets.py   # Great Lakes region data processing
+│   └── table_reporting.py     # Report and visualization generation
 ├── data/
-│   ├── input/               # Raw input data files
-│   ├── processed/           # Output of data processing
-│   └── reports/             # Generated reports
-├── notebooks/               # Jupyter notebooks for exploration
-└── docs/                    # Documentation
+│   ├── input/                 # Raw input data files
+│   ├── processed/             # Output of data processing
+│   └── reports/               # Generated reports
+├── archive/
+│   └── crosswalks/            # Archived crosswalk data
+└── docs/                      # Documentation
 ```
 
 ## Design Principles
@@ -28,6 +29,7 @@ This codebase follows the Single Responsibility Principle (SRP):
 - Each module has a clear, singular purpose
 - Region-specific logic is isolated in dedicated modules
 - Data processing is separated from reporting
+- Crosswalks are separated by domain (geography vs. species)
 - Coordination happens in the main.py script
 
 ## Modules
@@ -35,8 +37,11 @@ This codebase follows the Single Responsibility Principle (SRP):
 ### main.py
 Orchestrates the entire workflow, coordinating between data processing and reporting modules.
 
-### utils.py
-Contains shared utilities, constants, data loading/formatting functions, and species lookup dictionaries.
+### geo_crosswalks.py
+Contains geographic data structures, FIPS code utilities, state/county mappings, and geographic reference crosswalks.
+
+### species_crosswalks.py
+Contains species data structures, timber species codes, conversion factors for volume and value, and species reference crosswalks.
 
 ### south_assets.py
 Processes Southern region timber data.
@@ -80,6 +85,21 @@ python code/main.py --report-only
 The project uses timber data from two regions:
 - South: Includes merchantable and pre-merchantable timber data
 - Great Lakes: Regional timber asset data
+
+### Crosswalks
+
+Crosswalk files provide mappings between different data sources and formats:
+
+**Geographic Crosswalks:**
+- georef.csv: Geographic reference data
+- crosswalk_micromarket_county.csv: Maps micromarkets to counties
+- crosswalk_priceRegions.csv: Maps price regions to geographic areas
+- crosswalk_tmsCounties.csv: Maps TMS data to counties
+
+**Species Crosswalks:**
+- speciesDict.csv: Maps species codes to names
+- speciesGroupDict.csv: Maps species group codes to group names
+- crosswalk_southSpecies.csv: South-specific species classification
 
 ## Adding New Regions
 

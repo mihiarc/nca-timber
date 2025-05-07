@@ -11,6 +11,7 @@ conversion factors for biomass and value calculations.
 import pandas as pd
 import os
 from pathlib import Path
+from typing import Dict, Optional, Union
 
 # Path constants - kept here to avoid circular imports
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -153,7 +154,7 @@ def categorize_species_by_region(spcd):
     else:
         return 'Unknown'
 
-def convert_to_billions(df, value_col='value'):
+def convert_to_billions(df: pd.DataFrame, value_col: str = 'value') -> pd.DataFrame:
     """Convert dollar values to billions.
     
     Parameters:

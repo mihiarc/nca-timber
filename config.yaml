@@ -1,0 +1,48 @@
+# Timber Assets Project Configuration
+
+# Region definitions
+regions:
+  south_states: ['AL', 'AR', 'FL', 'GA', 'LA', 'MS', 'NC', 'SC', 'TN', 'TX', 'VA']
+  great_lakes_states: ['MI', 'MN', 'WI']
+
+# State FIPS code mapping
+state_fips:
+  AL: '01'
+  AR: '05' 
+  FL: '12'
+  GA: '13'
+  LA: '22'
+  MS: '28'
+  NC: '37'
+  SC: '45'
+  TN: '47'
+  TX: '48'
+  VA: '51'
+  MI: '26'
+  MN: '27'
+  WI: '55'
+
+# Unit conversion factors
+conversions:
+  cubic_ft_to_megatonne: 0.000000025713  # Convert cubic feet to megatonnes
+  dollars_to_billions: 0.000000001  # Convert dollars to billions
+  tons_to_cubic_feet: 40.0  # 1 ton = 40 cubic feet (for timber)
+
+# Financial parameters
+financial:
+  discount_rate: 0.05  # Discount rate for financial calculations
+  merchantable_age: 15  # Age at which trees become merchantable
+
+# Product types
+product_types:
+  saw: Sawtimber
+  plp: Pulpwood
+  pre: Pre-merchantable
+
+# File paths
+files:
+  price_regions: priceRegions.csv
+  south_prices: Timber Prices/prices_south.csv
+  gl_prices: Timber Prices/TMN/TMN_Price_Series_June2023.xlsx
+  south_premerch: Premerch Bio South by spp 08-28-2024.xlsx
+  gl_biomass: Merch Bio GLakes by spp 08-28-2024.xlsx 

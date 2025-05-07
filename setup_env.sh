@@ -1,30 +1,23 @@
 #!/bin/bash
-# Timber Asset Analysis Environment Setup Script
-# Uses uv for package management as specified in the requirements
+# Set up Python virtual environment with uv
 
-# Check if uv is installed
-if ! command -v uv &> /dev/null
-then
-    echo "uv could not be found, installing it now..."
-    if command -v pip &> /dev/null
-    then
-        pip install uv
-    else
-        echo "pip could not be found. Please install Python and pip first."
-        exit 1
-    fi
-fi
-
-# Create a virtual environment if it doesn't exist
+# Create virtual environment if it doesn't exist
 if [ ! -d ".venv" ]; then
     echo "Creating virtual environment..."
-    uv venv
-else
-    echo "Virtual environment already exists."
+    python -m venv .venv
 fi
 
-# Install dependencies using uv
-echo "Installing dependencies using uv..."
+# Activate virtual environment
+source .venv/bin/activate
+
+# Install uv if not already available
+if ! command -v uv &> /dev/null; then
+    echo "Installing uv..."
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+fi
+
+# Install project dependencies
+echo "Installing dependencies with uv..."
 uv pip install -r requirements.txt
 
 # Create necessary directories
