@@ -11,10 +11,11 @@ import sys
 import os
 from pathlib import Path
 
-# Add the parent directory to sys.path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+# Add the code directory to sys.path
+code_dir = Path(__file__).resolve().parent.parent / 'code'
+sys.path.insert(0, str(code_dir))
 
-from code.species_crosswalks import (
+from species_crosswalks import (
     get_species_name, 
     get_species_group_name,
     convert_to_billions,
