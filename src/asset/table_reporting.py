@@ -445,6 +445,78 @@ def create_word_document(tables, region):
     print(f"Word document saved: {region_name.lower()}_timber_asset_tables.docx")
 
 
+def create_markdown_report(tables, region):
+    """
+    Create a Markdown report with all tables.
+
+    Parameters:
+    -----------
+    tables : dict
+        Dictionary containing all generated tables
+    region : str
+        Region identifier ('south', 'gl', or 'all')
+
+    Returns:
+    --------
+    None
+    """
+    # Set region name for titles
+    if region.lower() == 'south':
+        region_name = 'South'
+    elif region.lower() in ('gl', 'great_lakes'):
+        region_name = 'Great Lakes'
+    else:
+        region_name = 'US'
+
+    report_content = f"# {region_name} Timber Asset Tables\n\n"
+
+    # Table list and titles are the same as for Word
+    table_list = [
+        tables['physical_by_species_class'],
+        tables['monetary_by_species_class'],
+        tables['physical_by_species_group'],
+        tables['monetary_by_species_group']
+    ]
+    table_titles = [
+        f'Table 1: {region_name}: Physical Table by Species Class',
+        f'Table 2: {region_name}: Monetary Value Table by Species Class',
+        f'Table 3: {region_name}: Physical Table by Timber Species Group',
+        f'Table 4: {region_name}: Monetary Value Table by Timber Species Group'
+    ]
+
+    for df, title in zip(table_list, table_titles):
+        report_content += f"## {title}\n\n"
+        # Format numerical columns for better readability in Markdown
+        # This is a simplified version; for Word, more complex formatting was applied
+        # We'll apply basic float formatting here.
+        df_md = df.copy()
+        for col in df_md.columns:
+            if df_md[col].dtype == 'float64' or df_md[col].dtype == 'float32':
+                # Check if it's a monetary or physical table to apply B or Mt
+                if 'Monetary' in title :
+                     df_md[col] = df_md[col].apply(lambda x: f"{x:,.2f}B" if pd.notnull(x) else "-")
+                elif 'Physical' in title:
+                     df_md[col] = df_md[col].apply(lambda x: f"{x:,.0f} Mt" if pd.notnull(x) else "-")
+                else: # Fallback for other float columns if any
+                    df_md[col] = df_md[col].apply(lambda x: f"{x:,.2f}" if pd.notnull(x) else "-")
+            elif df_md[col].dtype == 'object': # Handle NaNs in object columns too
+                 df_md[col] = df_md[col].apply(lambda x: "-" if pd.isnull(x) else x)
+
+
+        report_content += df_md.to_markdown(index=False)
+        report_content += "\n\n"
+
+    # Create reports directory if it doesn't exist
+    reports_dir = DATA_DIR / 'reports'
+    reports_dir.mkdir(exist_ok=True)
+
+    # Save Markdown report
+    md_file_path = reports_dir / f'{region_name.lower()}_timber_asset_report.md'
+    with open(md_file_path, 'w') as f:
+        f.write(report_content)
+    print(f"Markdown report saved: {md_file_path.name}")
+
+
 def generate_region_summary_chart(region):
     """
     Generate a summary chart for the region.
@@ -540,6 +612,9 @@ def generate_reports(regions=None):
             
             # Create Word document
             create_word_document(tables, region)
+
+            # Create Markdown report
+            create_markdown_report(tables, region)
             
             # Generate summary chart
             generate_region_summary_chart(region)

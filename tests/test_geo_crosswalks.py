@@ -15,15 +15,15 @@ from pathlib import Path
 code_dir = Path(__file__).resolve().parent.parent / 'code'
 sys.path.insert(0, str(code_dir))
 
-from geo_crosswalks import (
-    format_fips,
+from src.utils.geo_crosswalks import (
+    get_price_regions,
     format_unit_code,
     get_state_abbr_from_fips,
-    get_price_regions,
-    STATE_FIPS,
     SOUTH_STATES,
     GREAT_LAKES_STATES
 )
+from src.utils.county import format_fips
+from src.config import STATE_FIPS
 
 
 class TestGeoCrosswalksFunctions(unittest.TestCase):

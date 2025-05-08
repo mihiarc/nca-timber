@@ -20,6 +20,9 @@ from south_assets import (
     create_mock_south_table,
     load_south_harvested_species
 )
+from src.utils.species_crosswalks import load_csv, speciesDict, speciesGroupDict
+from src.utils.geo_crosswalks import SOUTH_STATES
+from src.config import STATE_FIPS
 
 
 class TestSouthAssetsFunctions(unittest.TestCase):
@@ -54,7 +57,6 @@ class TestSouthAssetsFunctions(unittest.TestCase):
             self.assertIn(col, mock_south.columns)
         
         # Check for Southern states in the data
-        from geo_crosswalks import STATE_FIPS, SOUTH_STATES
         south_fips = [STATE_FIPS[state] for state in SOUTH_STATES]
         # At least one Southern state should be in the data
         self.assertTrue(any(state in mock_south['statecd'].values for state in south_fips))
