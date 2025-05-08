@@ -41,6 +41,8 @@ product_types:
 
 # File paths
 files:
+  external_drive: "/media/mihiarc/RPA1TB/"
+  tms_south: f"{external_drive}/TimberMart_South/"
   price_regions: priceRegions.csv
   south_prices: Timber Prices/prices_south.csv
   gl_prices: Timber Prices/TMN/TMN_Price_Series_June2023.xlsx
