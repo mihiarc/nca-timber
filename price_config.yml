@@ -1,0 +1,77 @@
+input:
+  file_path: "data/raw_prices.csv"
+  file_type: "csv"
+  sheet_name: null
+  encoding: "utf-8"
+  
+output:
+  file_path: "data/prices_data.csv"
+  file_type: "csv"
+  index: false
+
+cleaning:
+  drop_columns:
+    - "SourceFile"
+    - "YearColumn"
+
+aggregation:
+  enabled: true
+  # Basic aggregation for simple metrics
+  metrics:
+    - column: "price"
+      method: "mean"
+    - column: "quantity" 
+      method: "mean"
+  
+  # Time-based aggregation options
+  time:
+    enabled: true
+    variables:
+      - name: "Year"
+        level: 1  # Higher level = coarser granularity
+      - name: "Quarter" 
+        level: 2  # Lower level = finer granularity
+    aggregation_methods:
+      - "mean"  # Can also include: sum, median, min, max, count
+  
+  # Spatial-based aggregation options
+  spatial:
+    enabled: true
+    variables:
+      - name: "Region"
+        level: 1
+      - name: "State"
+        level: 2  # State is higher-level spatial unit
+      - name: "Area"
+        level: 3  # Area is state-specific, finer granularity
+    aggregation_methods:
+      - "mean"  # Can also include: sum, median, min, max, count
+  
+  # Wood type aggregation options
+  wood_type:
+    enabled: true
+    variables:
+      - name: "softwood"
+        columns:
+          - "Pine_Sawtimber_WR"
+          - "Pine_Sawtimber_CNS"
+          - "Pine_Sawtimber_Ply"
+          - "Pine_Poles"
+          - "Pine_Pulpwood"
+      - name: "hardwood"
+        columns:
+          - "Oak_Sawtimber"
+          - "MixHwd_Sawtimber"
+          - "Hardwood_Pulpwood"
+    aggregation_methods:
+      - "mean"
+      - "sum"
+  
+  # Cross-dimensional aggregation settings
+  cross_dimensional:
+    enabled: true
+    order:
+      - "temporal"  # First aggregate by time
+      - "spatial"  # Then aggregate by space
+      - "wood_type"  # Finally aggregate by wood type
+    final_level: "State-Year-WoodType"  # Options: State-Year, Area-Quarter, etc.
