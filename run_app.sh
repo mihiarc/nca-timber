@@ -1,13 +1,20 @@
 #!/bin/bash
 
-# Create a virtual environment
-uv venv
+# Create virtual environment if it doesn't exist
+if [ ! -d ".venv" ]; then
+    python -m venv .venv
+fi
 
-# Activate the virtual environment
+# Activate virtual environment
 source .venv/bin/activate
 
-# Install dependencies
+# Install uv if not already installed
+if ! command -v uv &> /dev/null; then
+    pip install uv
+fi
+
+# Install dependencies with uv
 uv pip install -r requirements.txt
 
-# Run the Streamlit app
+# Run the Streamlit application
 streamlit run app/app.py 

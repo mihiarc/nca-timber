@@ -3,6 +3,9 @@ import yaml
 from pathlib import Path
 import plotly.express as px
 import logging
+import folium
+import json
+import requests
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -83,6 +86,377 @@ def prepare_biomass_summary(df):
         summary = df.describe().T
         return summary
     return None
+
+def create_state_map(data_dict, map_type="prices"):
+    """
+    Create a Folium map showing state-level data for the Southern US region.
+    
+    Parameters:
+    -----------
+    data_dict : dict
+        Dictionary of dataframes (prices, species, etc.)
+    map_type : str
+        Type of data to display (prices, species, bio_merch, bio_premerch)
+        
+    Returns:
+    --------
+    folium.Map object or None if data is not available
+    """
+    # Define the 13 southern states with standardized names
+    southern_states = {
+        "Alabama": ["Alabama", "AL", "01", "01 Alabama"],
+        "Arkansas": ["Arkansas", "AR", "05", "05 Arkansas"],
+        "Florida": ["Florida", "FL", "12", "12 Florida"],
+        "Georgia": ["Georgia", "GA", "13", "13 Georgia"],
+        "Louisiana": ["Louisiana", "LA", "22", "22 Louisiana"], 
+        "Mississippi": ["Mississippi", "MS", "28", "28 Mississippi"],
+        "North Carolina": ["North Carolina", "NC", "37", "37 North Carolina"],
+        "South Carolina": ["South Carolina", "SC", "45", "45 South Carolina"],
+        "Tennessee": ["Tennessee", "TN", "47", "47 Tennessee"],
+        "Virginia": ["Virginia", "VA", "51", "51 Virginia"]
+    }
+    
+    # Center of the Southern US region
+    southern_center = [32.7, -83.5]  # Approximate center of the Southern states
+    
+    # Create a base map centered on the Southern region
+    m = folium.Map(location=southern_center, zoom_start=5, tiles="CartoDB positron")
+    
+    # Dictionary to store detailed data by state for tooltips
+    state_details = {}
+    
+    # Check which data to display
+    if map_type == "prices" and data_dict["prices"] is not None:
+        df = data_dict["prices"].copy()
+        if "State" not in df.columns:
+            return None
+        
+        # Function to normalize state names
+        def normalize_state(state_str):
+            for std_name, variants in southern_states.items():
+                if state_str in variants:
+                    return std_name
+            return state_str
+        
+        # Normalize state names 
+        df["State"] = df["State"].apply(normalize_state)
+        
+        # Filter for southern states only
+        df = df[df["State"].isin(list(southern_states.keys()))]
+        if df.empty:
+            return None
+            
+        # Aggregate price data by state (mean of all price columns)
+        price_cols = filter_price_columns(df)
+        if not price_cols:
+            return None
+            
+        # Make sure we only use numeric columns for calculation
+        numeric_price_cols = []
+        for col in price_cols:
+            # Convert to numeric, coercing non-numeric values to NaN
+            df[col] = pd.to_numeric(df[col], errors='coerce')
+            if df[col].notna().any():  # Only include columns with at least some valid numbers
+                numeric_price_cols.append(col)
+        
+        if not numeric_price_cols:
+            return None
+            
+        # Create a new column with the mean of all price columns
+        df["mean_price"] = df[numeric_price_cols].mean(axis=1)
+        
+        # Group by state and calculate mean
+        state_data = df.groupby("State")["mean_price"].mean().reset_index()
+        state_data.columns = ["state", "value"]
+        
+        # Create detailed data for tooltips
+        for state in state_data["state"]:
+            state_df = df[df["State"] == state]
+            
+            # Calculate additional metrics
+            details = {
+                "Mean Price": f"${state_data.loc[state_data['state'] == state, 'value'].values[0]:.2f}/ton",
+                "Data Points": len(state_df),
+                "Year Range": f"{state_df['Year'].min()}-{state_df['Year'].max()}"
+            }
+            
+            # Format Products list with line breaks
+            product_list = [col.replace('_', ' ') for col in numeric_price_cols[:5]]
+            if len(numeric_price_cols) > 5:
+                product_list.append(f"and {len(numeric_price_cols)-5} more")
+            details["Products"] = "<br>".join(product_list)
+            
+            # Add top 3 most expensive products with line breaks
+            product_means = {col: state_df[col].mean() for col in numeric_price_cols}
+            sorted_products = sorted(product_means.items(), key=lambda x: x[1], reverse=True)[:3]
+            top_products = [f"{p[0].replace('_', ' ')}: ${p[1]:.2f}" for p in sorted_products]
+            details["Top Products"] = "<br>".join(top_products)
+            
+            state_details[state] = details
+        
+        # Title and description
+        title = "Average Timber Prices by Southern State"
+        legend_name = "Avg. Price ($/ton)"
+        
+    elif map_type == "species" and data_dict["species"] is not None:
+        df = data_dict["species"].copy()
+        
+        # Check if GRP2 column exists (state information)
+        if "GRP2" in df.columns:
+            # Extract state name from GRP2 column which has format like "`0001 01 Alabama"
+            def extract_state(grp2_str):
+                if not isinstance(grp2_str, str):
+                    return None
+                    
+                # Remove backticks
+                clean_str = grp2_str.replace('`', '')
+                
+                # Try to extract state name
+                for std_name, variants in southern_states.items():
+                    for variant in variants:
+                        if variant in clean_str or std_name in clean_str:
+                            return std_name
+                return None
+            
+            # Extract state from GRP2 column
+            df["State"] = df["GRP2"].apply(extract_state)
+        
+        if "State" not in df.columns or "ESTIMATE" not in df.columns:
+            return None
+        
+        # Filter for southern states only
+        df = df[df["State"].isin(list(southern_states.keys()))]
+        if df.empty:
+            return None
+            
+        # Convert ESTIMATE to numeric, handling empty strings
+        df["ESTIMATE"] = pd.to_numeric(df["ESTIMATE"], errors='coerce')
+        
+        # Group by state and sum estimates
+        state_data = df.groupby("State")["ESTIMATE"].sum().reset_index()
+        state_data.columns = ["state", "value"]
+        
+        # Create detailed data for tooltips
+        for state in state_data["state"]:
+            state_df = df[df["State"] == state]
+            
+            # Count unique species
+            if "Species" in state_df.columns:
+                unique_species = state_df["Species"].nunique()
+                top_species = state_df.groupby("Species")["ESTIMATE"].sum().sort_values(ascending=False).head(3)
+                
+                details = {
+                    "Total Estimate": f"{state_data.loc[state_data['state'] == state, 'value'].values[0]:,.0f}",
+                    "Unique Species": unique_species,
+                    "Data Points": len(state_df),
+                    "Top Species": ", ".join([f"{sp}: {val:,.0f}" for sp, val in top_species.items()])
+                }
+            else:
+                details = {
+                    "Total Estimate": f"{state_data.loc[state_data['state'] == state, 'value'].values[0]:,.0f}",
+                    "Data Points": len(state_df)
+                }
+            
+            state_details[state] = details
+        
+        # Title and description
+        title = "Species Estimates by Southern State"
+        legend_name = "Total Estimate"
+        
+    elif map_type == "bio_merch" and data_dict["bio_merch"] is not None:
+        df = data_dict["bio_merch"].copy()
+        if "STATENM" not in df.columns:
+            return None
+            
+        # Normalize state names
+        def normalize_state(state_str):
+            for std_name, variants in southern_states.items():
+                if state_str in variants or std_name in state_str:
+                    return std_name
+            return state_str
+            
+        # Normalize state name
+        df["State"] = df["STATENM"].apply(normalize_state)
+            
+        # Filter for southern states only
+        df = df[df["State"].isin(list(southern_states.keys()))]
+        if df.empty:
+            return None
+            
+        # Count records by state
+        state_data = df.groupby("State").size().reset_index()
+        state_data.columns = ["state", "value"]
+        
+        # Create detailed data for tooltips
+        for state in state_data["state"]:
+            state_df = df[df["State"] == state]
+            
+            # Calculate additional metrics
+            numeric_cols = state_df.select_dtypes(include=['number']).columns
+            if len(numeric_cols) > 0:
+                details = {
+                    "Data Points": f"{state_data.loc[state_data['state'] == state, 'value'].values[0]:,}",
+                    "Counties": state_df["COUNTYCD"].nunique() if "COUNTYCD" in state_df.columns else "N/A"
+                }
+                
+                if "FIAPROTYPCD" in state_df.columns:
+                    details["Forest Types"] = state_df["FIAPROTYPCD"].nunique()
+            else:
+                details = {
+                    "Data Points": f"{state_data.loc[state_data['state'] == state, 'value'].values[0]:,}"
+                }
+            
+            state_details[state] = details
+        
+        # Title and description
+        title = "Merchantable Biomass Data Points by Southern State"
+        legend_name = "Data Points"
+        
+    elif map_type == "bio_premerch" and data_dict["bio_premerch"] is not None:
+        df = data_dict["bio_premerch"].copy()
+        if "STATENM" not in df.columns:
+            return None
+            
+        # Normalize state names
+        def normalize_state(state_str):
+            for std_name, variants in southern_states.items():
+                if state_str in variants or std_name in state_str:
+                    return std_name
+            return state_str
+            
+        # Normalize state name
+        df["State"] = df["STATENM"].apply(normalize_state)
+            
+        # Filter for southern states only
+        df = df[df["State"].isin(list(southern_states.keys()))]
+        if df.empty:
+            return None
+            
+        # Count records by state
+        state_data = df.groupby("State").size().reset_index()
+        state_data.columns = ["state", "value"]
+        
+        # Create detailed data for tooltips
+        for state in state_data["state"]:
+            state_df = df[df["State"] == state]
+            
+            # Calculate additional metrics
+            numeric_cols = state_df.select_dtypes(include=['number']).columns
+            if len(numeric_cols) > 0:
+                details = {
+                    "Data Points": f"{state_data.loc[state_data['state'] == state, 'value'].values[0]:,}",
+                    "Counties": state_df["COUNTYCD"].nunique() if "COUNTYCD" in state_df.columns else "N/A"
+                }
+                
+                if "FIAPROTYPCD" in state_df.columns:
+                    details["Forest Types"] = state_df["FIAPROTYPCD"].nunique()
+            else:
+                details = {
+                    "Data Points": f"{state_data.loc[state_data['state'] == state, 'value'].values[0]:,}"
+                }
+            
+            state_details[state] = details
+        
+        # Title and description
+        title = "Pre-merchantable Biomass Data Points by Southern State"
+        legend_name = "Data Points"
+        
+    else:
+        return None
+    
+    # Load GeoJSON data for US states
+    # Download the GeoJSON data for US states
+    geojson_url = "https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/us-states.json"
+    response = requests.get(geojson_url)
+    us_states_geojson = json.loads(response.text)
+    
+    # Filter to only include southern states
+    southern_geojson = {
+        "type": "FeatureCollection",
+        "features": [feature for feature in us_states_geojson["features"] 
+                     if feature["properties"]["name"] in southern_states.keys()]
+    }
+    
+    # Create a choropleth map with tooltips
+    choropleth = folium.Choropleth(
+        geo_data=southern_geojson,
+        name="choropleth",
+        data=state_data,
+        columns=["state", "value"],
+        key_on="feature.properties.name",
+        fill_color="YlGn",
+        fill_opacity=0.7,
+        line_opacity=0.2,
+        legend_name=legend_name,
+        highlight=True
+    ).add_to(m)
+    
+    # Add a title
+    title_html = f'''
+        <h3 align="center" style="font-size:16px"><b>{title}</b></h3>
+    '''
+    m.get_root().html.add_child(folium.Element(title_html))
+    
+    # Add tooltips with detailed information
+    tooltip_html = {}
+    for state, details in state_details.items():
+        html = f"<h4>{state}</h4>"
+        
+        # Get the value used for coloring from state_data
+        value_row = state_data[state_data["state"] == state]
+        if not value_row.empty:
+            raw_value = value_row["value"].values[0]
+            
+            # Format based on map type
+            if map_type == "prices":
+                formatted_value = f"<div style='font-size:16px;color:#2c7fb8;font-weight:bold;margin:8px 0;'>${raw_value:.2f}/ton</div>"
+            elif map_type == "species":
+                formatted_value = f"<div style='font-size:16px;color:#2c7fb8;font-weight:bold;margin:8px 0;'>{raw_value:,.0f}</div>"
+            else:
+                formatted_value = f"<div style='font-size:16px;color:#2c7fb8;font-weight:bold;margin:8px 0;'>{raw_value:,}</div>"
+            
+            html += formatted_value
+        
+        html += "<table style='width:100%;'>"
+        for key, value in details.items():
+            html += f"<tr><td style='padding:4px;font-weight:bold;'>{key}:</td><td style='padding:4px;'>{value}</td></tr>"
+        html += "</table>"
+        tooltip_html[state] = html
+    
+    # Create new GeoJSON with tooltips
+    style_function = lambda x: {
+        'fillColor': '#00000000',  # Transparent fill
+        'color': '#00000000',      # Transparent border
+        'fillOpacity': 0.0,
+        'weight': 0
+    }
+    
+    # Add tooltip GeoJSON layer - using a different approach
+    for feature in southern_geojson["features"]:
+        state_name = feature["properties"]["name"]
+        if state_name in tooltip_html:
+            # Add tooltip HTML directly to the properties
+            feature["properties"]["tooltip_html"] = tooltip_html[state_name]
+    
+    # Create GeoJson layer with tooltips
+    folium.GeoJson(
+        southern_geojson,
+        name="tooltips",
+        style_function=style_function,
+        tooltip=folium.GeoJsonTooltip(
+            fields=["tooltip_html"],
+            aliases=[""],
+            style="background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;",
+            sticky=True,
+            labels=False,
+            max_width=300,
+        )
+    ).add_to(m)
+    
+    # Add layer control
+    folium.LayerControl().add_to(m)
+    
+    return m
 
 # Preprocessing Functions
 def load_preprocessing_config(config_path="price_config.yml"):

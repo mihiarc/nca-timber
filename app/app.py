@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
 import os
+from streamlit_folium import st_folium
+import folium
 from utils import (
     clean_column_names, 
     extract_year_quarter, 
@@ -13,8 +15,13 @@ from utils import (
     extract_species_info,
     create_time_series_plot,
     create_bar_chart,
-    prepare_biomass_summary
+    prepare_biomass_summary,
+    create_state_map
 )
+
+# Initialize global variables 
+softwood_cols = []
+hardwood_cols = []
 
 # Set page config
 st.set_page_config(
@@ -50,8 +57,8 @@ page = st.sidebar.radio(
 @st.cache_data
 def load_data():
     try:
-        # Try to load preprocessed data if it exists
-        prices_df = pd.read_csv("data/prices_data.csv") if os.path.exists("data/prices_data.csv") else pd.read_csv("data/raw_prices.csv")
+        # Use prices.csv file directly
+        prices_df = pd.read_csv("data/prices.csv")
     except Exception as e:
         st.error(f"Error loading price data: {e}")
         prices_df = None
@@ -332,18 +339,23 @@ if prices_df is not None:
 if page == "Overview":
     st.header("Dataset Overview")
     
-    col1, col2 = st.columns(2)
+    st.subheader("Southern States Timber Data Map")
+    # Select which dataset to show on map
+    map_type = st.selectbox(
+        "Select data to display on map",
+        ["prices", "species", "bio_merch", "bio_premerch"],
+        index=0,
+        format_func=lambda x: {"prices": "Timber Prices", "species": "Species Estimates", 
+                              "bio_merch": "Merchantable Biomass", 
+                              "bio_premerch": "Pre-merchantable Biomass"}[x]
+    )
     
-    with col1:
-        st.subheader("Available Datasets")
-        for name, df in data.items():
-            if df is not None:
-                st.markdown(f"**{name.capitalize()}**: {df.shape[0]} rows × {df.shape[1]} columns")
-    
-    with col2:
-        st.subheader("Data Preview")
-        dataset = st.selectbox("Select a dataset to preview", [k for k, v in data.items() if v is not None])
-        st.dataframe(data[dataset].head(10))
+    # Create and display the map
+    m = create_state_map(data, map_type)
+    if m:
+        st_folium(m, width=800, height=500)
+    else:
+        st.warning(f"Cannot create map for {map_type} data. Required columns may be missing.")
 
     # Basic dataset statistics
     st.subheader("Dataset Information")
@@ -363,9 +375,9 @@ if page == "Overview":
                     st.markdown("- State, Area: Geographic location")
                     st.markdown("- Price columns: Various timber products and their prices")
                     
-                    if show_softwood:
+                    if softwood_cols:
                         st.markdown(f"**Softwood products**: {', '.join(softwood_cols)}")
-                    if show_hardwood:
+                    if hardwood_cols:
                         st.markdown(f"**Hardwood products**: {', '.join(hardwood_cols)}")
                         
                 elif tab_name == "species":
@@ -631,4 +643,4 @@ elif page == "Biomass Explorer":
 
 # Add footer
 st.markdown("---")
-st.markdown("NCA Timber Data Explorer © 2023") 
+st.markdown("NCA Timber Data Explorer © 2025") 
